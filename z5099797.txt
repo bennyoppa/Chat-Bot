@@ -1,0 +1,6 @@
+week 4
+For this project,UI is my main responsibility,but it doesn't mean it is only one task that i should involve.
+first, I decide use Django as our web frame.
+so in this week, I'll foucus on how to implement a web project using python and Django frame.
+secondly, our project require asynchronize communication between front and back end,
+we need us js, so I need do some research on js, especially ajax(Asynchronous JavaScript and XML)
