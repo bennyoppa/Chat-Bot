@@ -21,7 +21,10 @@ def info():
             # example of a row: [code, timetable, name, adk, comment]
             columns = row.find_all("td")
             # get course code
-            course_codes.append(columns[0].get_text()[:-1])
+            if len(columns[0].get_text()) > 8:
+                course_codes.append(columns[0].get_text()[:-1])
+            else:
+                course_codes.append(columns[0].get_text())
             # get course name
             course_names.append(columns[2].get_text())
             # get handbook link
