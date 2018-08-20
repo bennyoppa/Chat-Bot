@@ -86,4 +86,4 @@ r = RasaNLP("../rasa-config.json", "../rasa-data.json", "../rasa-model")
 
 r.train()
 
-print(r.get_short_answer("who is the president of U.S.?"))
+print(r.get_short_answer(r.parse("who is the president of U.S.?")['entities'][0]['value']))
