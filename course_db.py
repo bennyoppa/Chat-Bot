@@ -5,15 +5,15 @@ from mongoengine import *
 
 
 class Course(Document):
-    _id = StringField(required=True, primary_key=True)
+    code = StringField(required=True)
     name = StringField(required=False)
     adk = BooleanField(required=False)
     pre_requisite = StringField(required=False)
     description = StringField(required=False)
 
-    def __init__(self, _id, name, adk, pre_requisite, description, *args, **values):
+    def __init__(self, code, name, adk, pre_requisite, description, *args, **values):
         super().__init__(*args, **values)
-        self._id = _id
+        self.code = code
         self.name = name
         self.adk = adk
         self.pre_requisite = pre_requisite
