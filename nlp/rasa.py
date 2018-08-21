@@ -17,15 +17,21 @@ from rasa_nlu.components import ComponentBuilder
 
 class RasaNLP(object):
     COULD_NOT_PARSE_MSGS = [
-        "Sorry, I don't know it",
-        "Next time I will know, but not now",
-        "Sorry, can't get what do you mean",
-        "Try something else"
+        'Sorry, I don\'t know it',
+        'Next time I will know, but not now',
+        'Sorry, can\'t get what do you mean',
+        'Try something else'
     ]
-    GREET_MSGS = ["Hola!", "Privet!", "Xin chào!"]
-    INTENT_GREET = "greet"
-    INTENTS_QUESTION = ["nd", "whatis", "howto", "when", "do"]
-    ENTITY_QUERY = "query"
+    GREET_MSGS = ['Hola!', 'Privet!', 'Xin chào!']
+    INTENT_GREET = 'greet'
+
+    # d: yes or no
+    INTENTS_QUESTION = ['nd', 'd']
+
+    # table name to locate entry, or 'attribute' to retrieve the attribute
+    # [table name / attribute]
+    ENTITY_TABLE = ['course']
+    ENTITY_ATT = 'att'
 
     def __init__(self, config_file, data_file, model_dir):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
@@ -44,47 +50,74 @@ class RasaNLP(object):
 
         self.interpreter = Interpreter.load(trainer.persist(self.model_dir), self.rasa_config)
 
-        logging.info("rasa trained successfully")
+        logging.info('rasa trained successfully')
 
     def parse(self, msg):
         return self.interpreter.parse(msg)
 
     def find_reply(self, msg):
         res = self.parse(msg)
-        logging.info("rasa parse res: {}".format(res))
+        logging.info('rasa parse res: {}'.format(res))
 
-        if not "intent" in res or res["intent"] is None:
+        if not 'intent' in res or res['intent'] is None:
             # later we can do something with unparsed messages, probably train bot
             self.unparsed_messages.append(msg)
             return random.choice(self.COULD_NOT_PARSE_MSGS)
 
-        if res["intent"]["name"] == self.INTENT_GREET:
+        if res['intent']['name'] == self.INTENT_GREET:
             return random.choice(self.GREET_MSGS)
 
+
+
+
         # same approach for all questions
-        if res["intent"]["name"] in self.INTENTS_QUESTION and len(res["entities"]) > 0:
-            for e in res["entities"]:
-                if e["entity"] == self.ENTITY_QUERY:
-                    return self.get_short_answer(e["value"])
+        if res['intent']['name'] in self.INTENTS_QUESTION and len(res['entities']) > 0:
+
+
+            # to locate entry
+            table_key = {}
+            # to retrieve info
+            att = []
+
+            
+            for e in res['entities']:
+                if e['entity'] == self.ENTITY_ATT:
+                    att = e['value']
+                else:
+                    table_key[e['entity']] = e['value']
+
+            return self.get_short_answer(table_key, att)
+
+
+
+
+
+
+
+
+
 
         self.unparsed_messages.append(msg)
         return random.choice(self.COULD_NOT_PARSE_MSGS)
 
-    def get_short_answer(self, query):
-        return wikipedia.summary(query, sentences=1)
+
+    # {table name: key word}, desired att
+    def get_short_answer(self, table_key, att):
+        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
 
     # saves unparsed messages into a file
     def snapshot_unparsed_messages(self, filename):
-        with open(filename, "a") as f:
+        with open(filename, 'a') as f:
             for msg in self.unparsed_messages:
-                f.write("{}\n".format(msg))
+                f.write('{}\n'.format(msg))
 
 
 
 
-r = RasaNLP("../rasa-config.json", "../rasa-data.json", "../rasa-model")
+r = RasaNLP('../rasa-config.json', '../rasa-data.json', '../rasa-model')
 
 r.train()
 
-print(r.find_reply("who is the president of U.S.?"))#['entities'][0]['value']))
-res = r.parse("Who is the tutor of COMP9417")
+print(r.find_reply('Who is the tutor of COMP9417?'))
+res = r.parse('Who is the tutor of COMP9417?')
+print(res)

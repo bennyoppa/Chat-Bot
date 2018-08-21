@@ -2,17 +2,16 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey",
         "intent": "greet",
-        "entities": []
+        "entities": [],
+        "text": "hey"
       },
       {
-        "text": "howdy",
         "intent": "greet",
-        "entities": []
+        "entities": [],
+        "text": "howdy"
       },
       {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "nd",
         "entities": [
           {
@@ -27,10 +26,10 @@
             "value": "LiC",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       },
       {
-        "text": "What is the prerequisite of COMP9876?",
         "intent": "nd",
         "entities": [
           {
@@ -45,10 +44,10 @@
             "value": "prerequisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9876?"
       },
       {
-        "text": "Who are the enrolment requirements of COMP9922?",
         "intent": "nd",
         "entities": [
           {
@@ -63,8 +62,11 @@
             "value": "enrolment requirements",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Who are the enrolment requirements of COMP9922?"
       }
-    ]
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
   }
 }

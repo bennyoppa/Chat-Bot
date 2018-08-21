@@ -2,69 +2,61 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey",
-        "intent": "greet",
-        "entities": []
-      },
-      {
-        "text": "howdy",
-        "intent": "greet",
-        "entities": []
-      },
-      {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "nd",
         "entities": [
           {
             "start": 18,
             "end": 26,
             "value": "COMP9900",
-            "entity": "course"
+            "entity": "query"
           },
           {
             "start": 11,
             "end": 14,
             "value": "LiC",
-            "entity": "att"
+            "entity": "query"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       },
       {
-        "text": "What is the prerequisite of COMP9876?",
         "intent": "nd",
         "entities": [
           {
             "start": 28,
             "end": 36,
             "value": "COMP9876",
-            "entity": "course"
+            "entity": "query"
           },
           {
             "start": 12,
             "end": 24,
             "value": "prerequisite",
-            "entity": "att"
+            "entity": "query"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9876?"
       },
       {
-        "text": "Who are the enrolment requirements of COMP9922?",
         "intent": "nd",
         "entities": [
           {
             "start": 38,
             "end": 46,
             "value": "COMP9922",
-            "entity": "course"
+            "entity": "query"
           },
           {
             "start": 12,
             "end": 34,
             "value": "enrolment requirements",
-            "entity": "att"
+            "entity": "query"
           }
-        ]
+        ],
+        "text": "Who are the enrolment requirements of COMP9922?"
       }
-    ]
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
   }
 }
