@@ -4,3 +4,9 @@ first, I decide use Django as our web frame.
 so in this week, I'll foucus on how to implement a web project using python and Django frame.
 secondly, our project require asynchronize communication between front and back end,
 we need us js, so I need do some research on js, especially ajax(Asynchronous JavaScript and XML)
+
+week 5
+I have made some progress on last week, I have build a simple UI and a simple backend logic which implemented the chat
+fuction, by that I mean when user type in, the chatbot will give the response, and this is implemented Asynchronized.
+In this week, I will work with our teammate to integrate the rest part of project(NLP and data search part) and deliver 
+a prototype for our project.
