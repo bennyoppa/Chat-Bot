@@ -24,7 +24,7 @@ class RasaNLP(object):
     ]
     GREET_MSGS = ["Hola!", "Privet!", "Xin chào!"]
     INTENT_GREET = "greet"
-    INTENTS_QUESTION = ["whatis", "howto", "when", "do"]
+    INTENTS_QUESTION = ["nd", "whatis", "howto", "when", "do"]
     ENTITY_QUERY = "query"
 
     def __init__(self, config_file, data_file, model_dir):
@@ -86,4 +86,5 @@ r = RasaNLP("../rasa-config.json", "../rasa-data.json", "../rasa-model")
 
 r.train()
 
-print(r.get_short_answer(r.parse("who is the president of U.S.?")['entities'][0]['value']))
+print(r.find_reply("who is the president of U.S.?"))#['entities'][0]['value']))
+res = r.parse("Who is the tutor of COMP9417")

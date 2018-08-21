@@ -2,7 +2,6 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "nd",
         "entities": [
           {
@@ -17,8 +16,11 @@
             "value": "COMP9900",
             "entity": "query"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       }
-    ]
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
   }
 }
