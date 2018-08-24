@@ -1,12 +1,19 @@
 from nlp.rasa import RasaNLP
+from db.retrieve_info import get_course_info
 
 
+q = 'Who is the pre_requisite of COMP9417?'
 
+
+#  train the nlp model
 nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
-
 nlp.train()
 
 
-print(nlp.find_reply('Who is the tutor of COMP9417?'))
-res = nlp.parse('what is the course name of COMP9417?')
-print(res)
+# parse query
+res = nlp.find_reply(q)
+need_reply, [deter, table, [keyword], att] = res
+
+
+# get the answer
+answer = get_course_info(table, (keyword).upper(), att)
