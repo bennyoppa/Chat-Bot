@@ -8,5 +8,5 @@ nlp.train()
 
 
 print(nlp.find_reply('Who is the tutor of COMP9417?'))
-res = nlp.parse('Who is the LiC of COMP9417?')
+res = nlp.parse('what is the course name of COMP9417?')
 print(res)
