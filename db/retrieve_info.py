@@ -1,5 +1,5 @@
 from mongoengine import *
-import course_db
+from db import course_db
 import json
 
 

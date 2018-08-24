@@ -1,4 +1,4 @@
-from retrieve_info import *
+from db.retrieve_info import *
 import re
 
 

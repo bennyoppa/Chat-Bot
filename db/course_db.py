@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from info_lists import info
+from db.info_lists import info
 from mongoengine import *
 
 
