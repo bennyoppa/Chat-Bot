@@ -122,10 +122,10 @@ class RasaNLP(object):
 
 
 
-r = RasaNLP('../rasa-config.json', '../rasa-data.json', '../rasa-model')
-
-r.train()
-
-print(r.find_reply('Who is the tutor of COMP9417?'))
-res = r.parse('Who is the LiC of COMP9417?')
-print(res)
+##r = RasaNLP('../rasa-config.json', '../rasa-data.json', '../rasa-model')
+##
+##r.train()
+##
+##print(r.find_reply('Who is the tutor of COMP9417?'))
+##res = r.parse('Who is the LiC of COMP9417?')
+##print(res)
