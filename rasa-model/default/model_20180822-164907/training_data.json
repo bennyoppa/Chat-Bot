@@ -2,17 +2,16 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey",
         "intent": "greet",
-        "entities": []
+        "entities": [],
+        "text": "hey"
       },
       {
-        "text": "howdy",
         "intent": "greet",
-        "entities": []
+        "entities": [],
+        "text": "howdy"
       },
       {
-        "text": "What is the mobile number of Rachid Hamadi?",
         "intent": "staff",
         "entities": [
           {
@@ -33,10 +32,10 @@
             "value": "mobile number",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the mobile number of Rachid Hamadi?"
       },
       {
-        "text": "What is the contact number of Eric Martin?",
         "intent": "staff",
         "entities": [
           {
@@ -57,10 +56,10 @@
             "value": "contact number",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the contact number of Eric Martin?"
       },
       {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "course",
         "entities": [
           {
@@ -81,10 +80,10 @@
             "value": "LiC",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       },
       {
-        "text": "What is the prerequisite of COMP9876?",
         "intent": "course",
         "entities": [
           {
@@ -105,10 +104,10 @@
             "value": "prerequisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9876?"
       },
       {
-        "text": "What are the enrolment requirements of COMP9922?",
         "intent": "course",
         "entities": [
           {
@@ -129,21 +128,23 @@
             "value": "enrolment requirements",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the enrolment requirements of COMP9922?"
       }
     ],
-
     "regex_features": [
       {
         "name": "code",
         "pattern": "[a-z]{4}[0-9]{4}"
       }
     ],
-
     "entity_synonyms": [
       {
         "value": "LiC",
-        "synonyms": ["Lecturer in charge", "Lecturer"]
+        "synonyms": [
+          "Lecturer in charge",
+          "Lecturer"
+        ]
       }
     ]
   }

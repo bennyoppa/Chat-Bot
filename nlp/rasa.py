@@ -25,15 +25,20 @@ class RasaNLP(object):
     GREET_MSGS = ['Hola!', 'Privet!', 'Xin chào!']
     INTENT_GREET = 'greet'
 
-    # d: yes or no
-    INTENTS_QUESTION = ['nd', 'd']
+    # intent: table names, table to search 
+    INTENTS = ['course', 'staff']
 
-    # table name to locate entry, or 'attribute' to retrieve the attribute
-    # [table name / attribute]
-    ENTITY_TABLE = ['course']
+    # entity: keywords
+    ENTITY_DET = 'd'
+    ENTITY_NDET = 'nd'
+    ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
 
     def __init__(self, config_file, data_file, model_dir):
+        # record the current subject for follow questions
+        self.subject = None
+
+        
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
         # store unparsed messages, so later we can train bot
@@ -71,22 +76,25 @@ class RasaNLP(object):
 
 
         # same approach for all questions
-        if res['intent']['name'] in self.INTENTS_QUESTION and len(res['entities']) > 0:
+        if res['intent']['name'] in self.INTENTS and len(res['entities']) > 0:
 
 
+            deterministic = False
             # to locate entry
-            table_key = {}
+            key = []
             # to retrieve info
             att = []
 
             
             for e in res['entities']:
-                if e['entity'] == self.ENTITY_ATT:
-                    att = e['value']
-                else:
-                    table_key[e['entity']] = e['value']
+                if e['entity'] == self.ENTITY_DET:
+                    deterministic = True
+                elif e['entity'] == self.ENTITY_ATT:
+                    att += [e['value']]
+                elif e['entity'] == self.ENTITY_KEY:
+                    key += [e['value']]
 
-            return self.get_short_answer(table_key, att)
+            return True, [deterministic, res['intent']['name'], key, att]
 
 
 
@@ -119,5 +127,5 @@ r = RasaNLP('../rasa-config.json', '../rasa-data.json', '../rasa-model')
 r.train()
 
 print(r.find_reply('Who is the tutor of COMP9417?'))
-res = r.parse('Who is the tutor of COMP9417?')
+res = r.parse('Who is the LiC of COMP9417?')
 print(res)
