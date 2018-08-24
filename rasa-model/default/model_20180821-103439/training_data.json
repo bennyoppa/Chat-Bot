@@ -1,0 +1,26 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "nd",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "COMP9900",
+            "entity": "course"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "value": "LiC",
+            "entity": "lecturer"
+          }
+        ],
+        "text": "Who is the LiC of COMP9900?"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

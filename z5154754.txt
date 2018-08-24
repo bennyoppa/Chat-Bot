@@ -1,0 +1,15 @@
+week 2
+
+Formed a group of four. Discussed with group members on three available project topics, and picked topic 1 for our project. Started research on project related areas.
+
+week 3
+
+Discussed with group members on what the potential requirements of our application are, settled on epic selection as well as individual task division. Wrote and polished group project proposal. Focused on searching for resources related to NLP/Question Parsing, some of them seem to be quite useful and handy.
+
+week 4
+
+Implemented a basic version to handle user inputs using the resources found last week. It is able to distinguish different types of questions as we specified and perform appropriate actions accordingly, and extract the key words from user input, which will be used to search for answers. Wrote the training data and tested the implementation. Discussed the high level design with group members. 
+
+week 5
+
+

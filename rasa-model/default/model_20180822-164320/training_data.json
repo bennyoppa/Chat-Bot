@@ -1,0 +1,127 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "howdy"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "COMP9900",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Who is",
+            "entity": "d"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "value": "LiC",
+            "entity": "att"
+          }
+        ],
+        "text": "Who is the LiC of COMP9900?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "Eric Martin",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "d"
+          },
+          {
+            "start": 12,
+            "end": 26,
+            "value": "contact number",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the contact number of Eric Martin?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP9876",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "d"
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "value": "prerequisite",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the prerequisite of COMP9876?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "COMP9922",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "d"
+          },
+          {
+            "start": 12,
+            "end": 34,
+            "value": "enrolment requirements",
+            "entity": "att"
+          }
+        ],
+        "text": "What are the enrolment requirements of COMP9922?"
+      }
+    ],
+    "regex_features": [
+      {
+        "name": "code",
+        "pattern": "[a-z]{4}[0-9]{4}"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "LiC",
+        "synonyms": [
+          "Lecturer in charge",
+          "Lecturer"
+        ]
+      }
+    ]
+  }
+}
