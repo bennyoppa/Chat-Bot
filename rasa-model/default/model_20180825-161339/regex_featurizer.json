@@ -1,0 +1,6 @@
+[
+    {
+        "name": "course code",
+        "pattern": "[a-z]{4}[0-9]{4}"
+    }
+]

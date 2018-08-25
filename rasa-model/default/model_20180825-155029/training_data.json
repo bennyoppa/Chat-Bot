@@ -2,17 +2,16 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey",
         "intent": "greet",
-        "entities": []
+        "entities": [],
+        "text": "hey"
       },
       {
-        "text": "howdy",
         "intent": "greet",
-        "entities": []
+        "entities": [],
+        "text": "howdy"
       },
       {
-        "text": "What is the mobile number of Rachid Hamadi?",
         "intent": "staff",
         "entities": [
           {
@@ -25,7 +24,7 @@
             "start": 0,
             "end": 7,
             "value": "What is",
-            "entity": "nd"
+            "entity": "d"
           },
           {
             "start": 12,
@@ -33,10 +32,10 @@
             "value": "mobile number",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the mobile number of Rachid Hamadi?"
       },
       {
-        "text": "What is the contact number of Eric Martin?",
         "intent": "staff",
         "entities": [
           {
@@ -49,7 +48,7 @@
             "start": 0,
             "end": 7,
             "value": "What is",
-            "entity": "nd"
+            "entity": "d"
           },
           {
             "start": 12,
@@ -57,10 +56,10 @@
             "value": "contact number",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the contact number of Eric Martin?"
       },
       {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "course",
         "entities": [
           {
@@ -73,7 +72,7 @@
             "start": 0,
             "end": 6,
             "value": "Who is",
-            "entity": "nd"
+            "entity": "d"
           },
           {
             "start": 11,
@@ -81,34 +80,34 @@
             "value": "LiC",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       },
       {
-        "text": "What is the prerequisite of COMP9417?",
         "intent": "course",
         "entities": [
           {
             "start": 28,
             "end": 36,
-            "value": "COMP9417",
+            "value": "COMP9876",
             "entity": "key"
           },
           {
             "start": 0,
             "end": 7,
             "value": "What is",
-            "entity": "nd"
+            "entity": "d"
           },
           {
             "start": 12,
             "end": 24,
-            "value": "pre_requisite",
+            "value": "prerequisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9876?"
       },
       {
-        "text": "What are the enrolment requirements of COMP9922?",
         "intent": "course",
         "entities": [
           {
@@ -121,84 +120,31 @@
             "start": 0,
             "end": 8,
             "value": "What are",
-            "entity": "nd"
+            "entity": "d"
           },
           {
             "start": 12,
             "end": 34,
-            "value": "pre_requisite",
+            "value": "enrolment requirements",
             "entity": "att"
           }
-        ]
-      },
-
-
-
-      {
-        "text": "Is COMP9021 an adk course?",
-        "intent": "course",
-        "entities": [
-          {
-            "start": 3,
-            "end": 11,
-            "value": "COMP9021",
-            "entity": "key"
-          },
-          {
-            "start": 0,
-            "end": 2,
-            "value": "Is",
-            "entity": "d"
-          },
-          {
-            "start": 15,
-            "end": 18,
-            "value": "adk",
-            "entity": "att"
-          }
-        ]
-      },
-      {
-        "text": "Is COMP9876 an adk course?",
-        "intent": "course",
-        "entities": [
-          {
-            "start": 3,
-            "end": 11,
-            "value": "COMP9876",
-            "entity": "key"
-          },
-          {
-            "start": 0,
-            "end": 2,
-            "value": "Is",
-            "entity": "d"
-          },
-          {
-            "start": 15,
-            "end": 18,
-            "value": "adk",
-            "entity": "att"
-          }
-        ]
+        ],
+        "text": "What are the enrolment requirements of COMP9922?"
       }
     ],
-
     "regex_features": [
       {
-        "name": "course code",
-        "pattern": "[a-zA-Z]{4}[0-9]{4}"
+        "name": "code",
+        "pattern": "[a-z]{4}[0-9]{4}"
       }
     ],
-
     "entity_synonyms": [
       {
-        "value": "lic",
-        "synonyms": ["Lecturer in charge", "Lecturer"]
-      },
-      {
-        "value": "pre_requisite",
-        "synonyms": ["enrolment requirements", "requirements", "pre_requisite"]
+        "value": "LiC",
+        "synonyms": [
+          "Lecturer in charge",
+          "Lecturer"
+        ]
       }
     ]
   }

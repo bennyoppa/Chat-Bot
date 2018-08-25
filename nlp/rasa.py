@@ -110,9 +110,8 @@ class RasaNLP(object):
         return random.choice(self.COULD_NOT_PARSE_MSGS)
 
 
-    # {table name: key word}, desired att
-    def get_short_answer(self, table_key, att):
-        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
+##    def get_short_answer(self, table_key, att):
+##        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
 
     # saves unparsed messages into a file
     def snapshot_unparsed_messages(self, filename):
