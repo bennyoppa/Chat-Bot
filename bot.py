@@ -2,6 +2,9 @@ from nlp.rasa import RasaNLP
 from db.retrieve_info import get_course_info
 
 
+# get_course_info -> take a list of keywords as input, multiply queries at the same time
+
+
 def reply(parsed_query):
     '''
     takes RasaNLP parsed query as input
@@ -36,7 +39,8 @@ def reply(parsed_query):
     return answer
 
 q = 'What is the pre_requisite of COMP9417?'
-q1 = 'Is COMP9417 an adk course?'
+q11 = 'Is COMP9417 an adk course?'
+q12 = 'What is the prerequisite of it?'
 
 
 #  train the nlp model
@@ -44,7 +48,8 @@ nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
 nlp.train()
 
 
-print(reply(nlp.find_reply(q)))
+print(reply(nlp.find_reply(q11)))
+print(reply(nlp.find_reply(q12)))
 
 ### parse query
 ##parsed_query = nlp.find_reply(q)

@@ -27,7 +27,7 @@ class RasaNLP(object):
     INTENT_GREET = 'greet'
 
     # intent: table names, table to search 
-    INTENTS = ['course', 'staff']
+##    INTENTS = ['course', 'staff']
 
     # entity: keywords
     ENTITY_DET = 'd'
@@ -35,10 +35,11 @@ class RasaNLP(object):
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
 
-    def __init__(self, config_file, data_file, model_dir):
+    def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff']):
         # record the current subject for follow questions
         self.subject = None
 
+        self.INTENTS = INTENTS
         
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
@@ -95,7 +96,10 @@ class RasaNLP(object):
                 elif e['entity'] == self.ENTITY_KEY:
                     key += [e['value']]
 
-            return True, [deterministic, res['intent']['name'], key, att]
+            if len(key):
+                self.subject = key
+
+            return True, [deterministic, res['intent']['name'], self.subject, att]
 
 
 
