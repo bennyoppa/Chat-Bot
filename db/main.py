@@ -6,7 +6,6 @@ if __name__ == '__main__':
     while True:
         print("---instruction---")
         print("c - Create database")
-        print("d - Delete database")
         print("s - Search")
         print("q - Quit\n")
         action = input("Select an action: ")
@@ -24,9 +23,6 @@ if __name__ == '__main__':
             break
         elif action == 'c':
             create_course_db()
-            print()
-        elif action == 'd':
-            delete_course_db()
             print()
         else:
             continue
