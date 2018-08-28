@@ -18,3 +18,10 @@ Use python library (BeautifulSoup) to extract useful info from HTML files, and s
 JSON or dictionary format. Simple demo during Tuesday lab. So far I can collect course code, course
 name, description, prerequisite and link of timetable for each CSE postgraduate course. However,
 still struggling with timetable collection due to its format. Need to make it less hard-coding as well.
+
+Week 5
+
+Used mongoengine (a python library for MongoDB) to create a NoSQL database for courses. The database is
+document-based, which means each document represent a course. Inside each document, there are details
+including course name, adk, prerequisite and description. Developed my part of code so that I can
+integrate mine with my teammates'. Prepare for next week's demo.

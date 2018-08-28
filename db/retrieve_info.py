@@ -8,11 +8,6 @@ def create_course_db():
     return "Course database created."
 
 
-def delete_course_db():
-    course_db.delete_all_courses()
-    return "Course database deleted."
-
-
 def get_course_info(table, keyword, query):
     connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
     if table == 'course':

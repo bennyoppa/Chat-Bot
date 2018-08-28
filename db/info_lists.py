@@ -9,7 +9,6 @@ def info():
     table = soup.find_all("tbody")[0]
     rows = table.find_all("tr")[2:]
 
-    handbooks = []
     timetables = []
     course_codes = []
     course_names = []
@@ -27,8 +26,6 @@ def info():
                 course_codes.append(columns[0].get_text())
             # get course name
             course_names.append(columns[2].get_text())
-            # get handbook link
-            handbooks.append(columns[0].find("a")['href'])
             # get timetable link
             if columns[1].find("a"):
                 timetables.append(columns[1].find("a")['href'])
@@ -40,4 +37,4 @@ def info():
             else:
                 adk.append(False)
 
-    return handbooks, timetables, course_codes, course_names, adk
+    return timetables, course_codes, course_names, adk
