@@ -1,0 +1,331 @@
+<html lang="en" class="no-js gr__hrnwp_qiniudn_com">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Animated Background Headers | Demo 2</title>
+        <meta name="description" content="Examples for creative website header animations using Canvas and JavaScript">
+        <meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript">
+        <meta name="author" content="Codrops">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>CHAT_BOT</title>
+        {% load static %}
+	    <link rel="stylesheet" type="text/css" href="{% static "normalize.css" %}" />
+	    <link rel="stylesheet" type="text/css" href="{% static "htmleaf-demo.css"%}"/>
+	    <link rel="stylesheet" href="{% static "botui.min.css" %}"/>
+        <link rel="stylesheet" href="{% static "botui-theme-default.css"%}" />
+        <!--[if IE]>
+        	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+<style type="text/css">
+		/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.demo-1 .large-header {
+	background-image: url('../img/demo-1-bg.jpg');
+}
+
+.demo-2 .large-header {
+	background-image: url('../img/demo-2-bg.jpg');
+	background-position: center bottom;
+}
+
+.demo-3 .large-header {
+	background: #7f8c8d;
+}
+
+.demo-4 .large-header {
+	background: #f9f1e9;
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-1 .main-title,
+.demo-3 .main-title {
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+
+.demo-2 .main-title {
+	font-family: 'Clicker Script', cursive;
+	font-weight: normal;
+	font-size: 8em;
+	padding-left: 10px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.demo-2 .main-title::before {
+	content: '';
+	width: 20vw;
+	height: 20vw;
+	min-width: 3.5em;
+	min-height: 3.5em;
+	background: url(../img/deco.svg) no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	z-index: -1;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-3 .main-title {
+	padding: 10px 40px;
+	border: 10px double #f9f1e9;
+	text-transform: uppercase;
+	font-family: Londrina Outline, sans-serif;
+}
+
+.demo-4 .main-title {
+	font-size: 6em;
+	font-weight: 300;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	color: #222;
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title,
+	.demo-3 .main-title,
+	.demo-4 .main-title {
+		font-size: 3em;
+	}
+
+	.demo-2 .main-title {
+		font-size: 4em;
+	}
+}
+		</style>
+	</head>
+
+
+	<body data-gr-c-s-loaded="true">
+		<div class="container demo-2">
+			<div class="content">
+                <div id="large-header" class="large-header" style="height: 974px;">
+                    <canvas id="demo-canvas" width="778" height="974"></canvas>
+                </div>
+                <div style="position:fixed;height:90px;width:100%;left:0;top:-15px;z-index:9999;tex-align:center">
+                </div>
+            </div>
+		</div><!-- /container -->
+        <div style="position:fixed;height:90px;width:100%;left:0;bottom:5px;z-index:999"><div class="footer-banner" style="width:728px; margin:0px auto"></div></div>
+
+        {% csrf_token %}
+		<div class="htmleaf-content" style="filter:alpha(opacity=0,finishopacity=0,style=2)">
+			<div class="botui-app-container" id="mychatbotUI">
+			      <bot-ui></bot-ui>
+			</div>
+            </div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="{% static "botui.min.js"%}"></script>
+	<script type="text/javascript">
+		var homeBot = BotUI('mychatbotUI');
+		homeBot.message.add({
+          delay: 1000,
+		  content: 'Sup,CSE student！'
+		}).then(function () {
+		  return homeBot.message.add({
+		    delay: 1000,
+		    content: 'wanna see something cool？'
+		  });
+		}).then(function () {
+		  return homeBot.action.button({
+		    delay: 1000,
+		    action: [{
+		      text: 'OK!',
+		      value: 'sure'
+		    }, {
+		      text: 'Nah😒',
+		      value: 'skip'
+		    }]
+		  });
+		}).then(function (res) {
+		  if(res.value == 'sure') {
+		      mytutorial();
+		      loopfuc3();
+		  }
+		  if(res.value == 'skip') {
+		    end();
+		  }
+		});
+
+		var mytutorial = function () {
+		    homeBot.message.add({
+		    delay: 1000,
+		    content: "cool, try to ask me some course information about cse"
+		  }).then(function () {
+		      homeBot.message.add({
+		      delay: 1000,
+		      content: 'like which course you want to know more about it？（click enter after type in..）'
+		    });
+        })}
+
+		  var loopfuc3=function () {
+              return homeBot.action.text({
+		      delay: 2500,
+		      action: {
+		        value: '',
+		        placeholder: 'type in please...'
+		      }
+		  }).then(function (res) {
+		    var data = JSON.stringify({"content":res.value})
+              $.ajax({
+                url:"Chatbot_sub",
+                contentType:'application/json;charset=UTF-8',
+                type:"POST",
+                data:data,
+                beforeSend: function(xhr, settings) {
+                    var token =  $('input[name=csrfmiddlewaretoken]').val()
+                    xhr.setRequestHeader("X-CSRFToken",token);
+                },
+                success:function (data) {
+                      return homeBot.message.bot({
+		              delay: 500,
+		              content: data + ', is that your want?'
+		    }).then(function () {
+                         loopfuc3();
+                      });
+                },error:function (error) {
+                    console.log(error)
+                }
+            })
+		  });
+          }
+
+		var end = function () {
+		  homeBot.message.add({
+		    delay: 1000,
+		    content: 'see ya!'
+		  });
+		};
+
+
+	</script>
+
+        <script>
+(function() {
+
+    var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
+
+    // Main
+    initHeader();
+    addListeners();
+
+    function initHeader() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        target = {x: 0, y: height};
+
+        largeHeader = document.getElementById('large-header');
+        largeHeader.style.height = height+'px';
+
+        canvas = document.getElementById('demo-canvas');
+        canvas.width = width;
+        canvas.height = height;
+        ctx = canvas.getContext('2d');
+
+        // create particles
+        circles = [];
+        for(var x = 0; x < width*0.5; x++) {
+            var c = new Circle();
+            circles.push(c);
+        }
+        animate();
+    }
+
+    // Event handling
+    function addListeners() {
+        window.addEventListener('scroll', scrollCheck);
+        window.addEventListener('resize', resize);
+    }
+
+    function scrollCheck() {
+        if(document.body.scrollTop > height) animateHeader = false;
+        else animateHeader = true;
+    }
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        largeHeader.style.height = height+'px';
+        canvas.width = width;
+        canvas.height = height;
+    }
+
+    function animate() {
+        if(animateHeader) {
+            ctx.clearRect(0,0,width,height);
+            for(var i in circles) {
+                circles[i].draw();
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+
+    // Canvas manipulation
+    function Circle() {
+        var _this = this;
+
+        // constructor
+        (function() {
+            _this.pos = {};
+            init();
+            console.log(_this);
+        })();
+
+        function init() {
+            _this.pos.x = Math.random()*width;
+            _this.pos.y = height+Math.random()*100;
+            _this.alpha = 0.1+Math.random()*0.3;
+            _this.scale = 0.1+Math.random()*0.3;
+            _this.velocity = Math.random();
+        }
+
+        this.draw = function() {
+            if(_this.alpha <= 0) {
+                init();
+            }
+            _this.pos.y -= _this.velocity;
+            _this.alpha -= 0.0005;
+            ctx.beginPath();
+            ctx.arc(_this.pos.x, _this.pos.y, _this.scale*10, 0, 2 * Math.PI, false);
+            ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
+            ctx.fill();
+        };
+    }
+
+})();
+
+
+		</script>
+        <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+
+</body></html>

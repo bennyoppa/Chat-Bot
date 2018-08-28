@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>视频播放</title>
+<style>
+body{ margin:0; padding:0}
+.abc{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+    }
+</style>
+<style type="text/css">
+    video::-webkit-media-controls{
+        display:none !important;
+    }
+</style>
+</head>
+
+<body>
+<video class="abc"  preload muted autoplay loop  >
+    <source src="myvideo3.webm" type="video/webm">
+    <source src="myvideo3.mp4" type="video/mp4"></video>
+</body>
+</html>
+
