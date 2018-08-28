@@ -1,8 +1,9 @@
 import random
 import logging
-import wikipedia
 
-##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy wikipedia
+##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy
+##python -m spacy download en
+
 
 from rasa_nlu.converters import load_data
 ##pip install rasa-nlu==0.11.5
@@ -26,7 +27,7 @@ class RasaNLP(object):
     INTENT_GREET = 'greet'
 
     # intent: table names, table to search 
-    INTENTS = ['course', 'staff']
+##    INTENTS = ['course', 'staff']
 
     # entity: keywords
     ENTITY_DET = 'd'
@@ -34,10 +35,11 @@ class RasaNLP(object):
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
 
-    def __init__(self, config_file, data_file, model_dir):
+    def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff']):
         # record the current subject for follow questions
         self.subject = None
 
+        self.INTENTS = INTENTS
         
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
@@ -94,7 +96,10 @@ class RasaNLP(object):
                 elif e['entity'] == self.ENTITY_KEY:
                     key += [e['value']]
 
-            return True, [deterministic, res['intent']['name'], key, att]
+            if len(key):
+                self.subject = key
+
+            return True, [deterministic, res['intent']['name'], self.subject, att]
 
 
 
@@ -109,9 +114,8 @@ class RasaNLP(object):
         return random.choice(self.COULD_NOT_PARSE_MSGS)
 
 
-    # {table name: key word}, desired att
-    def get_short_answer(self, table_key, att):
-        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
+##    def get_short_answer(self, table_key, att):
+##        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
 
     # saves unparsed messages into a file
     def snapshot_unparsed_messages(self, filename):
