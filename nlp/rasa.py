@@ -1,8 +1,7 @@
 import random
 import logging
-import wikipedia
 
-##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy wikipedia
+##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy
 
 from rasa_nlu.converters import load_data
 ##pip install rasa-nlu==0.11.5

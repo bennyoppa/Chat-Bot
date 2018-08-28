@@ -17,4 +17,3 @@ need_reply, [deter, table, [keyword], att] = res
 
 # get the answer
 answer = get_course_info(table, (keyword).upper(), att)
-
