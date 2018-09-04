@@ -6,6 +6,9 @@ def list_of_info():
     courses_list = []
     numbers_list = [1, 3, 1, 3, 2, 2, 2, 3, 3, 3, 3]
     stream_id_list = []
+    stream_names = {'COMPAS': 'Artificial intelligence', 'COMPBS': 'Bioinformatics',
+                    'COMPSS': 'Data science and engineering', 'COMPDS': 'Database systems',
+                    'COMPES': 'E-Commerce systems', 'COMPGS': 'Geospatial', 'COMPIS': 'Internetworking'}
 
     url = 'https://www.engineering.unsw.edu.au/computer-science-engineering/courses-programs/postgraduate-coursework/specialisations'
     page = requests.get(url)
@@ -28,4 +31,4 @@ def list_of_info():
             stream_id_list.append(stream_id)
         start_of_paragraph = start_of_paragraph.find_next('div', class_='paragraph')
 
-    return stream_id_list, courses_list, numbers_list
+    return stream_id_list, courses_list, numbers_list, stream_names
