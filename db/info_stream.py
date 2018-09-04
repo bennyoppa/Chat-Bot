@@ -5,7 +5,7 @@ import requests
 def list_of_info():
     courses_list = []
     numbers_list = [1, 3, 1, 3, 2, 2, 2, 3, 3, 3, 3]
-    stream_name_list = []
+    stream_id_list = []
 
     url = 'https://www.engineering.unsw.edu.au/computer-science-engineering/courses-programs/postgraduate-coursework/specialisations'
     page = requests.get(url)
@@ -23,9 +23,9 @@ def list_of_info():
 
     start_of_paragraph = soup.find('div', class_='paragraph').find_next('div', class_='paragraph')
     while start_of_paragraph:
-        stream_name = start_of_paragraph.find('h3').get_text()
-        if stream_name != 'COMPCS':
-            stream_name_list.append(stream_name)
+        stream_id = start_of_paragraph.find('h3').get_text()
+        if stream_id != 'COMPCS':
+            stream_id_list.append(stream_id)
         start_of_paragraph = start_of_paragraph.find_next('div', class_='paragraph')
 
-    return stream_name_list, courses_list, numbers_list
+    return stream_id_list, courses_list, numbers_list
