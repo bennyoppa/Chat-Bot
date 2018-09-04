@@ -22,7 +22,13 @@ if __name__ == '__main__':
         elif action == 'q':
             break
         elif action == 'c':
-            create_course_db()
+            db_name = input("Enter a database name: ")
+            if db_name == 'course':
+                create_course_db()
+            elif db_name == 'stream':
+                create_stream_db()
+            else:
+                print('Wrong database name.')
             print()
         else:
             continue
