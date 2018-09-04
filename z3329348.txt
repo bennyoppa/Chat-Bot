@@ -25,3 +25,14 @@ Used mongoengine (a python library for MongoDB) to create a NoSQL database for c
 document-based, which means each document represent a course. Inside each document, there are details
 including course name, adk, prerequisite and description. Developed my part of code so that I can
 integrate mine with my teammates'. Prepare for next week's demo.
+
+Week 6
+
+Demonstrated our Chat Bot and planned for further development. Started to collect data for different
+CSE Postgraduate Streams.
+
+Week 7
+
+Created Stream database to store required courses of different areas of streams. Developed functions
+to retrieve details of streams. In this way, we can provide course recommendation based on user's input.
+Also, integrate my code with other team members' to prepare for next week's demo.
