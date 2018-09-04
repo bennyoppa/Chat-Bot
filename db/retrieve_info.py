@@ -1,11 +1,17 @@
 from mongoengine import *
 from db import course_db
+from db import stream_db
 import json
 
 
 def create_course_db():
     course_db.add_courses()
     return "Course database created."
+
+
+def create_stream_db():
+    stream_db.create_streams()
+    return "Stream database created."
 
 
 def get_course_info(table, keyword, query):
