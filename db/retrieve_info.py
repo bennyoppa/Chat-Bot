@@ -14,18 +14,21 @@ def create_stream_db():
     return "Stream database created."
 
 
-def get_course_info(table, keyword, query):
-    connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
+def get_info(table, keyword, query):
     if table == 'course':
-        target = course_db.Course.objects
+        return get_course_info(keyword, query)
     elif table == 'stream':
-        target = course_db.Course.objects
+        return get_stream_info(keyword, query)
     elif table == 'staff':
-        target = course_db.Course.objects
-    else:
-        return "Wrong table name."
+        pass
+    return 'Wrong table name.'
 
-    for doc in target:
+
+def get_course_info(keyword, query):
+    connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
+    table = course_db.Course.objects
+
+    for doc in table:
         if doc._id == keyword:
             if len(query) == 0:
                 result = json.loads(doc.to_json())
@@ -38,3 +41,29 @@ def get_course_info(table, keyword, query):
                     result[key] = info[key]
             return result
     return "Not found."
+
+
+def get_stream_info(keyword, query):
+    connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
+    table = stream_db.Stream.objects
+
+    for doc in table:
+        if doc._id == keyword:
+            if len(query) == 0:
+                return json.loads(doc.to_json())['areas']
+            else:
+                areas = json.loads(doc.to_json())['areas']
+                while query:
+                    course = query.pop(0)
+                    for i in range(len(areas)):
+                        area = areas[i]['electives']
+                        for j in range(len(area)):
+                            if course == area[j]:
+                                areas[i]['electives'].pop(j)
+                                areas[i]['number'] = areas[i]['number'] - 1
+                                break
+                result = []
+                for k in range(len(areas)):
+                    if areas[k]['number'] != 0:
+                        result.append(areas[k])
+                return result
