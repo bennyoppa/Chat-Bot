@@ -12,7 +12,7 @@ if __name__ == '__main__':
         if action == 's':
             table_name = input("Enter a table name: ")
             match_keyword = input("Enter a search keyword: ")
-            output = input("Enter desired search result: ")
+            output = input("Enter query: ")
             if len(output) == 0:
                 output = []
             else:
