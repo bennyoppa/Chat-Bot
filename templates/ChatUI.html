@@ -13,16 +13,17 @@
 </head>
 <body>
 {% csrf_token %}
-		<div class="htmleaf-content">
+
 			<div class="botui-app-container" id="mychatbotUI">
 			      <bot-ui></bot-ui>
 			</div>
-            </div>
+
 	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="{% static "botui.min.js"%}"></script>
 	<script type="text/javascript">
 		var homeBot = BotUI('mychatbotUI');
+        //var homeBot=document.getElementById('test')
 		homeBot.message.add({
           delay: 1000,
 		  content: 'Sup,CSE student！'

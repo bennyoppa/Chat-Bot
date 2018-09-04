@@ -58,8 +58,7 @@ body{
 	margin: 0 auto;
 }
 .htmleaf-content{
-	padding: 2em 0;
-	background-color: transparent;
+	height:100%;
 }
 .bgcolor-1 { background: #f0efee; }
 .bgcolor-2 { background: #f9f9f9; }

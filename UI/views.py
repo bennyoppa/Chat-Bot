@@ -51,10 +51,12 @@ def reply(parsed_query):
 
 # Create your views here.
 def homepage(request):
-    return render(request, 'ChatUI.html')
+    return render(request, 'mainpage.html')
+
+def Chatbot_iframe(request):
+    return  render(request, 'ChatUI.html')
 
 def Chatbot_sub(req):
-     result='Sup!!!'
 
      nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
      nlp.train()
