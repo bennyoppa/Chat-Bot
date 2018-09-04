@@ -11,14 +11,13 @@ if __name__ == '__main__':
         action = input("Select an action: ")
         if action == 's':
             table_name = input("Enter a table name: ")
-            if table_name == 'course':
-                match_keyword = input("Enter a search keyword: ")
-                output = input("Enter desired search result: ")
-                if len(output) == 0:
-                    output = []
-                else:
-                    output = re.split(' ', output)
-                print(get_info(table_name, match_keyword, output))
+            match_keyword = input("Enter a search keyword: ")
+            output = input("Enter desired search result: ")
+            if len(output) == 0:
+                output = []
+            else:
+                output = re.split(' ', output)
+            print(get_info(table_name, match_keyword, output))
             print()
         elif action == 'q':
             break
