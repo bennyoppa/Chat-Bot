@@ -17,7 +17,7 @@ if __name__ == '__main__':
                 output = []
             else:
                 output = re.split(' ', output)
-            print(get_course_info(table_name, match_keyword, output))
+            print(get_info(table_name, match_keyword, output))
             print()
         elif action == 'q':
             break

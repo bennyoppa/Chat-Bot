@@ -14,7 +14,7 @@ def create_stream_db():
     return "Stream database created."
 
 
-def get_course_info(table, keyword, query):
+def get_info(table, keyword, query):
     connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
     if table == 'course':
         target = course_db.Course.objects
