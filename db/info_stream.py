@@ -23,7 +23,9 @@ def list_of_info():
 
     start_of_paragraph = soup.find('div', class_='paragraph').find_next('div', class_='paragraph')
     while start_of_paragraph:
-        id_list.append(start_of_paragraph.find('h3').get_text())
+        stream_name = start_of_paragraph.find('h3').get_text()
+        if stream_name != 'COMPCS':
+            id_list.append(stream_name)
         start_of_paragraph = start_of_paragraph.find_next('div', class_='paragraph')
 
     return id_list, courses_list, numbers_list
