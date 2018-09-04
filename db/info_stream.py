@@ -5,7 +5,7 @@ import requests
 def list_of_info():
     courses_list = []
     numbers_list = [1, 3, 1, 3, 2, 2, 2, 3, 3, 3, 3]
-    id_list = []
+    stream_name_list = []
 
     url = 'https://www.engineering.unsw.edu.au/computer-science-engineering/courses-programs/postgraduate-coursework/specialisations'
     page = requests.get(url)
@@ -25,7 +25,7 @@ def list_of_info():
     while start_of_paragraph:
         stream_name = start_of_paragraph.find('h3').get_text()
         if stream_name != 'COMPCS':
-            id_list.append(stream_name)
+            stream_name_list.append(stream_name)
         start_of_paragraph = start_of_paragraph.find_next('div', class_='paragraph')
 
-    return id_list, courses_list, numbers_list
+    return stream_name_list, courses_list, numbers_list
