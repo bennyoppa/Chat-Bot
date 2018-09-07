@@ -68,7 +68,7 @@ def get_stream_info(keywords, original_query):
                                     break
 
                     for k in range(len(areas)):
-                        if areas[k]['number'] != 0:
+                        if areas[k]['number'] <= 0:
                             result.append(areas[k])
         final_result.append(result)
     return final_result
