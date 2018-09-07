@@ -49,6 +49,7 @@ def get_stream_info(keywords, original_query):
     connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
     table = stream_db.Stream.objects
     final_result = []
+    original_query = [x.upper() for x in original_query]
 
     for keyword in keywords:
         result = []
