@@ -14,4 +14,8 @@ deliver a prototype for our project.
 
 week 6
 in last week, our team had a meeting and work together delivered a prototype of our bot, it now has the ability to give the information
-about course, beacause wfor now
+about course, and two more information table to go which are lecture and tream, two of my teammate are working on it. As for me, I'm working on design a more reasonable and more beautiful UI,look for more css frame and js to make our UI better.
+
+week 7
+I have make some progress on UI design, it now can prompt a new window from current page by click a button or a image.
+and for the backgroud I decide to keep playing a video which is related to our project. there are still some bugs need to be fixd. 
