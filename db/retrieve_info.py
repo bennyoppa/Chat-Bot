@@ -21,7 +21,7 @@ def get_info(table, keyword, query):
         return get_stream_info(keyword, query)
     elif table == 'staff':
         pass
-    return 'Wrong table name.'
+    return None
 
 
 def get_course_info(keyword, query):
@@ -37,10 +37,10 @@ def get_course_info(keyword, query):
                 info = json.loads(doc.to_json())
                 for key in query:
                     if key not in query:
-                        return "Wrong desired output."
+                        return None
                     result[key] = info[key]
             return result
-    return "Not found."
+    return None
 
 
 def get_stream_info(keyword, query):
