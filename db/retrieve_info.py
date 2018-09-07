@@ -15,6 +15,8 @@ def create_stream_db():
 
 
 def get_info(table, keywords, query):
+    keywords = [x.upper() for x in keywords]
+    query = [x.lower() for x in query]
     if table == 'course':
         return get_course_info(keywords, query)
     elif table == 'stream':
