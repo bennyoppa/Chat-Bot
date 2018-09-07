@@ -2,6 +2,7 @@
 Example for Stream retrieval
 
 get_info(table_name, keywords, query)
+
 get_info('stream', ['COMPAS', 'COMPSS], ['COMP9444', 'COMP9318', 'COMP9417'])
 
 
