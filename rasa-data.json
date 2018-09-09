@@ -41,7 +41,7 @@
         "entities": [
           {
             "start": 30,
-            "end": 40,
+            "end": 41,
             "value": "Eric Martin",
             "entity": "key"
           },
@@ -84,13 +84,13 @@
         ]
       },
       {
-        "text": "What is the prerequisite of COMP9417?",
+        "text": "What is the prerequisite of COMP9999?",
         "intent": "course",
         "entities": [
           {
             "start": 28,
             "end": 36,
-            "value": "COMP9417",
+            "value": "COMP9999",
             "entity": "key"
           },
           {
@@ -112,8 +112,8 @@
         "intent": "course",
         "entities": [
           {
-            "start": 38,
-            "end": 46,
+            "start": 39,
+            "end": 47,
             "value": "COMP9922",
             "entity": "key"
           },
@@ -125,7 +125,7 @@
           },
           {
             "start": 13,
-            "end": 34,
+            "end": 35,
             "value": "pre_requisite",
             "entity": "att"
           }
@@ -143,16 +143,58 @@
           },
           {
             "start": 13,
-            "end": 34,
+            "end": 35,
             "value": "pre_requisite",
             "entity": "att"
           }
         ]
       },
       {
-        "text": "What are the enrolment requirements of it?",
+        "text": "What is the prerequisite of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP9999",
+            "entity": "key"
+          },
+          {
+            "start": 41,
+            "end": 49,
+            "value": "comp9022",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What are the prerequisite and name of COMP9999 and comp9022?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "COMP9999",
+            "entity": "key"
+          },
+          {
+            "start": 51,
+            "end": 59,
+            "value": "comp9022",
+            "entity": "key"
+          },
           {
             "start": 0,
             "end": 8,
@@ -161,23 +203,30 @@
           },
           {
             "start": 13,
-            "end": 34,
+            "end": 25,
             "value": "pre_requisite",
+            "entity": "att"
+          },
+          {
+            "start": 30,
+            "end": 34,
+            "value": "name",
             "entity": "att"
           }
         ]
       },
+      
 
 
 
       {
-        "text": "Is COMP9021 an adk course?",
+        "text": "Is COMP9417 an adk course?",
         "intent": "course",
         "entities": [
           {
             "start": 3,
             "end": 11,
-            "value": "COMP9021",
+            "value": "COMP9417",
             "entity": "key"
           },
           {
@@ -217,6 +266,134 @@
             "entity": "att"
           }
         ]
+      },
+      {
+        "text": "Are COMP9020 and comp9034 adk courses?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Are",
+            "entity": "d"
+          },
+          {
+            "start": 4,
+            "end": 12,
+            "value": "COMP9020",
+            "entity": "key"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "comp9034",
+            "entity": "key"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "value": "adk",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "Are COMP9321 and comp9517 adk courses?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Are",
+            "entity": "d"
+          },
+          {
+            "start": 4,
+            "end": 12,
+            "value": "COMP9321",
+            "entity": "key"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "comp9517",
+            "entity": "key"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "value": "adk",
+            "entity": "att"
+          }
+        ]
+      },
+
+
+      {
+        "text": "What courses do I need to finish to declare COMPAS stream?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 44,
+            "end": 50,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "What subjects do I have to complete to declare COMPDS stream?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 47,
+            "end": 53,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I've completed COMP9414 and COMP9999, what other subjects do I have to study to declare COMPDS stream?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP9414",
+            "entity": "att"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP9999",
+            "entity": "att"
+          },
+          {
+            "start": 38,
+            "end": 42,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 88,
+            "end": 94,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ]
       }
     ],
 
@@ -224,6 +401,10 @@
       {
         "name": "course code",
         "pattern": "[a-zA-Z]{4}[0-9]{4}"
+      },
+      {
+        "name": "stream code",
+        "pattern": "[a-zA-Z]{6}"
       }
     ],
 
