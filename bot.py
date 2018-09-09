@@ -41,7 +41,7 @@ def reply(parsed_query):
                 if not deter:
                     answer += key.upper() + ':\n'
                     for i in info:
-                        answer += '\t' + i + info[i] + '\n'
+                        answer += '\t' + i + ': ' + info[i] + '\n'
 
                 else:
                     answer += key
