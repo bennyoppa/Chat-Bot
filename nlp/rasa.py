@@ -35,7 +35,7 @@ class RasaNLP(object):
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
 
-    def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff']):
+    def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff', 'stream']):
         # record the current subject for follow questions
         self.subject = None
 
@@ -99,6 +99,7 @@ class RasaNLP(object):
             if len(key):
                 self.subject = key
 
+            # need_reply,[]
             return True, [deterministic, res['intent']['name'], self.subject, att]
 
 
