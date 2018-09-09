@@ -1,0 +1,38 @@
+Week 2
+
+Formed a group of 4. We decided to pick topic 1 (conversational agent) for our project.
+Discussion about what epics we need to achieve eventually. Wrote draft proposal.
+
+Week 3
+
+Planned to create a Chat bot which can handle enquiries about CSE courses, including course
+recommendation, course vacancies, lecturer contact details, etc. Later on, make the agent more
+flexible and be able to adapt to various use scenarios. Defined 3 main epics of these project,
+which are natural language understanding, data collection and UI design. Finalised project
+proposal and submitted it. Started doing research.
+
+Week 4
+
+I focused on data crawling and collection. Starting with CSE postgraduate elective courses list.
+Use python library (BeautifulSoup) to extract useful info from HTML files, and store them in
+JSON or dictionary format. Simple demo during Tuesday lab. So far I can collect course code, course
+name, description, prerequisite and link of timetable for each CSE postgraduate course. However,
+still struggling with timetable collection due to its format. Need to make it less hard-coding as well.
+
+Week 5
+
+Used mongoengine (a python library for MongoDB) to create a NoSQL database for courses. The database is
+document-based, which means each document represent a course. Inside each document, there are details
+including course name, adk, prerequisite and description. Developed my part of code so that I can
+integrate mine with my teammates'. Prepare for next week's demo.
+
+Week 6
+
+Demonstrated our Chat Bot and planned for further development. Started to collect data for different
+CSE Postgraduate Streams.
+
+Week 7
+
+Created Stream database to store required courses of different areas of streams. Developed functions
+to retrieve details of streams. In this way, we can provide course recommendation based on user's input.
+Also, integrate my code with other team members' to prepare for next week's demo.
