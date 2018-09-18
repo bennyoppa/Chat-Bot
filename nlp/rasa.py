@@ -1,5 +1,6 @@
 import random
 import logging
+from db.retrieve_info import get_info
 
 ##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy
 ##python -m spacy download en
@@ -23,8 +24,8 @@ class RasaNLP(object):
         'Sorry, can\'t get what do you mean',
         'Try something else'
     ]
-    GREET_MSGS = ['Hola!', 'Privet!', 'Xin chào!']
-    INTENT_GREET = 'greet'
+    GREET_MSGS = ['Hola!', 'Hello.', 'Hi.']
+    INTENT_GREET = 'greet1'
 
     # intent: table names, table to search 
 ##    INTENTS = ['course', 'staff']
@@ -62,7 +63,7 @@ class RasaNLP(object):
     def parse(self, msg):
         return self.interpreter.parse(msg)
 
-    def find_reply(self, msg):
+    def _reply(self, msg):
         res = self.parse(msg)
         logging.info('rasa parse res: {}'.format(res))
 
@@ -115,8 +116,70 @@ class RasaNLP(object):
         return random.choice(self.COULD_NOT_PARSE_MSGS)
 
 
-##    def get_short_answer(self, table_key, att):
-##        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
+    def reply(self, msg):
+        
+        '''
+        takes RasaNLP parsed query as input
+        outputs the answer string for user
+        '''
+
+        parsed_query = self._reply(msg)
+        # used to construct answers to queries related to stream questions
+        stream = ['number', 'electives']
+
+        if parsed_query[0] is True:
+            # need_reply,[]
+            _, [deter, table, keyword, att] = parsed_query
+
+
+
+            try:
+                info_list = get_info(table, keyword, att)
+            except:
+                # parsed into undesired format
+                return random.choice(self.GREET_MSGS)
+
+            if not any(info_list):
+                # no record in DB
+                return random.choice(self.GREET_MSGS)
+            
+            answer = ''
+
+            for index in range(len(keyword)):
+                key = keyword[index]
+                info = info_list[index]
+
+                if table == 'course':
+                    
+                    if not deter:
+                        answer += key.upper() + ':\n'
+                        for i in info:
+                            answer += '\t' + i + ': ' + info[i] + '\n'
+
+                    else:
+                        answer += key
+                        for i in info:
+                            if info[i]:
+                                answer += ' is ' + i + ','
+                            else:
+                                answer += ' is not' + i + ','
+
+                        answer = answer[:-1] + '.' + '\n'
+
+                    
+                elif table == 'stream':
+                    answer += key.upper() + ':\n\tPlease choose'
+                    for i in range(len(info)):
+                        if i > 0:
+                            answer += '\n\tAnd'
+                        answer += ' ' + str(info[i][stream[0]]) + ' subjects from below:\n\t\t' \
+                                  + '\n\t\t'.join(info[i][stream[1]])
+                    answer += '\n'
+
+            return answer[:-1]
+        
+        return parsed_query
+
 
     # saves unparsed messages into a file
     def snapshot_unparsed_messages(self, filename):
@@ -127,10 +190,3 @@ class RasaNLP(object):
 
 
 
-##r = RasaNLP('../rasa-config.json', '../rasa-data.json', '../rasa-model')
-##
-##r.train()
-##
-##print(r.find_reply('Who is the tutor of COMP9417?'))
-##res = r.parse('Who is the LiC of COMP9417?')
-##print(res)

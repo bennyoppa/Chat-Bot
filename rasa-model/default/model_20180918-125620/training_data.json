@@ -2,41 +2,16 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey",
-        "intent": "greet1",
-        "entities": []
+        "intent": "greet",
+        "entities": [],
+        "text": "hey"
       },
       {
-        "text": "howdy",
-        "intent": "greet1",
-        "entities": []
-      },
-
-
-      {
-        "text": "how are you",
-        "intent": "greet2",
-        "entities": []
+        "intent": "greet",
+        "entities": [],
+        "text": "howdy"
       },
       {
-        "text": "how r u",
-        "intent": "greet2",
-        "entities": []
-      },
-      {
-        "text": "how's going",
-        "intent": "greet2",
-        "entities": []
-      },
-      {
-        "text": "how you feeling?",
-        "intent": "greet2",
-        "entities": []
-      },
-
-      
-      {
-        "text": "What is the mobile number of Rachid Hamadi?",
         "intent": "staff",
         "entities": [
           {
@@ -57,10 +32,10 @@
             "value": "mobile number",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the mobile number of Rachid Hamadi?"
       },
       {
-        "text": "What is the contact number of Eric Martin?",
         "intent": "staff",
         "entities": [
           {
@@ -81,10 +56,10 @@
             "value": "contact number",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the contact number of Eric Martin?"
       },
       {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "course",
         "entities": [
           {
@@ -105,10 +80,10 @@
             "value": "LiC",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       },
       {
-        "text": "What is the prerequisite of COMP9999?",
         "intent": "course",
         "entities": [
           {
@@ -129,10 +104,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9999?"
       },
       {
-        "text": "What are the enrolment requirements of COMP9922?",
         "intent": "course",
         "entities": [
           {
@@ -153,10 +128,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the enrolment requirements of COMP9922?"
       },
       {
-        "text": "What are the enrolment requirements of it?",
         "intent": "course",
         "entities": [
           {
@@ -171,10 +146,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the enrolment requirements of it?"
       },
       {
-        "text": "What is the prerequisite of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
           {
@@ -201,10 +176,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9999 and comp9022?"
       },
       {
-        "text": "What are the prerequisite and name of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
           {
@@ -237,14 +212,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the prerequisite and name of COMP9999 and comp9022?"
       },
-      
-
-
-
       {
-        "text": "Is COMP9417 an adk course?",
         "intent": "course",
         "entities": [
           {
@@ -265,10 +236,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Is COMP9417 an adk course?"
       },
       {
-        "text": "Is COMP9876 an adk course?",
         "intent": "course",
         "entities": [
           {
@@ -289,10 +260,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Is COMP9876 an adk course?"
       },
       {
-        "text": "Are COMP9020 and comp9034 adk courses?",
         "intent": "course",
         "entities": [
           {
@@ -319,10 +290,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Are COMP9020 and comp9034 adk courses?"
       },
       {
-        "text": "Are COMP9321 and comp9517 adk courses?",
         "intent": "course",
         "entities": [
           {
@@ -349,12 +320,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Are COMP9321 and comp9517 adk courses?"
       },
-
-
       {
-        "text": "What courses do I need to finish to declare COMPAS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -369,10 +338,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What courses do I need to finish to declare COMPAS stream?"
       },
       {
-        "text": "What subjects do I have to complete to declare COMPDS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -387,10 +356,10 @@
             "value": "COMPDS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What subjects do I have to complete to declare COMPDS stream?"
       },
       {
-        "text": "I've completed COMP9414 and COMP9999, what other subjects do I have to study to declare COMPDS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -417,10 +386,10 @@
             "value": "COMPDS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've completed COMP9414 and COMP9999, what other subjects do I have to study to declare COMPDS stream?"
       }
     ],
-
     "regex_features": [
       {
         "name": "course code",
@@ -431,15 +400,20 @@
         "pattern": "[a-zA-Z]{6}"
       }
     ],
-
     "entity_synonyms": [
       {
         "value": "lic",
-        "synonyms": ["Lecturer in charge", "Lecturer"]
+        "synonyms": [
+          "Lecturer in charge",
+          "Lecturer"
+        ]
       },
       {
         "value": "pre_requisite",
-        "synonyms": ["enrolment requirements", "requirements", "pre_requisite"]
+        "synonyms": [
+          "enrolment requirements",
+          "requirements"
+        ]
       }
     ]
   }
