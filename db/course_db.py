@@ -35,7 +35,7 @@ def add_courses():
         page = requests.get('http://www.handbook.unsw.edu.au/postgraduate/courses/2019/' + course_codes[i])
         soup = BeautifulSoup(page.content, "html.parser")
         if soup.find(text='Conditions for Enrolment'):
-            pre_req = soup.find_all('h3')[1].find_next().find('div').get_text()
+            pre_req = soup.find_all('h3')[1].find_next().find('div').get_text()[15:]
             pre_req = pre_req.replace('\n', '')
 
         if soup.find('div', class_="a-card-text m-toggle-text has-focus"):
