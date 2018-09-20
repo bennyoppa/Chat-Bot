@@ -1,5 +1,6 @@
 from mongoengine import *
 import csv
+import requests
 
 
 class Staff(Document):
@@ -21,6 +22,11 @@ class Staff(Document):
 
 
 def create_staff():
+    url = 'https://raw.githubusercontent.com/bennyoppa/Chat-Bot/master/multi_location_data/Contact_Details_Staff_Type.csv?token=AXsox4yMmg64M63cK84cbgu-0xVP5oJjks5brKIuwA%3D%3D'
+    response = requests.get(url)
+    with open('staff_details.csv', 'wb') as output_file:
+        output_file.write(response.content)
+
     first_line = True
     with open('staff_details.csv') as raw_file:
         file = csv.reader(raw_file, delimiter=',')
