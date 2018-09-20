@@ -31,6 +31,8 @@ if __name__ == '__main__':
                 create_course_db()
             elif db_name == 'stream':
                 create_stream_db()
+            elif db_name == 'staff':
+                create_staff_db()
             else:
                 print('Wrong database name.')
             print()
