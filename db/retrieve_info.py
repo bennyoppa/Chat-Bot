@@ -28,7 +28,7 @@ def get_info(table, keywords, query):
     elif table == 'stream':
         return get_stream_info(keywords, query)
     elif table == 'staff':
-        pass
+        return get_staff_info(keywords, query)
     return None
 
 
@@ -79,5 +79,24 @@ def get_stream_info(keywords, original_query):
                     for k in range(len(areas)):
                         if areas[k]['number'] > 0:
                             result.append(areas[k])
+        final_result.append(result)
+    return final_result
+
+
+def get_staff_info(keywords, query):
+    connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
+    table = staff_db.Staff.objects
+    final_result = []
+
+    for keyword in keywords:
+        result = {}
+        for doc in table:
+            if doc._id == keyword:
+                if len(query) == 0:
+                    result = json.loads(doc.to_json())
+                else:
+                    info = json.loads(doc.to_json())
+                    for key in query:
+                        result[key] = info[key]
         final_result.append(result)
     return final_result
