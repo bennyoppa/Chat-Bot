@@ -1,6 +1,7 @@
 from mongoengine import *
 from db import course_db
 from db import stream_db
+from db import staff_db
 import json
 
 
@@ -12,6 +13,11 @@ def create_course_db():
 def create_stream_db():
     stream_db.create_streams()
     return "Stream database created."
+
+
+def create_staff_db():
+    staff_db.create_staff()
+    return "Staff database created."
 
 
 def get_info(table, keywords, query):
