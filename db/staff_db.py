@@ -1,4 +1,5 @@
 from mongoengine import *
+import csv
 
 
 class Staff(Document):
@@ -20,4 +21,19 @@ class Staff(Document):
 
 
 def create_staff():
-    pass
+    first_line = True
+    with open('staff_details.csv') as raw_file:
+        file = csv.reader(raw_file, delimiter=',')
+        for row in file:
+            if first_line:
+                first_line = False
+            else:
+                if row:
+                    if row[4] == 'Staff':
+                        row[4] = 'lecturer'
+                    else:
+                        row[4] = 'tutor'
+                    connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
+                    staff = Staff(row[0], row[1], row[2], row[3], row[4])
+                    staff.save()
+                    print(row[0])
