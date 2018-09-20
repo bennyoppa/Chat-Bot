@@ -36,3 +36,12 @@ Week 7
 Created Stream database to store required courses of different areas of streams. Developed functions
 to retrieve details of streams. In this way, we can provide course recommendation based on user's input.
 Also, integrate my code with other team members' to prepare for next week's demo.
+
+Week 8
+
+Demonstrated Chat bot and planned for next demo.
+
+Week 9
+
+Created another table for staff details. Waited for team member to collect more teaching details. Also,
+wrote search functions for 'Staff' table.
