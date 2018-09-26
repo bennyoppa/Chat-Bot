@@ -24,11 +24,31 @@ class RasaNLP(object):
         'Sorry, can\'t get what do you mean',
         'Try something else'
     ]
-    GREET_MSGS = ['Hola!', 'Hello.', 'Hi.']
-    INTENT_GREET = 'greet1'
+    
+    INTENT_GREET1 = 'greet1'
+    GREET_MSGS1 = ['Hello.', 'Hi.', 'Hey.', 'Hihi.']
+
+    INTENT_GREET2 = 'greet2'
+    GREET_MSGS2 = [
+        'Fine, thank you, how may I help you.',
+        'Pretty good, thank you for asking, how may I help you.'
+        ]
+
+##    INTENT_SELF = 'self'
+    SELF_MSG = ['My name is UNSW CSE Chat-Bot, I can answer CSE enrolment related questions.']
+
+    INTENT_UNRELATED = 'unrelated'
+    UNRELATED_MSG = ['Sorry, I can only answer questions related to CSE courses, streams and staff.']
+
+##    INTENT_FUNC = 'function'
+##    FUNC_MSG = ['I can provide course recommendation and information retrieval of CSE courses, streams and staff.']
+
+    INTENT_CHALLENGE = 'challenge'
+    CHALLENGE_MSG = ['I\'m able to assist you with CSE-related questions.']
+
+    ENTITY_SELF = 'self'
 
     # intent: table names, table to search 
-##    INTENTS = ['course', 'staff']
 
     # entity: keywords
     ENTITY_DET = 'd'
@@ -72,8 +92,29 @@ class RasaNLP(object):
             self.unparsed_messages.append(msg)
             return random.choice(self.COULD_NOT_PARSE_MSGS)
 
-        if res['intent']['name'] == self.INTENT_GREET:
-            return random.choice(self.GREET_MSGS)
+        if res['intent']['name'] == self.INTENT_GREET1:
+            return random.choice(self.GREET_MSGS1)
+
+        if res['intent']['name'] == self.INTENT_GREET2:
+            return random.choice(self.GREET_MSGS2)
+        
+##        if res['intent']['name'] == self.INTENT_SELF:
+##            return random.choice(self.SELF_MSG)
+        
+        if res['intent']['name'] == self.INTENT_UNRELATED:
+##            if not any(res['entities']):
+##                return random.choice(self.UNRELATED_MSG)
+
+            if self.ENTITY_SELF in [e['entity'] for e in res['entities']]:
+                return random.choice(self.SELF_MSG)
+            
+            return random.choice(self.UNRELATED_MSG)
+        
+##        if res['intent']['name'] == self.INTENT_FUNC:
+##            return random.choice(self.FUNC_MSG)
+        
+        if res['intent']['name'] == self.INTENT_CHALLENGE:
+            return random.choice(self.CHALLENGE_MSG)
 
 
 
@@ -101,7 +142,7 @@ class RasaNLP(object):
                 self.subject = key
 
             # need_reply,[]
-            return True, [deterministic, res['intent']['name'], self.subject, att]
+            return deterministic, res['intent']['name'], self.subject, att
 
 
 
@@ -127,9 +168,9 @@ class RasaNLP(object):
         # used to construct answers to queries related to stream questions
         stream = ['number', 'electives']
 
-        if parsed_query[0] is True:
+        if type(parsed_query) is tuple:
             # need_reply,[]
-            _, [deter, table, keyword, att] = parsed_query
+            deter, table, keyword, att = parsed_query
 
 
 
@@ -137,11 +178,13 @@ class RasaNLP(object):
                 info_list = get_info(table, keyword, att)
             except:
                 # parsed into undesired format
-                return random.choice(self.GREET_MSGS)
+                self.unparsed_messages.append(msg)
+                return random.choice(self.COULD_NOT_PARSE_MSGS)
 
             if not any(info_list):
                 # no record in DB
-                return random.choice(self.GREET_MSGS)
+                self.unparsed_messages.append(msg)
+                return random.choice(self.COULD_NOT_PARSE_MSGS)
             
             answer = ''
 

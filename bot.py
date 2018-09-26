@@ -1,4 +1,5 @@
 from nlp.rasa import RasaNLP
+from SpeechRecognition.SpeechRecognition import BotSR
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -121,6 +122,7 @@ q42 = "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
 nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
 nlp.train()
 
+botsr = BotSR()
 
 
 ##print(reply(nlp.find_reply(q4)))
@@ -138,6 +140,19 @@ def test():
         print(nlp.reply(q))
 
     nlp.snapshot_unparsed_messages('unparsed.txt')
+
+def test2():
+    print('Tell me your question:')
+    audio = botsr.capture()
+    q = botsr.speech_to_text(audio)
+    print(nlp.reply(q))
+
+    nlp.snapshot_unparsed_messages('unparsed.txt')
+
+
+
+test()
+
 
 ### parse query
 ##parsed_query = nlp.find_reply(q)

@@ -17,4 +17,3 @@ What can you do? / Tell me something about you. (I can provide course recommenda
 
 How smart are you? (I'm smart enough to assist you with CSE-related questions.)
 	intent: challenge
-	entity: smart
