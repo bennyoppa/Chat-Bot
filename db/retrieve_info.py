@@ -90,6 +90,7 @@ def get_staff_info(keywords, query):
 
     for keyword in keywords:
         result = {}
+        keyword = staff_db.change_name_format(keyword)
         for doc in table:
             if doc._id == keyword:
                 if len(query) == 0:
