@@ -104,6 +104,11 @@
         "entities": []
       },
       {
+        "text": "Did you see the movie last night?",
+        "intent": "unrelated",
+        "entities": []
+      },
+      {
         "text": "What can you do???",
         "intent": "unrelated",
         "entities": [
@@ -116,7 +121,7 @@
         ]
       },
       {
-        "text": "What r you able to do",
+        "text": "What are you able to do",
         "intent": "unrelated",
         "entities": [
           {
@@ -194,7 +199,7 @@
           {
             "start": 12,
             "end": 25,
-            "value": "mobile number",
+            "value": "phone",
             "entity": "att"
           }
         ]
@@ -218,11 +223,68 @@
           {
             "start": 12,
             "end": 26,
-            "value": "contact number",
+            "value": "phone",
             "entity": "att"
           }
         ]
       },
+      {
+        "text": "How to contact Lina Yao?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "Lina Yao",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "How to contact John Shepherd or Alex Linker?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 15,
+            "end": 28,
+            "value": "John Shepherd",
+            "entity": "key"
+          },
+          {
+            "start": 32,
+            "end": 43,
+            "value": "Alex Linker",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ]
+      },
+
+
+
       {
         "text": "Who is the LiC of COMP9900?",
         "intent": "course",
@@ -555,6 +617,72 @@
             "start": 88,
             "end": 94,
             "value": "COMPDS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I've done COMP4121 and COMP9417, am I eligible to declare COMPAS stream?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "COMP4121",
+            "entity": "att"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP9417",
+            "entity": "att"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "am",
+            "entity": "nd"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I've completed COMP3121 and COMP3111, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP3121",
+            "entity": "att"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP3111",
+            "entity": "att"
+          },
+          {
+            "start": 38,
+            "end": 42,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 88,
+            "end": 94,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 106,
+            "end": 112,
+            "value": "COMPAS",
             "entity": "key"
           }
         ]

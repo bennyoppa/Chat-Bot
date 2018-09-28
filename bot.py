@@ -1,6 +1,14 @@
 from nlp.rasa import RasaNLP
 from SpeechRecognition.SpeechRecognition import BotSR
 
+from db.retrieve_info import get_info
+
+# stream, no record and eligible are the same.
+#                       return True
+
+qs = "I've completed COMP6714 and comp9313 and COMP9321, \
+    what other subjects do I have to study to declare COMPDS stream and COMPAS?"
+
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -151,7 +159,7 @@ def test2():
 
 
 
-##test()
+test()
 
 
 ### parse query

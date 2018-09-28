@@ -18,12 +18,15 @@ from rasa_nlu.components import ComponentBuilder
 
 
 class RasaNLP(object):
-    COULD_NOT_PARSE_MSGS = [
-        'Sorry, I don\'t know it',
-        'Next time I will know, but not now',
-        'Sorry, can\'t get what do you mean',
-        'Try something else'
-    ]
+    COULD_NOT_PARSE_MSGS = ['Sorry, I don\'t know it',
+                            'Next time I will know, but not now',
+                            'Sorry, can\'t get what do you mean',
+                            'Try something else'
+                            ]
+
+    NO_RECORD = ['Sorry, I could not find what you are looking for',
+                 'Sorry, there is no record found in my database for your question',
+                 ]
     
     INTENT_GREET1 = 'greet1'
     GREET_MSGS1 = ['Hello.', 'Hi.', 'Hey.', 'Hihi.']
@@ -163,6 +166,17 @@ class RasaNLP(object):
         takes RasaNLP parsed query as input
         outputs the answer string for user
         '''
+        _answers = ['Sure, this is what I found:\n',
+                    'OK, I found this:\n',
+                    'Not a problem.\n',
+                    'No problem at all.\n',
+                    'Sure, I can do this.\n',
+                    '',
+                    '',
+                    '',
+                    ]
+
+
 
         parsed_query = self._reply(msg)
         # used to construct answers to queries related to stream questions
@@ -171,6 +185,14 @@ class RasaNLP(object):
         if type(parsed_query) is tuple:
             # need_reply,[]
             deter, table, keyword, att = parsed_query
+
+
+            # replace 'contact' in att for staff table
+            try:
+                idx = att.index('contact')
+                att[idx:idx+1] = ('email', 'phone')
+            except:
+                pass
 
 
 
@@ -184,13 +206,20 @@ class RasaNLP(object):
             if not any(info_list):
                 # no record in DB
                 self.unparsed_messages.append(msg)
-                return random.choice(self.COULD_NOT_PARSE_MSGS)
+                return random.choice(self.NO_RECORD)
             
-            answer = ''
+            answer = random.choice(_answers)
 
             for index in range(len(keyword)):
                 key = keyword[index]
                 info = info_list[index]
+
+                if not any(info):
+                    if not deter:
+                        answer += key + ': \n\tNo record found\n'
+                    else:
+                        answer += key + ': No record found\n'
+                    continue
 
                 if table == 'course':
                     
@@ -205,19 +234,37 @@ class RasaNLP(object):
                             if info[i]:
                                 answer += ' is ' + i + ','
                             else:
-                                answer += ' is not' + i + ','
+                                answer += ' is not ' + i + ','
 
                         answer = answer[:-1] + '.' + '\n'
 
                     
                 elif table == 'stream':
-                    answer += key.upper() + ':\n\tPlease choose'
+                    answer += key.upper()
+
+                    if not any(info):
+                        # meet the requirement
+                        answer += ': you are eligible to declare this stream, congratulations!\n'
+                        continue
+                    else:
+                        answer += ':\n\tPlease choose'
+
+                        
                     for i in range(len(info)):
                         if i > 0:
                             answer += '\n\tAnd'
                         answer += ' ' + str(info[i][stream[0]]) + ' subjects from below:\n\t\t' \
                                   + '\n\t\t'.join(info[i][stream[1]])
                     answer += '\n'
+
+                elif table == 'staff':
+                    answer += key + ':\n'
+                    for i in info:
+                        if info[i] == 'N/A':
+                            answer += '\t' + i + ': No record' + '\n'
+                        else:
+                            answer += '\t' + i + ': ' + info[i] + '\n'
+
 
             return answer[:-1]
         
