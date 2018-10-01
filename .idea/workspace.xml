@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79a9d524-36a1-4f11-94d8-25c472787def" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/UI/static/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/3jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/UNSW.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/enter-stop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/hua.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/msg-input.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/touxiang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/touxiang1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/touxiangm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/touxiangm2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/images/xiaolian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/js/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/js/flexible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/p01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/unsw1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/static/unsw2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/static/botui-theme-default.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/static/botui-theme-default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/static/botui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/UI/static/botui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/static/human.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/static/layer/theme/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/static/layer/theme/default/layer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/static/robot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mychatbot/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mychatbot/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/rasa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ChatUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ChatUI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,41 +43,41 @@
         <counts>
           <entry key="Django Console" value="28" />
           <entry key="css" value="204" />
-          <entry key="html" value="5797" />
-          <entry key="js" value="94" />
-          <entry key="py" value="1493" />
+          <entry key="html" value="5813" />
+          <entry key="js" value="105" />
+          <entry key="py" value="1508" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="204" />
-          <entry key="HTML" value="5798" />
-          <entry key="JavaScript" value="93" />
+          <entry key="HTML" value="5814" />
+          <entry key="JavaScript" value="104" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1521" />
+          <entry key="Python" value="1536" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="26" />
           <entry key="gif" value="1" />
-          <entry key="html" value="27" />
+          <entry key="html" value="29" />
           <entry key="jpg" value="10" />
-          <entry key="js" value="20" />
+          <entry key="js" value="21" />
           <entry key="json" value="4" />
           <entry key="png" value="12" />
-          <entry key="py" value="42" />
+          <entry key="py" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="26" />
-          <entry key="HTML" value="27" />
+          <entry key="HTML" value="29" />
           <entry key="Image" value="23" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="20" />
-          <entry key="Python" value="42" />
+          <entry key="JavaScript" value="21" />
+          <entry key="Python" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -132,20 +89,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/ChatUI.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="236">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/urls.py">
+        <entry file="file://$PROJECT_DIR$/UI/static/botui.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            <state relative-caret-position="46">
+              <caret line="9" column="3905" selection-start-line="9" selection-start-column="3905" selection-end-line="9" selection-end-column="3905" />
             </state>
           </provider>
         </entry>
@@ -153,8 +110,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+            <state relative-caret-position="374">
+              <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -162,20 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="-1204">
               <caret line="79" column="95" selection-start-line="79" selection-start-column="95" selection-end-line="79" selection-end-column="95" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/static/botui-theme-default.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="1001" selection-start-line="1" selection-start-column="1001" selection-end-line="1" selection-end-column="1001" />
             </state>
           </provider>
         </entry>
@@ -193,9 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>botui-message-content.text</find>
-      <find>botui-app-container</find>
-      <find>300px</find>
       <find>botui-actions-text-input</find>
       <find>m</find>
       <find>max</find>
@@ -223,6 +174,9 @@
       <find>throw</find>
       <find>innerh</find>
       <find>.botui-actions-text-submit</find>
+      <find>go</find>
+      <find>isMobile</find>
+      <find>Go</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -246,7 +200,6 @@
         <option value="$PROJECT_DIR$/UI/static/layer/theme/default/layer.css" />
         <option value="$PROJECT_DIR$/nlp/rasa.py" />
         <option value="$PROJECT_DIR$/db/retrieve_info.py" />
-        <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/templates/test2.html" />
         <option value="$PROJECT_DIR$/templates/test3.html" />
@@ -257,11 +210,12 @@
         <option value="$PROJECT_DIR$/UI/static/vue.min.js" />
         <option value="$PROJECT_DIR$/UI/index.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/UI/static/botui.min.js" />
-        <option value="$PROJECT_DIR$/UI/views.py" />
         <option value="$PROJECT_DIR$/UI/static/botui-theme-default.css" />
         <option value="$PROJECT_DIR$/templates/mainpage.html" />
         <option value="$PROJECT_DIR$/templates/ChatUI.html" />
+        <option value="$PROJECT_DIR$/UI/static/botui.min.js" />
+        <option value="$PROJECT_DIR$/UI/views.py" />
+        <option value="$PROJECT_DIR$/bot.py" />
       </list>
     </option>
   </component>
@@ -271,7 +225,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="547" />
     <option name="y" value="51" />
     <option name="width" value="1163" />
@@ -439,12 +393,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27025586" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27025586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.29035753" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.29035753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -615,36 +569,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UI/static/chat.css" />
-    <entry file="file://$PROJECT_DIR$/UI/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UI/static/vue.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/static/botui.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="9" column="9088" selection-start-line="9" selection-start-column="9082" selection-end-line="9" selection-end-column="9088" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -660,20 +586,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UI/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="-1204">
           <caret line="79" column="95" selection-start-line="79" selection-start-column="95" selection-end-line="79" selection-end-column="95" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ChatUI.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="236">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/static/botui.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="9" column="3905" selection-start-line="9" selection-start-column="3905" selection-end-line="9" selection-end-column="3905" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
         </state>
       </provider>
     </entry>
