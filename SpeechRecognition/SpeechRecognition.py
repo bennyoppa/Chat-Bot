@@ -31,7 +31,9 @@ class BotSR(object):
         try:
             text = self.speech_to_text(audio)
             text = self.preprocess_text(text)
-        except sr.UnknowValueError:
+        except sr.UnknownValueError:
+            return False
+        except sr.WaitTimeoutError:
             return False
 
         return text
@@ -43,7 +45,7 @@ class BotSR(object):
 
 
 
-##botsr = BotSR()
+botsr = BotSR()
 ##audio = botsr.capture()
 ##
 ##print(botsr.speech_to_text(audio))
