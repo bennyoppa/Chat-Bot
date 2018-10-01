@@ -15,7 +15,10 @@ if __name__ == '__main__':
             if len(match_keyword) == 0:
                 match_keyword = []
             else:
-                match_keyword = re.split(' ', match_keyword)
+                if table_name == 'staff':
+                    match_keyword = re.split(',', match_keyword)
+                else:
+                    match_keyword = re.split(' ', match_keyword)
             output = input("Enter query: ")
             if len(output) == 0:
                 output = []
