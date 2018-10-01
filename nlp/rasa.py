@@ -96,6 +96,8 @@ class RasaNLP(object):
                 elif e['entity'] == self.ENTITY_KEY:
                     key += [e['value']]
 
+
+            print('rara: ', key)
             if len(key):
                 self.subject = key
 

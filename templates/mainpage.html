@@ -44,26 +44,108 @@ video {
        function askme() {
            layer.open({
                type: 2,
-               title: 'Ask me!',
+               title: 'Ask me 🤖!',
                shadeClose: true,
                shade: false,
                maxmin: false, //开启最大化最小化按钮
-               area: ['650px', '600px'],
-               content:'http://127.0.0.1:8000/UI/Chatbot_iframe'
+               closeBtn:2,
+               area: ['634px', '600px'],
+               scrollbar:false,
+               resize:false,
+               anim:4,
+               content:'Chatbot_iframe',
+               cancel:
+                   function(){
+                     layer.msg('hope this helps 😉!', {time: 3000, icon:6});
+                   }
            });
+       }
+
+       function onmyclick(url){
+            window.open(url);
        }
  </script>
 </head>
 
 <body>
     {% load static %}
+
+
+    <div id="mydiv">
+    <strong>
+                            <p>
+                             Hi there! I am a chatbot! you can ask me for information about cse/Unsw! Such as:
+                                <br/>
+                             <br><a onclick=onmyclick("https://www.engineering.unsw.edu.au/study-with-us/current-students/academic-information/electives/pg-electives")>Information about courses.</a>
+                                <br><a onclick=onmyclick("https://student.unsw.edu.au/staff")>Information about staffs.</a>
+                                <br><a onclick=onmyclick("http://legacy.handbook.unsw.edu.au/postgraduate/specialisations/2018/ComputerScienceEngineering.html")>Information about streams.</a>
+                             <br/>
+                                <br>For example: ask me "What is the prerequisite of coMp9024?"
+                             <br>Now,click me and try it!!
+                            </p>
+</strong>
+    </div>
     <video class="abc"  preload muted autoplay loop id="video">
-        <source src="{% static "myvideo.mp4" %}" type="video/webm">
-        <source src="{% static "myvideo.mp4" %}">
+        <source src="{% static "UNSW.mp4" %}" type="video/webm">
+        <source src="{% static "UNSW.mp4" %}">
     </video>
 
-    <div id="ask_me" onclick="askme()" style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 9999; position: fixed; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
+    <div id="ask_me" onclick="askme()"  style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 999; position: absolute;left: 250px;top:350px; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
+<style>
+   a{color: #030000;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-decoration: none;
+        margin-left: 45px;
+   }
+    div {
+    display: block;
+}
+    #header #header-top #faculty-site-name {
+    left: 230px;
+    position: absolute;
+    top: 28px;
+}
+    #header div.section .region-header {
+    float: right;
+}
+    #header div.section {
+    margin: 0 auto;
+    position: relative;
+}
+    iframe{
+        width: 400px;
+        height: 270px;
+        border: 0px;
+    }
+    #mydiv{
+        background-image: url("{% static "13.png" %}");
+        width: 450px;
+        height: 300px;
+        background-size: cover;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 50px;
+        opacity:0.8;
+       filter:alpha(opacity=90);
+        z-index: 1000;
+    }
+    p{
+        font-size: 1.1em;
+        color: black;
+        font-family: Garamond;
+        width: 375px;
+        height:228px;
+        margin-top: 37px;
+        margin-left: 45px;
+        background-color: rgba(222, 222, 222, 0.4);
+        z-index: -1000;
+    }
+    a:hover{
+    color: #19ff3d;
+    }
 
+</style>
 </body>
 </html>
 

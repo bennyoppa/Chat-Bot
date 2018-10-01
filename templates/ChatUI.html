@@ -14,40 +14,20 @@
 <body>
 {% csrf_token %}
 
-			<div class="botui-app-container" id="mychatbotUI">
+			<div class="botui-app-container" id="mychatbotUI" >
 			      <bot-ui></bot-ui>
 			</div>
-
-	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="{% static "botui.min.js"%}"></script>
+    <script src="{% static "vue.min.js"%}"></script>
 	<script type="text/javascript">
 		var homeBot = BotUI('mychatbotUI');
-        //var homeBot=document.getElementById('test')
 		homeBot.message.add({
           delay: 1000,
-		  content: 'Sup,CSE student！'
-		}).then(function () {
-		  return homeBot.message.add({
-		    delay: 1000,
-		    content: 'wanna see something cool？'
-		  });
-		}).then(function () {
-		  return homeBot.action.button({
-		    delay: 1000,
-		    action: [{
-		      text: 'OK!',
-		      value: 'sure'
-		    }, {
-		      text: 'Nah😒',
-		      value: 'skip'
-		    }]
-		  });
+		  content: '🤖:Hi, my name is Uri. I\'m an intelligent chatting bot. I can answer CSE course enrolment related questions.'
 		}).then(function (res) {
-		  if(res.value == 'sure') {
-		      mytutorial();
 		      loopfuc3();
-		  }
+
 		  if(res.value == 'skip') {
 		    end();
 		  }
@@ -56,11 +36,11 @@
 		var mytutorial = function () {
 		    homeBot.message.add({
 		    delay: 1000,
-		    content: "cool, try to ask me some course information about cse"
+		    content: "🤖: cool, try to ask me some course information about cse"
 		  }).then(function () {
 		      homeBot.message.add({
 		      delay: 1000,
-		      content: 'like which course you want to know more about it？（click enter after type in..）'
+		      content: '🤖: like which course you want to know more about it？（hit enter after type in..）'
 		    });
         })}
 
@@ -72,7 +52,7 @@
 		        placeholder: 'type in please...'
 		      }
 		  }).then(function (res) {
-		    var data = JSON.stringify({"content":res.value})
+		      var data = JSON.stringify({"content":res.value})
               $.ajax({
                 url:"Chatbot_sub",
                 contentType:'application/json;charset=UTF-8',
@@ -82,14 +62,16 @@
                     var token =  $('input[name=csrfmiddlewaretoken]').val()
                     xhr.setRequestHeader("X-CSRFToken",token);
                 },
-                success:function (data) {
-                      return homeBot.message.bot({
-		              delay: 500,
-		              content: data + ', is that your want?'
-		    }).then(function () {
-                         loopfuc3();
+                success:
+                    function (data) {
+                     console.log(data)
+                      return homeBot.message.add({
+		              delay: 0,
+		              content: '🤖: <br>'+data
+		         }).then(function () {
+                        loopfuc3();
                       });
-                },error:function (error) {
+                 },error:function (error) {
                     console.log(error)
                 }
             })
@@ -102,8 +84,9 @@
 		    content: 'see ya!'
 		  });
 		};
-
-
 	</script>
+<style>
+html { overflow-y:hidden; }
+</style>
 </body>
 </html>
