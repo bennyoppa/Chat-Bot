@@ -210,7 +210,8 @@ class RasaNLP(object):
                 self.unparsed_messages.append(msg)
                 return random.choice(self.NO_RECORD)
             
-            answer = random.choice(_answers)
+##            answer = random.choice(_answers)
+            answer = ''
 
             for index in range(len(keyword)):
                 key = keyword[index]
