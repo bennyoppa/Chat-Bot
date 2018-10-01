@@ -99,7 +99,7 @@ def Chatbot_sub(req):
           #reply = ''
           #for q in answer:
           #     reply += answer[q] + '\n'
-          answer = reply(nlp.find_reply(data['content']))
+          answer = reply(nlp.reply(data['content']))
           print('view: ', nlp.subject)
 
           return HttpResponse(json.dumps(answer), content_type='application/json')
