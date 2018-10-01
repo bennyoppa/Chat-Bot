@@ -778,6 +778,36 @@
         ]
       },
       {
+        "text": "I've done COMP6587 and COMP3485, am I eligible to declare COMPAS stream?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "COMP6587",
+            "entity": "att"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP3485",
+            "entity": "att"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "am",
+            "entity": "nd"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
         "text": "I've completed COMP3121 and COMP3111, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
         "intent": "stream",
         "entities": [

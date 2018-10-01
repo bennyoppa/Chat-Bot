@@ -242,7 +242,7 @@ class RasaNLP(object):
                 elif table == 'stream':
                     answer += key.upper()
 
-                    if not any(info):
+                    if info is True:
                         # meet the requirement
                         answer += ': you are eligible to declare this stream, congratulations!\n'
                         continue
