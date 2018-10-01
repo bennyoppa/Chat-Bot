@@ -16,7 +16,8 @@ def create_stream_db():
 
 
 def create_staff_db():
-    staff_db.create_staff()
+    # staff_db.create_staff()
+    staff_db.add_details()
     return "Staff database created."
 
 
@@ -83,14 +84,12 @@ def get_stream_info(keywords, original_query):
                             result.append(areas[k])
         if result:
             final_result.append(result)
-
-    if found:
-        if not final_result:
-            return [True]
         else:
-            return final_result
-    else:
-        return final_result
+            if found:
+                final_result.append([True])
+            else:
+                final_result.append(result)
+    return final_result
 
 
 def get_staff_info(keywords, query):
