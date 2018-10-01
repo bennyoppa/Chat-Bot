@@ -466,6 +466,36 @@
         ]
       },
       {
+        "text": "What is the name of COMP9021 and comp9318?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "COMP9021",
+            "entity": "key"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "comp9318",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "name",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "What are the prerequisite and name of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
@@ -497,6 +527,42 @@
             "start": 30,
             "end": 34,
             "value": "name",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What are the prerequisite and lic of COMP3121 and comp4122?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 37,
+            "end": 45,
+            "value": "COMP3121",
+            "entity": "key"
+          },
+          {
+            "start": 50,
+            "end": 58,
+            "value": "comp4122",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 25,
+            "value": "pre_requisite",
+            "entity": "att"
+          },
+          {
+            "start": 30,
+            "end": 33,
+            "value": "lic",
             "entity": "att"
           }
         ]

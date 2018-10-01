@@ -150,16 +150,20 @@ def test():
     nlp.snapshot_unparsed_messages('unparsed.txt')
 
 def test2():
-    print('Tell me your question:')
-    audio = botsr.capture()
-    q = botsr.speech_to_text(audio)
-    print(nlp.reply(q))
+    while 1:
+        print('Tell me your question:')
+        q = botsr.recognise()
+        if q is False:
+            print('Sorry, I didn\'t hear what you just said')
+        else:
+            print(nlp.reply(q))
+
 
     nlp.snapshot_unparsed_messages('unparsed.txt')
 
 
 
-test()
+##test2()
 
 
 ### parse query
