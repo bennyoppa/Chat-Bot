@@ -209,7 +209,7 @@ class RasaNLP(object):
                 return random.choice(self.NO_RECORD)
             
 ##            answer = random.choice(_answers)
-            answer = ''
+            answer = '\n'
 
             for index in range(len(keyword)):
                 key = keyword[index]
