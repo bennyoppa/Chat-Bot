@@ -141,8 +141,6 @@ class RasaNLP(object):
                 elif e['entity'] == self.ENTITY_KEY:
                     key += [e['value']]
 
-
-            print('rara: ', key)
             if len(key):
                 self.subject = key
 
@@ -211,7 +209,7 @@ class RasaNLP(object):
                 return random.choice(self.NO_RECORD)
             
 ##            answer = random.choice(_answers)
-            answer = ''
+            answer = '\n'
 
             for index in range(len(keyword)):
                 key = keyword[index]
