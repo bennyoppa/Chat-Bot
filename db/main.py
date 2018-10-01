@@ -15,7 +15,10 @@ if __name__ == '__main__':
             if len(match_keyword) == 0:
                 match_keyword = []
             else:
-                match_keyword = re.split(' ', match_keyword)
+                if table_name == 'staff':
+                    match_keyword = re.split(',', match_keyword)
+                else:
+                    match_keyword = re.split(' ', match_keyword)
             output = input("Enter query: ")
             if len(output) == 0:
                 output = []
@@ -31,6 +34,8 @@ if __name__ == '__main__':
                 create_course_db()
             elif db_name == 'stream':
                 create_stream_db()
+            elif db_name == 'staff':
+                create_staff_db()
             else:
                 print('Wrong database name.')
             print()

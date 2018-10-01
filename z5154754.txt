@@ -20,9 +20,9 @@ week 7
 Added functions to align with progress in database implementation, wrote more training data to handle related queries. Integrated with other members. Made several modifications to handle errors and corner cases.
 
 week 8
+Added more training data to handle more questions including both general and specific ones. Bit internal structure modifications for future development convenience.
 
-
-
+week 9
 
 
 
