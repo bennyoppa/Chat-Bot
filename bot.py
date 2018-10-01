@@ -109,7 +109,7 @@ warnings.filterwarnings('ignore')
 ##        return answer
 
 q01 = 'What is the pre_requisite of COMP9417?'
-q02 = 'What is the pre_requisite and name of COMP9517 and comp9418?'
+q02 = 'What is the pre_requisite and name of COMP9517?'
 
 ##????????
 ##q11 = 'Is COMP9417 an adk course?'
@@ -119,10 +119,10 @@ q11 = 'Is COMP9418 an adk course?'
 q12 = 'What is the prerequisite of it?'
 
 q21 = 'Are COMP9417 and comp9801 adk courses?'
-q22 = "What is the prerequisite of coMp9024 and comp9021?"
-q23 = "What are the prerequisite and name of coMp9024 and comp9021?"
+q22 = "What is the prerequisite of coMp9024?"
+q23 = "What are the prerequisite and name of coMp9024?"
 
-q3 = 'I\'ve done comp9021 and comp9024, am i eligible for COMPas stream?'
+##q3 = 'I\'ve done comp9021 and comp9024, am i eligible for COMPas stream?'
 q41 = "What subjects do I have to complete to declare COMPAS stream?"
 q42 = "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
 
