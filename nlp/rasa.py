@@ -1,5 +1,6 @@
 import random
 import logging
+from db.retrieve_info import get_info
 
 ##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy
 ##python -m spacy download en
@@ -17,17 +18,40 @@ from rasa_nlu.components import ComponentBuilder
 
 
 class RasaNLP(object):
-    COULD_NOT_PARSE_MSGS = [
-        'Sorry, I don\'t know it',
-        'Next time I will know, but not now',
-        'Sorry, can\'t get what do you mean',
-        'Try something else'
-    ]
-    GREET_MSGS = ['Hola!', 'Privet!', 'Xin chào!']
-    INTENT_GREET = 'greet'
+    COULD_NOT_PARSE_MSGS = ['Sorry, I don\'t know it',
+                            'Next time I will know, but not now',
+                            'Sorry, can\'t get what do you mean',
+                            'Try something else'
+                            ]
+
+    NO_RECORD = ['Sorry, I could not find what you are looking for',
+                 'Sorry, there is no record found in my database for your question',
+                 ]
+    
+    INTENT_GREET1 = 'greet1'
+    GREET_MSGS1 = ['Hello.', 'Hi.', 'Hey.', 'Hihi.']
+
+    INTENT_GREET2 = 'greet2'
+    GREET_MSGS2 = [
+        'Fine, thank you, how may I help you.',
+        'Pretty good, thank you for asking, how may I help you.'
+        ]
+
+##    INTENT_SELF = 'self'
+    SELF_MSG = ['My name is UNSW CSE Chat-Bot, I can answer CSE enrolment related questions.']
+
+    INTENT_UNRELATED = 'unrelated'
+    UNRELATED_MSG = ['Sorry, I can only answer questions related to CSE courses, streams and staff.']
+
+##    INTENT_FUNC = 'function'
+##    FUNC_MSG = ['I can provide course recommendation and information retrieval of CSE courses, streams and staff.']
+
+    INTENT_CHALLENGE = 'challenge'
+    CHALLENGE_MSG = ['I\'m able to assist you with CSE-related questions.']
+
+    ENTITY_SELF = 'self'
 
     # intent: table names, table to search 
-##    INTENTS = ['course', 'staff']
 
     # entity: keywords
     ENTITY_DET = 'd'
@@ -62,7 +86,7 @@ class RasaNLP(object):
     def parse(self, msg):
         return self.interpreter.parse(msg)
 
-    def find_reply(self, msg):
+    def _reply(self, msg):
         res = self.parse(msg)
         logging.info('rasa parse res: {}'.format(res))
 
@@ -71,8 +95,29 @@ class RasaNLP(object):
             self.unparsed_messages.append(msg)
             return random.choice(self.COULD_NOT_PARSE_MSGS)
 
-        if res['intent']['name'] == self.INTENT_GREET:
-            return random.choice(self.GREET_MSGS)
+        if res['intent']['name'] == self.INTENT_GREET1:
+            return random.choice(self.GREET_MSGS1)
+
+        if res['intent']['name'] == self.INTENT_GREET2:
+            return random.choice(self.GREET_MSGS2)
+        
+##        if res['intent']['name'] == self.INTENT_SELF:
+##            return random.choice(self.SELF_MSG)
+        
+        if res['intent']['name'] == self.INTENT_UNRELATED:
+##            if not any(res['entities']):
+##                return random.choice(self.UNRELATED_MSG)
+
+            if self.ENTITY_SELF in [e['entity'] for e in res['entities']]:
+                return random.choice(self.SELF_MSG)
+            
+            return random.choice(self.UNRELATED_MSG)
+        
+##        if res['intent']['name'] == self.INTENT_FUNC:
+##            return random.choice(self.FUNC_MSG)
+        
+        if res['intent']['name'] == self.INTENT_CHALLENGE:
+            return random.choice(self.CHALLENGE_MSG)
 
 
 
@@ -100,7 +145,7 @@ class RasaNLP(object):
                 self.subject = key
 
             # need_reply,[]
-            return True, [deterministic, res['intent']['name'], self.subject, att]
+            return deterministic, res['intent']['name'], self.subject, att
 
 
 
@@ -115,8 +160,116 @@ class RasaNLP(object):
         return random.choice(self.COULD_NOT_PARSE_MSGS)
 
 
-##    def get_short_answer(self, table_key, att):
-##        print('table name and desired key word:', table_key, '\ndesired attribute:', att)
+    def reply(self, msg):
+        
+        '''
+        takes RasaNLP parsed query as input
+        outputs the answer string for user
+        '''
+        _answers = ['Sure, this is what I found:\n',
+                    'OK, I found this:\n',
+                    'Not a problem.\n',
+                    'No problem at all.\n',
+                    'Sure, I can do this.\n',
+                    '',
+                    '',
+                    '',
+                    ]
+
+
+
+        parsed_query = self._reply(msg)
+        # used to construct answers to queries related to stream questions
+        stream = ['number', 'electives']
+
+        if type(parsed_query) is tuple:
+            # need_reply,[]
+            deter, table, keyword, att = parsed_query
+
+
+            # replace 'contact' in att for staff table
+            try:
+                idx = att.index('contact')
+                att[idx:idx+1] = ('email', 'phone')
+            except:
+                pass
+
+
+
+            try:
+                info_list = get_info(table, keyword, att)
+            except:
+                # parsed into undesired format
+                self.unparsed_messages.append(msg)
+                return random.choice(self.COULD_NOT_PARSE_MSGS)
+
+            if not any(info_list):
+                # no record in DB
+                self.unparsed_messages.append(msg)
+                return random.choice(self.NO_RECORD)
+            
+            answer = random.choice(_answers)
+
+            for index in range(len(keyword)):
+                key = keyword[index]
+                info = info_list[index]
+
+                if not any(info):
+                    if not deter:
+                        answer += key + ': \n\tNo record found\n'
+                    else:
+                        answer += key + ': No record found\n'
+                    continue
+
+                if table == 'course':
+                    
+                    if not deter:
+                        answer += key.upper() + ':\n'
+                        for i in info:
+                            answer += '\t' + i + ': ' + info[i] + '\n'
+
+                    else:
+                        answer += key
+                        for i in info:
+                            if info[i]:
+                                answer += ' is ' + i + ','
+                            else:
+                                answer += ' is not ' + i + ','
+
+                        answer = answer[:-1] + '.' + '\n'
+
+                    
+                elif table == 'stream':
+                    answer += key.upper()
+
+                    if not any(info):
+                        # meet the requirement
+                        answer += ': you are eligible to declare this stream, congratulations!\n'
+                        continue
+                    else:
+                        answer += ':\n\tPlease choose'
+
+                        
+                    for i in range(len(info)):
+                        if i > 0:
+                            answer += '\n\tAnd'
+                        answer += ' ' + str(info[i][stream[0]]) + ' subjects from below:\n\t\t' \
+                                  + '\n\t\t'.join(info[i][stream[1]])
+                    answer += '\n'
+
+                elif table == 'staff':
+                    answer += key + ':\n'
+                    for i in info:
+                        if info[i] == 'N/A':
+                            answer += '\t' + i + ': No record' + '\n'
+                        else:
+                            answer += '\t' + i + ': ' + info[i] + '\n'
+
+
+            return answer[:-1]
+        
+        return parsed_query
+
 
     # saves unparsed messages into a file
     def snapshot_unparsed_messages(self, filename):
@@ -127,10 +280,3 @@ class RasaNLP(object):
 
 
 
-##r = RasaNLP('../rasa-config.json', '../rasa-data.json', '../rasa-model')
-##
-##r.train()
-##
-##print(r.find_reply('Who is the tutor of COMP9417?'))
-##res = r.parse('Who is the LiC of COMP9417?')
-##print(res)

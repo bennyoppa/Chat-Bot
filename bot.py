@@ -1,5 +1,13 @@
 from nlp.rasa import RasaNLP
+from SpeechRecognition.SpeechRecognition import BotSR
+
 from db.retrieve_info import get_info
+
+# stream, no record and eligible are the same.
+#                       return True
+
+qs = "I've completed COMP6714 and comp9313 and COMP9321, \
+    what other subjects do I have to study to declare COMPDS stream and COMPAS?"
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -7,65 +15,65 @@ warnings.filterwarnings('ignore')
 #!/usr/bin/env python -W ignore::DeprecationWarning
 
 
-def reply(parsed_query):
-    '''
-    takes RasaNLP parsed query as input
-    outputs the answer string for user
-    '''
-
-    answers = ['Let me check.',
-               'Here is what I found:'
-               ]
-
-    notfound = 'Sorry, can\'t find what you want'
-
-    stream = ['number', 'electives']
-
-    if parsed_query[0] is True:
-        # need_reply,[]
-        _, [deter, table, keyword, att] = parsed_query
-
-        info_list = get_info(table, keyword, att)
-
-        if not any(info_list):
-            return notfound
-        
-        answer = ''
-
-        for index in range(len(keyword)):
-            key = keyword[index]
-            info = info_list[index]
-
-            if table == 'course':
-                
-                if not deter:
-                    answer += key.upper() + ':\n'
-                    for i in info:
-                        answer += '\t' + i + ': ' + info[i] + '\n'
-
-                else:
-                    answer += key
-                    for i in info:
-                        if info[i]:
-                            answer += ' is ' + i + ','
-                        else:
-                            answer += ' is not' + i + ','
-
-                    answer = answer[:-1] + '.' + '\n'
-
-                
-            elif table == 'stream':
-                answer += key.upper() + ':\n\tPlease choose'
-                for i in range(len(info)):
-                    if i > 0:
-                        answer += '\n\tAnd'
-                    answer += ' ' + str(info[i][stream[0]]) + ' subjects from below:\n\t\t' \
-                              + '\n\t\t'.join(info[i][stream[1]])
-                answer += '\n'
-
-        return answer[:-1]
-    
-    return parsed_query
+##def reply(parsed_query):
+##    '''
+##    takes RasaNLP parsed query as input
+##    outputs the answer string for user
+##    '''
+##
+##    answers = ['Let me check.',
+##               'Here is what I found:'
+##               ]
+##
+##    notfound = 'Sorry, can\'t find what you want'
+##
+##    stream = ['number', 'electives']
+##
+##    if parsed_query[0] is True:
+##        # need_reply,[]
+##        _, [deter, table, keyword, att] = parsed_query
+##
+##        info_list = get_info(table, keyword, att)
+##
+##        if not any(info_list):
+##            return notfound
+##        
+##        answer = ''
+##
+##        for index in range(len(keyword)):
+##            key = keyword[index]
+##            info = info_list[index]
+##
+##            if table == 'course':
+##                
+##                if not deter:
+##                    answer += key.upper() + ':\n'
+##                    for i in info:
+##                        answer += '\t' + i + ': ' + info[i] + '\n'
+##
+##                else:
+##                    answer += key
+##                    for i in info:
+##                        if info[i]:
+##                            answer += ' is ' + i + ','
+##                        else:
+##                            answer += ' is not' + i + ','
+##
+##                    answer = answer[:-1] + '.' + '\n'
+##
+##                
+##            elif table == 'stream':
+##                answer += key.upper() + ':\n\tPlease choose'
+##                for i in range(len(info)):
+##                    if i > 0:
+##                        answer += '\n\tAnd'
+##                    answer += ' ' + str(info[i][stream[0]]) + ' subjects from below:\n\t\t' \
+##                              + '\n\t\t'.join(info[i][stream[1]])
+##                answer += '\n'
+##
+##        return answer[:-1]
+##    
+##    return parsed_query
 
 
 
@@ -122,13 +130,37 @@ q42 = "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
 nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
 nlp.train()
 
+botsr = BotSR()
 
 
 ##print(reply(nlp.find_reply(q4)))
 
 
-print(   reply(nlp.find_reply(q41))    )
-print(   reply(nlp.find_reply(q42))    )
+##print(   reply(nlp.reply(q41))    )
+##print(   reply(nlp.reply(q42))    )
+
+def test():
+    while 1:
+        print('Your question:')
+        q = input()
+        if q == 'q':
+            break
+        print(nlp.reply(q))
+
+    nlp.snapshot_unparsed_messages('unparsed.txt')
+
+def test2():
+    print('Tell me your question:')
+    audio = botsr.capture()
+    q = botsr.speech_to_text(audio)
+    print(nlp.reply(q))
+
+    nlp.snapshot_unparsed_messages('unparsed.txt')
+
+
+
+test()
+
 
 ### parse query
 ##parsed_query = nlp.find_reply(q)
