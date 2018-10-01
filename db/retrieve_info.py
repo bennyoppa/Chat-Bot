@@ -52,6 +52,7 @@ def get_course_info(keywords, query):
 
 
 def get_stream_info(keywords, original_query):
+    found = False
     connect(host='mongodb://benny:comp9900@ds125912.mlab.com:25912/comp9900')
     table = stream_db.Stream.objects
     final_result = []
@@ -62,6 +63,7 @@ def get_stream_info(keywords, original_query):
         query = [x for x in original_query]
         for doc in table:
             if doc._id == keyword:
+                found = True
                 if len(query) == 0:
                     result = json.loads(doc.to_json())['areas']
                 else:
@@ -79,8 +81,16 @@ def get_stream_info(keywords, original_query):
                     for k in range(len(areas)):
                         if areas[k]['number'] > 0:
                             result.append(areas[k])
-        final_result.append(result)
-    return final_result
+        if result:
+            final_result.append(result)
+
+    if found:
+        if not final_result:
+            return [True]
+        else:
+            return final_result
+    else:
+        return final_result
 
 
 def get_staff_info(keywords, query):
