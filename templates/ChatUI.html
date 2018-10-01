@@ -46,10 +46,10 @@
 
 		  var loopfuc3=function () {
               return homeBot.action.text({
-		      delay: 2500,
+		      delay:1000,
 		      action: {
 		        value: '',
-		        placeholder: 'type in please...'
+		        placeholder: '👨‍🎓  type in please...'
 		      }
 		  }).then(function (res) {
 		      var data = JSON.stringify({"content":res.value})
@@ -67,7 +67,7 @@
                      console.log(data)
                       return homeBot.message.add({
 		              delay: 0,
-		              content: '🤖: <br>'+data
+		              content: '🤖:'+data
 		         }).then(function () {
                         loopfuc3();
                       });
