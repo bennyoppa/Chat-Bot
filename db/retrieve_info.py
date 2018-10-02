@@ -16,8 +16,7 @@ def create_stream_db():
 
 
 def create_staff_db():
-    # staff_db.create_staff()
-    staff_db.add_details()
+    staff_db.create_staff()
     return "Staff database created."
 
 
