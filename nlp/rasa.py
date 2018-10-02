@@ -38,7 +38,7 @@ class RasaNLP(object):
         ]
 
     INTENT_GREET3 = 'greet3'
-    GREET_MSG3 = [
+    GREET_MSGS3 = [
         'You are welcome.',
         'No worries at all',
         ]
