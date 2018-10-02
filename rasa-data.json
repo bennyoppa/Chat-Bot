@@ -43,6 +43,26 @@
         "intent": "greet2",
         "entities": []
       },
+      {
+        "text": "Thank you.",
+        "intent": "greet3",
+        "entities": []
+      },
+      {
+        "text": "Thanks.",
+        "intent": "greet3",
+        "entities": []
+      },
+      {
+        "text": "Thank you very much.",
+        "intent": "greet3",
+        "entities": []
+      },
+      {
+        "text": "Thank you thank you.",
+        "intent": "greet3",
+        "entities": []
+      },
 
 
       {
