@@ -489,6 +489,54 @@
         ]
       },
       {
+        "text": "How can I enrol COMP9417?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "How can I enrol in COMP9417?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "What is the prerequisite of COMP9999?",
         "intent": "course",
         "entities": [
