@@ -235,7 +235,7 @@ class RasaNLP(object):
                     if not deter:
                         answer += key.upper() + ':\n'
                         for i in info:
-                            answer += '\t' + i + ': ' + info[i] + '\n'
+                            answer += '\t' + i + ': ' + str(info[i]) + '\n'
 
                     else:
                         answer += key
