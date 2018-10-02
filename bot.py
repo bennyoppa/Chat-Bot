@@ -1,5 +1,5 @@
 from nlp.rasa import RasaNLP
-from SpeechRecognition.SpeechRecognition import BotSR
+#from SpeechRecognition.SpeechRecognition import BotSR
 
 from db.retrieve_info import get_info
 
@@ -129,6 +129,10 @@ q42 = "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
 
 q51 = "what is the phone of eric martin?"
 q52 = "what is the email of eric martin?"
+
+q61 = "who is the lic of comp9021?"
+q62 = "where is the office of eric martin?"
+q63 = "what courses does eric martin teach?"
 
 #  train the nlp model
 nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')

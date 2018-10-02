@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79a9d524-36a1-4f11-94d8-25c472787def" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/rasa.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mychatbot$test.coverage" NAME="test Coverage Results" MODIFIED="1534342265625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/mychatbot$pytest_in_bot_py.coverage" NAME="pytest in bot.py Coverage Results" MODIFIED="1538450402161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -41,11 +42,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Django Console" value="28" />
+          <entry key="Django Console" value="32" />
           <entry key="css" value="204" />
           <entry key="html" value="6101" />
           <entry key="js" value="105" />
-          <entry key="py" value="1533" />
+          <entry key="py" value="1568" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -55,7 +56,7 @@
           <entry key="HTML" value="6102" />
           <entry key="JavaScript" value="104" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1561" />
+          <entry key="Python" value="1600" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -67,7 +68,7 @@
           <entry key="js" value="21" />
           <entry key="json" value="4" />
           <entry key="png" value="12" />
-          <entry key="py" value="44" />
+          <entry key="py" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -77,7 +78,7 @@
           <entry key="Image" value="23" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="21" />
-          <entry key="Python" value="44" />
+          <entry key="Python" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -125,16 +126,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="127" column="79" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="79" />
+            <state relative-caret-position="23">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlp/rasa.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="237" column="39" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
@@ -207,7 +217,6 @@
         <option value="$PROJECT_DIR$/UI/static/htmleaf-demo.css" />
         <option value="$PROJECT_DIR$/UI/static/botui.min.css" />
         <option value="$PROJECT_DIR$/UI/static/layer/theme/default/layer.css" />
-        <option value="$PROJECT_DIR$/nlp/rasa.py" />
         <option value="$PROJECT_DIR$/db/retrieve_info.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/templates/test2.html" />
@@ -222,9 +231,10 @@
         <option value="$PROJECT_DIR$/templates/ChatUI.html" />
         <option value="$PROJECT_DIR$/UI/static/botui.min.js" />
         <option value="$PROJECT_DIR$/UI/views.py" />
-        <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/UI/static/botui-theme-default.css" />
         <option value="$PROJECT_DIR$/templates/mainpage.html" />
+        <option value="$PROJECT_DIR$/nlp/rasa.py" />
+        <option value="$PROJECT_DIR$/bot.py" />
       </list>
     </option>
   </component>
@@ -234,7 +244,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="547" />
     <option name="y" value="51" />
     <option name="width" value="1163" />
@@ -252,6 +262,11 @@
             <path>
               <item name="mychatbot" type="b2602c69:ProjectViewProjectNode" />
               <item name="mychatbot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mychatbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mychatbot" type="462c0819:PsiDirectoryNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mychatbot" type="b2602c69:ProjectViewProjectNode" />
@@ -358,12 +373,30 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in bot.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="mychatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/bot.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Django server.mychatbot" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python tests.pytest in bot.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in bot.py" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -389,6 +422,17 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_bot_py - 2018.10.02 at 13h 18m 13s.xml">
+      <configuration name="pytest in bot.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_bot_py - 2018.10.02 at 13h 19m 04s.xml">
+      <configuration name="pytest in bot.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_bot_py - 2018.10.02 at 13h 20m 07s.xml">
+      <configuration name="pytest in bot.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -400,14 +444,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27292112" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.29035753" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.29035753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,7 +459,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4632196" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.40520042" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -512,13 +555,6 @@
     <entry file="file://$PROJECT_DIR$/UI/static/robot.png" />
     <entry file="file://$PROJECT_DIR$/UI/static/enter-animate.gif">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlp/rasa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2001">
-          <caret line="99" column="23" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UI/static/4.jpg" />
     <entry file="file://$PROJECT_DIR$/UI/static/5.jpg" />
@@ -623,17 +659,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="127" column="79" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nlp/rasa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="237" column="39" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
