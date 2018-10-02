@@ -37,8 +37,14 @@ class RasaNLP(object):
         'Pretty good, thank you for asking, how may I help you.'
         ]
 
+    INTENT_GREET3 = 'greet3'
+    GREET_MSG3 = [
+        'You are welcome.',
+        'No worries at all',
+        ]
+
 ##    INTENT_SELF = 'self'
-    SELF_MSG = ['My name is UNSW CSE Chat-Bot, I can answer CSE enrolment related questions.']
+    SELF_MSG = ['My name is Uri. I am an intelligent chatting robot and can answer CSE enrolment related questions.']
 
     INTENT_UNRELATED = 'unrelated'
     UNRELATED_MSG = ['Sorry, I can only answer questions related to CSE courses, streams and staff.']
@@ -100,6 +106,9 @@ class RasaNLP(object):
 
         if res['intent']['name'] == self.INTENT_GREET2:
             return random.choice(self.GREET_MSGS2)
+
+        if res['intent']['name'] == self.INTENT_GREET3:
+            return random.choice(self.GREET_MSGS3)
         
 ##        if res['intent']['name'] == self.INTENT_SELF:
 ##            return random.choice(self.SELF_MSG)
