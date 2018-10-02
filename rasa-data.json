@@ -210,6 +210,21 @@
         "intent": "challenge",
         "entities": []
       },
+      {
+        "text": "You are stupid.",
+        "intent": "challenge",
+        "entities": []
+      },
+      {
+        "text": "You seem dumb.",
+        "intent": "challenge",
+        "entities": []
+      },
+      {
+        "text": "Why are you so dumb.",
+        "intent": "challenge",
+        "entities": []
+      },
 
       
       {
@@ -339,7 +354,7 @@
         ]
       },
       {
-        "text": "What courses does Lily Yao and Eric Martin teach?",
+        "text": "What courses do Lily Yao and Eric Martin teach?",
         "intent": "staff",
         "entities": [
           {
@@ -352,6 +367,36 @@
             "start": 31,
             "end": 42,
             "value": "Eric Martin",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What courses do Luke John and Jin Qu teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "Luke John",
+            "entity": "key"
+          },
+          {
+            "start": 30,
+            "end": 36,
+            "value": "Jin Qu",
             "entity": "key"
           },
           {

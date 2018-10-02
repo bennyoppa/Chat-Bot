@@ -18,10 +18,9 @@ from rasa_nlu.components import ComponentBuilder
 
 
 class RasaNLP(object):
-    COULD_NOT_PARSE_MSGS = ['Sorry, I don\'t know it',
-                            'Next time I will know, but not now',
-                            'Sorry, can\'t get what do you mean',
-                            'Try something else'
+    COULD_NOT_PARSE_MSGS = ['Sorry, I don\'t understand your question, can you please ask in another way?',
+                            'Sorry, I don\'t understand your query, can you please try it in a different way?',
+                            
                             ]
 
     NO_RECORD = ['Sorry, I could not find what you are looking for',
