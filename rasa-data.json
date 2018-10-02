@@ -983,6 +983,10 @@
       {
         "value": "pre_requisite",
         "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol"]
+      },
+      {
+        "value": "courses",
+        "synonyms": ["course", "subjects", "subject", "classes", "class"]
       }
     ]
   }
