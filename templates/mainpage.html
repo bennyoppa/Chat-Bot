@@ -77,11 +77,12 @@ video {
                              Hi there! I am Uru,a chatbot! you can ask me for information about cse/Unsw! Such as:
                                 <br/>
                              <br><a onclick=onmyclick("https://www.engineering.unsw.edu.au/study-with-us/current-students/academic-information/electives/pg-electives")>Information about courses.</a>
+                                 <br><span id="a1">(name,adk,description,pre_requisite,Lic)</span>
                                 <br><a onclick=onmyclick("https://student.unsw.edu.au/staff")>Information about staffs.</a>
+                                <br><span id="a1">(email,phone,office,staff_type,courses)</span>
                                 <br><a onclick=onmyclick("http://legacy.handbook.unsw.edu.au/postgraduate/specialisations/2018/ComputerScienceEngineering.html")>Information about streams.</a>
-                             <br/>
-                                <br>For example: ask me "What is the prerequisite of coMp9024?"
-                             <br>Now,click me and try it!!
+                                <br><span id="a1">(What subjects do I have to complete </span>
+                                <br><span id="a1">to declare a stream?)</span>
                             </p>
 </strong>
     </div>
@@ -96,7 +97,7 @@ video {
     font-size: 1.2em;
     line-height: 1.2em;
     text-decoration: none;
-        margin-left: 45px;
+        margin-left: 30px;
    }
     div {
     display: block;
@@ -144,7 +145,11 @@ video {
     a:hover{
     color: #ff0c3d;
     }
-
+#a1{
+    font-size: 1em;
+    margin-left: 45px;
+    color: #030000;
+}
 </style>
 </body>
 </html>
