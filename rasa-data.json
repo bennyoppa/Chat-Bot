@@ -294,6 +294,54 @@
           }
         ]
       },
+      {
+        "text": "What courses does John Shepherd teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 18,
+            "end": 31,
+            "value": "John Shepherd",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What courses does Lily Yao teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "Lily Yao",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
 
 
 

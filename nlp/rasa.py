@@ -264,7 +264,10 @@ class RasaNLP(object):
                         if info[i] == 'N/A':
                             answer += '\t' + i + ': No record' + '\n'
                         else:
-                            answer += '\t' + i + ': ' + info[i] + '\n'
+                            if isinstance(info[i], list):
+                                answer += '\t' + i + ': ' + ' and '.join(info[i]) + '\n'
+                            else:
+                                answer += '\t' + i + ': ' + info[i] + '\n'
 
 
             return answer[:-1]
