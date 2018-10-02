@@ -339,13 +339,19 @@
         ]
       },
       {
-        "text": "What courses does Lily Yao teach?",
+        "text": "What courses does Lily Yao and Eric Martin teach?",
         "intent": "staff",
         "entities": [
           {
             "start": 18,
             "end": 26,
             "value": "Lily Yao",
+            "entity": "key"
+          },
+          {
+            "start": 31,
+            "end": 42,
+            "value": "Eric Martin",
             "entity": "key"
           },
           {
