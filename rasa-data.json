@@ -1167,7 +1167,7 @@
       },
       {
         "value": "pre_requisite",
-        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol"]
+        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol", "prerequisite"]
       },
       {
         "value": "courses",
