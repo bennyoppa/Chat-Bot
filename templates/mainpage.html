@@ -73,9 +73,8 @@ video {
 
     <div id="mydiv">
     <strong>
-                            <p>
-                             Hi there! I am Uru,a chatbot! you can ask me for information about cse/Unsw! Such as:
-                                <br/>
+                            <p id="myp1">
+                             Hi there! I am Uri,a chatbot! you can ask me for information about cse/Unsw! Such as:
                              <br><a onclick=onmyclick("https://www.engineering.unsw.edu.au/study-with-us/current-students/academic-information/electives/pg-electives")>Information about courses.</a>
                                  <br><span id="a1">(name,adk,description,pre_requisite,Lic)</span>
                                 <br><a onclick=onmyclick("https://student.unsw.edu.au/staff")>Information about staffs.</a>
@@ -83,15 +82,48 @@ video {
                                 <br><a onclick=onmyclick("http://legacy.handbook.unsw.edu.au/postgraduate/specialisations/2018/ComputerScienceEngineering.html")>Information about streams.</a>
                                 <br><span id="a1">(What subjects do I have to complete </span>
                                 <br><span id="a1">to declare a stream?)</span>
+                                <br><span id="a2">Now,try to click me and ask the questions!</span>
                             </p>
 </strong>
+        <div id="mydiv2">
+            <strong>
+            <p id="myp2">
+                here are some questions you can ask!<br/><br/>
+
+                 'What is the pre_requisite of COMP9417?'<br/>
+                 'What is the pre_requisite and name of COMP9517?'<br/><br/>
+
+                'Is COMP9418 an adk course?'<br/>
+                'What is the prerequisite of it?'<br/><br/>
+
+                'Are COMP9417 and comp9801 adk courses?'<br/>
+                "What is the prerequisite of coMp9024 and comp9444?"<br/>
+                "What are the prerequisite and name of coMp9024 and comp9021?"<br/><br/>
+
+
+                'I've done comp9021 and comp9024, am i eligible for COMPas stream?'<br/>
+                "What subjects do I have to complete to declare COMPAS stream?"<br/>
+                "What subjects do I have to complete to declare COMPAS and COMPDS stream?"<br/><br/>
+
+                 "what is the phone of eric martin?"<br/>
+                "what is the email of eric martin?"<br/><br/>
+
+                "who is the lic of comp9021?"<br/>
+                "where is the office of eric martin?"<br/>
+                "what courses does eric martin teach?"<br/><br/>
+            </p>
+
+            </strong>
+        </div>
+
+
     </div>
     <video class="abc"  preload muted autoplay loop id="video">
         <source src="{% static "UNSW.mp4" %}" type="video/webm">
         <source src="{% static "UNSW.mp4" %}">
     </video>
 
-    <div id="ask_me" onclick="askme()"  style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 999; position: absolute;left: 250px;top:350px; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
+    <div id="ask_me" onclick="askme()"  style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 999; position: absolute;margin-right: 150px;top:350px; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 150px; height: 150px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
 <style>
    a{color: #030000;
     font-size: 1.2em;
@@ -131,7 +163,19 @@ video {
        filter:alpha(opacity=90);
         z-index: 1000;
     }
-    p{
+    #mydiv2{
+        background-image: url("{% static "paper.png" %}");
+        width: 444px;
+        height: 599px;
+        background-size: cover;
+        position: absolute;
+        margin-top: 0px;
+        margin-right: 50px;
+        opacity:0.8;
+       filter:alpha(opacity=90);
+        z-index: 1000;
+    }
+    #myp1{
         font-size: 1.1em;
         color: black;
         font-family: Garamond;
@@ -139,7 +183,7 @@ video {
         height:228px;
         margin-top: 37px;
         margin-left: 45px;
-        background-color: rgba(222, 222, 222, 0.4);
+        background-color: rgba(222, 222, 222, 0.9);
         z-index: -1000;
     }
     a:hover{
@@ -150,6 +194,21 @@ video {
     margin-left: 45px;
     color: #030000;
 }
+    #a2{
+        color: #1025ff;
+    }
+
+    #myp2{
+        font-size: 1.1em;
+        color: black;
+        font-family: Garamond;
+        width: 375px;
+        height:0px;
+        margin-top: 37px;
+        margin-left: 45px;
+        background-color: rgba(222, 222, 222, 0.4);
+        z-index: -1000;
+    }
 </style>
 </body>
 </html>
