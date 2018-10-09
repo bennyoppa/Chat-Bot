@@ -64,13 +64,17 @@ class RasaNLP(object):
     ENTITY_NDET = 'nd'
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
+    ENTITY_ATT2 = 'att2'
 
-    # combined querys, two tables to search
-    COMBINED_INTENT = 'combined'
-    # table to search first
-    ENTITY_KEY1 = 'key1'
-    # second table to search
-    ENTITY_KEY2 = 'key2'
+    # lecturer title
+    STAFF_TITLE = ['Dr ', 'Apro ', ]
+
+##    # combined querys, two tables to search
+##    COMBINED_INTENT = 'combined'
+##    # table to search first
+##    ENTITY_KEY1 = 'key1'
+##    # second table to search
+##    ENTITY_KEY2 = 'key2'
 
     def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff', 'stream']):
         # record the current subject for follow questions
@@ -136,25 +140,25 @@ class RasaNLP(object):
             return random.choice(self.CHALLENGE_MSG)
 
 
-        if res['intent']['name'] in self.COMBINED_INTENT:
-            deterministic = False
-            # to locate entry
-            key1 = []
-            key2 = []
-            # to retrieve info
-            att = []
-
-            for e in res['entities']:
-                if e['entity'] == self.ENTITY_DET:
-                    deterministic = True
-                elif e['entity'] == self.ENTITY_ATT:
-                    att += [e['value']]
-                elif e['entity'] == self.ENTITY_KEY1:
-                    key1 += [e['value']]
-                elif e['entity'] == self.ENTITY_KEY2:
-                    key2 += [e['value']]
-
-            return deterministic, 'staff', get_info('course', key1, key2), att
+##        if res['intent']['name'] in self.COMBINED_INTENT:
+##            deterministic = False
+##            # to locate entry
+##            key1 = []
+##            key2 = []
+##            # to retrieve info
+##            att = []
+##
+##            for e in res['entities']:
+##                if e['entity'] == self.ENTITY_DET:
+##                    deterministic = True
+##                elif e['entity'] == self.ENTITY_ATT:
+##                    att += [e['value']]
+##                elif e['entity'] == self.ENTITY_KEY1:
+##                    key1 += [e['value']]
+##                elif e['entity'] == self.ENTITY_KEY2:
+##                    key2 += [e['value']]
+##
+##            return deterministic, 'staff', get_info('course', key2, key1), att
 
 
 
@@ -167,6 +171,8 @@ class RasaNLP(object):
             key = []
             # to retrieve info
             att = []
+            # complex query
+            att2 = []
 
             
             for e in res['entities']:
@@ -176,10 +182,27 @@ class RasaNLP(object):
                     att += [e['value']]
                 elif e['entity'] == self.ENTITY_KEY:
                     key += [e['value']]
+                elif e['entity'] == self.ENTITY_ATT2:
+                    att2 += [e['value']]
 
             if len(key):
                 self.subject = key
 
+            if att2:
+                if att != ['lic']:
+                    self.unparsed_messages.append(msg)
+                    return random.choice(self.COULD_NOT_PARSE_MSGS)
+
+                res = get_info('course', key, att)
+                new_key = []
+                for i in res:
+                    name = ''.join(list(i.values()))
+                    for t in self.STAFF_TITLE:
+                        name = name.lstrip(t)
+                    new_key += [name]
+                
+                return deterministic, 'staff', new_key, att2
+            
             # need_reply,[]
             return deterministic, res['intent']['name'], self.subject, att
 

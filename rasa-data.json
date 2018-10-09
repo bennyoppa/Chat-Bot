@@ -358,14 +358,14 @@
         "intent": "staff",
         "entities": [
           {
-            "start": 18,
-            "end": 26,
+            "start": 16,
+            "end": 24,
             "value": "Lily Yao",
             "entity": "key"
           },
           {
-            "start": 31,
-            "end": 42,
+            "start": 29,
+            "end": 40,
             "value": "Eric Martin",
             "entity": "key"
           },
@@ -435,6 +435,30 @@
           {
             "start": 11,
             "end": 14,
+            "value": "LiC",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "Who is LiC of COMP4055?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "COMP4055",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Who is",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 10,
             "value": "LiC",
             "entity": "att"
           }
@@ -1017,7 +1041,7 @@
       
       {
         "text": "How to contact the lic of COMP9101?",
-        "intent": "combined",
+        "intent": "course",
         "entities": [
           {
             "start": 0,
@@ -1029,25 +1053,25 @@
             "start": 7,
             "end": 14,
             "value": "contact",
-            "entity": "att"
+            "entity": "att2"
           },
           {
             "start": 19,
             "end": 22,
             "value": "lic",
-            "entity": "key1"
+            "entity": "att"
           },
           {
             "start": 26,
             "end": 34,
             "value": "COMP9101",
-            "entity": "key2"
+            "entity": "key"
           }
         ]
       },
       {
         "text": "How to contact the lic of COMP3412?",
-        "intent": "combined",
+        "intent": "course",
         "entities": [
           {
             "start": 0,
@@ -1059,25 +1083,25 @@
             "start": 7,
             "end": 14,
             "value": "contact",
-            "entity": "att"
+            "entity": "att2"
           },
           {
             "start": 19,
             "end": 22,
             "value": "lic",
-            "entity": "key2"
+            "entity": "att"
           },
           {
             "start": 26,
             "end": 34,
             "value": "COMP3412",
-            "entity": "key1"
+            "entity": "key"
           }
         ]
       },
       {
-        "text": "How to contact the lic of COMP3456 and COMP4125?",
-        "intent": "combined",
+        "text": "How to contact lic of COMP3687?",
+        "intent": "course",
         "entities": [
           {
             "start": 0,
@@ -1089,31 +1113,61 @@
             "start": 7,
             "end": 14,
             "value": "contact",
+            "entity": "att2"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "value": "lic",
             "entity": "att"
+          },
+          {
+            "start": 22,
+            "end": 30,
+            "value": "COMP3687",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "How to contact the lic of COMP3456 and COMP4125?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "d"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att2"
           },
           {
             "start": 19,
             "end": 22,
             "value": "lic",
-            "entity": "key2"
+            "entity": "att"
           },
           {
             "start": 26,
             "end": 34,
             "value": "COMP3456",
-            "entity": "key1"
+            "entity": "key"
           },
           {
             "start": 39,
             "end": 47,
             "value": "COMP4125",
-            "entity": "key1"
+            "entity": "key"
           }
         ]
       },
       {
         "text": "Show me the contact details of the lic of COMP3456 and COMP4125?",
-        "intent": "combined",
+        "intent": "course",
         "entities": [
           {
             "start": 0,
@@ -1131,19 +1185,55 @@
             "start": 35,
             "end": 38,
             "value": "lic",
-            "entity": "key2"
+            "entity": "key1"
           },
           {
             "start": 42,
             "end": 50,
             "value": "COMP3456",
-            "entity": "key1"
+            "entity": "key2"
           },
           {
             "start": 55,
             "end": 63,
             "value": "COMP4125",
+            "entity": "key2"
+          }
+        ]
+      },
+      {
+        "text": "Show me the contact details of lic of COMP3456 and COMP4125?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "d"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 31,
+            "end": 34,
+            "value": "lic",
             "entity": "key1"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "COMP3456",
+            "entity": "key2"
+          },
+          {
+            "start": 51,
+            "end": 59,
+            "value": "COMP4125",
+            "entity": "key2"
           }
         ]
       }
@@ -1176,6 +1266,10 @@
       {
         "value": "What is",
         "synonyms": ["Show me", "Give me", "Tell me", "Gimme"]
+      },
+      {
+        "value": "courses",
+        "synonyms": ["course"]
       }
     ]
   }
