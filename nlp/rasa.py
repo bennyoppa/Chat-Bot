@@ -54,6 +54,7 @@ class RasaNLP(object):
     INTENT_CHALLENGE = 'challenge'
     CHALLENGE_MSG = ['I\'m able to assist you with CSE-related questions.']
 
+
     ENTITY_SELF = 'self'
 
     # intent: table names, table to search 
@@ -63,6 +64,13 @@ class RasaNLP(object):
     ENTITY_NDET = 'nd'
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
+
+    # combined querys, two tables to search
+    COMBINED_INTENT = 'combined'
+    # table to search first
+    ENTITY_KEY1 = 'key1'
+    # second table to search
+    ENTITY_KEY2 = 'key2'
 
     def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff', 'stream']):
         # record the current subject for follow questions
@@ -127,6 +135,26 @@ class RasaNLP(object):
         if res['intent']['name'] == self.INTENT_CHALLENGE:
             return random.choice(self.CHALLENGE_MSG)
 
+
+        if res['intent']['name'] in self.COMBINED_INTENT:
+            deterministic = False
+            # to locate entry
+            key1 = []
+            key2 = []
+            # to retrieve info
+            att = []
+
+            for e in res['entities']:
+                if e['entity'] == self.ENTITY_DET:
+                    deterministic = True
+                elif e['entity'] == self.ENTITY_ATT:
+                    att += [e['value']]
+                elif e['entity'] == self.ENTITY_KEY1:
+                    key1 += [e['value']]
+                elif e['entity'] == self.ENTITY_KEY2:
+                    key2 += [e['value']]
+
+            return deterministic, 'staff', get_info('course', key1, key2), att
 
 
 
