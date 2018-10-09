@@ -1009,6 +1009,143 @@
             "entity": "key"
           }
         ]
+      },
+
+
+
+
+      
+      {
+        "text": "How to contact the lic of COMP9101?",
+        "intent": "combined",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "d"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "lic",
+            "entity": "key1"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "COMP9101",
+            "entity": "key2"
+          }
+        ]
+      },
+      {
+        "text": "How to contact the lic of COMP3412?",
+        "intent": "combined",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "d"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "lic",
+            "entity": "key2"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "COMP3412",
+            "entity": "key1"
+          }
+        ]
+      },
+      {
+        "text": "How to contact the lic of COMP3456 and COMP4125?",
+        "intent": "combined",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "d"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "lic",
+            "entity": "key2"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "COMP3456",
+            "entity": "key1"
+          },
+          {
+            "start": 39,
+            "end": 47,
+            "value": "COMP4125",
+            "entity": "key1"
+          }
+        ]
+      },
+      {
+        "text": "Show me the contact details of the lic of COMP3456 and COMP4125?",
+        "intent": "combined",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "d"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 35,
+            "end": 38,
+            "value": "lic",
+            "entity": "key2"
+          },
+          {
+            "start": 42,
+            "end": 50,
+            "value": "COMP3456",
+            "entity": "key1"
+          },
+          {
+            "start": 55,
+            "end": 63,
+            "value": "COMP4125",
+            "entity": "key1"
+          }
+        ]
       }
     ],
 
@@ -1030,11 +1167,15 @@
       },
       {
         "value": "pre_requisite",
-        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol"]
+        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol", "prerequisite"]
       },
       {
         "value": "courses",
         "synonyms": ["course", "subjects", "subject", "classes", "class"]
+      },
+      {
+        "value": "What is",
+        "synonyms": ["Show me", "Give me", "Tell me", "Gimme"]
       }
     ]
   }
