@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 
 def info():
@@ -38,3 +39,23 @@ def info():
                 adk.append(False)
 
     return timetables, course_codes, course_names, adk
+
+
+def course_timetable():
+    timetable = dict()
+    url = 'https://raw.githubusercontent.com/bennyoppa/Chat-Bot/adbahl/multi_location_data/Course_Time.csv?token=AXsox5jSDShxYt30X1gBTsRnm1bJy4rQks5bxo6hwA%3D%3D'
+    response = requests.get(url)
+    with open('course_timetable.csv', 'wb') as output_file:
+        output_file.write(response.content)
+
+    first_line = True
+    with open('course_timetable.csv') as raw_file:
+        file = csv.reader(raw_file, delimiter=',')
+        for row in file:
+            if first_line:
+                first_line = False
+            else:
+                if row:
+                    timetable[row[0]] = row[1]
+
+    return timetable
