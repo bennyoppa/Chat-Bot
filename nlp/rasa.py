@@ -273,6 +273,11 @@ class RasaNLP(object):
                 self.unparsed_messages.append(msg)
                 return random.choice(self.COULD_NOT_PARSE_MSGS)
 
+            if table == 'course' and 'lic' in [k.lowwer() for k in keyword]:
+                self.staff = []
+                for i in info_list:
+                    self.staff += [i['lic']]
+
             if not any(info_list):
                 # no record in DB
                 self.unparsed_messages.append(msg)
