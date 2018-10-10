@@ -6,16 +6,18 @@ from db.retrieve_info import get_info
 # stream, no record and eligible are the same.
 #                       return True
 
-qs = "I've completed COMP6714 and comp9313 and COMP9321, \
-    what other subjects do I have to study to declare COMPDS stream and COMPAS?"
+qs = "I've completed COMP6714 and comp9313 and COMP9321, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
 
 
-q = "how to contact the lic of comp9417?"
+q = "how to contact the lic of comp9020?"
 qq = "show me the name of comp4121"
 
 
 qq0 = 'is it adk'
 qq1 = 'what is the name of it'
+
+qq11 = 'whos lic comp9020'
+qq12 = 'how to contact him'
 
 
 import warnings

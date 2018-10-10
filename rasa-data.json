@@ -70,9 +70,9 @@
         "intent": "unrelated",
         "entities": [
           {
-            "start": 13,
+            "start": 8,
             "end": 17,
-            "value": "name",
+            "value": "your name",
             "entity": "self"
           }
         ]
@@ -82,9 +82,9 @@
         "intent": "unrelated",
         "entities": [
           {
-            "start": 13,
+            "start": 8,
             "end": 17,
-            "value": "name",
+            "value": "your name",
             "entity": "self"
           }
         ]
@@ -94,9 +94,9 @@
         "intent": "unrelated",
         "entities": [
           {
-            "start": 12,
+            "start": 7,
             "end": 16,
-            "value": "name",
+            "value": "your name",
             "entity": "self"
           }
         ]
@@ -106,9 +106,9 @@
         "intent": "unrelated",
         "entities": [
           {
-            "start": 13,
+            "start": 8,
             "end": 17,
-            "value": "name",
+            "value": "your name",
             "entity": "self"
           }
         ]
@@ -157,9 +157,9 @@
         "intent": "unrelated",
         "entities": [
           {
-            "start": 21,
+            "start": 5,
             "end": 23,
-            "value": "do",
+            "value": "are you able to do",
             "entity": "self"
           }
         ]
@@ -295,7 +295,7 @@
         "entities": [
           {
             "start": 0,
-            "end": 5,
+            "end": 4,
             "value": "what",
             "entity": "nd"
           },
@@ -303,6 +303,96 @@
             "start": 5,
             "end": 13,
             "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "whats his email?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "email",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "how to contact him?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "how to contact her?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "wheres her office?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "where",
+            "entity": "nd"
+          },
+          {
+            "start": 11,
+            "end": 17,
+            "value": "office",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "where is his office?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "where",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "office",
             "entity": "att"
           }
         ]
@@ -1173,6 +1263,120 @@
           }
         ]
       },
+      {
+        "text": "I've completed COMP3121, COMP3111 and comp1247, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP3121",
+            "entity": "att"
+          },
+          {
+            "start": 25,
+            "end": 33,
+            "value": "COMP3111",
+            "entity": "att"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "comp1247",
+            "entity": "att"
+          },
+          {
+            "start": 48,
+            "end": 52,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 98,
+            "end": 104,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 116,
+            "end": 122,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I've completed COMP3121 and COMP3111 and comp9024 and comp9418, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP3121",
+            "entity": "att"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP3111",
+            "entity": "att"
+          },
+          {
+            "start": 41,
+            "end": 49,
+            "value": "comp9024",
+            "entity": "att"
+          },
+          {
+            "start": 54,
+            "end": 62,
+            "value": "comp9418",
+            "entity": "att"
+          },
+          {
+            "start": 64,
+            "end": 68,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 114,
+            "end": 120,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 132,
+            "end": 138,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "What subjects do I have to complete to declare COMPAS and COMPDS stream?",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 47,
+            "end": 53,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
 
 
 
@@ -1186,7 +1390,7 @@
             "start": 0,
             "end": 6,
             "value": "How to",
-            "entity": "d"
+            "entity": "nd"
           },
           {
             "start": 7,
@@ -1216,7 +1420,7 @@
             "start": 0,
             "end": 6,
             "value": "How to",
-            "entity": "d"
+            "entity": "nd"
           },
           {
             "start": 7,
@@ -1246,7 +1450,7 @@
             "start": 0,
             "end": 6,
             "value": "How to",
-            "entity": "d"
+            "entity": "nd"
           },
           {
             "start": 7,
@@ -1276,7 +1480,7 @@
             "start": 0,
             "end": 6,
             "value": "How to",
-            "entity": "d"
+            "entity": "nd"
           },
           {
             "start": 7,
@@ -1311,8 +1515,8 @@
           {
             "start": 0,
             "end": 7,
-            "value": "What is",
-            "entity": "d"
+            "value": "What",
+            "entity": "nd"
           },
           {
             "start": 12,
@@ -1347,8 +1551,8 @@
           {
             "start": 0,
             "end": 7,
-            "value": "What is",
-            "entity": "d"
+            "value": "What",
+            "entity": "nd"
           },
           {
             "start": 12,
@@ -1414,6 +1618,10 @@
       {
         "value": "phone",
         "synonyms": ["contact number", "phone number", "mobile", "mobile number"]
+      },
+      {
+        "value": "timetable",
+        "synonyms": ["time table"]
       }
     ]
   }

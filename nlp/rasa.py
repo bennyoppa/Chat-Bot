@@ -71,7 +71,7 @@ class RasaNLP(object):
     ENTITY_ATT3 = 'att3'
 
     # lecturer title
-    STAFF_TITLE = ['Dr ', 'Apro ', ]
+    STAFF_TITLE = ['Dr ', 'Apro ', 'Prof ',]
 
 ##    # combined querys, two tables to search
 ##    COMBINED_INTENT = 'combined'
@@ -190,10 +190,11 @@ class RasaNLP(object):
                     att = att2
                 else:
                     try:
-                        res = get_info('course', key, att2)
+                        res = get_info(table, key, att2)
                     except:
                         return random.choice(self.NO_RECORD)
 
+                    table = 'staff'
                     new_key = []
                     for i in res:
                         name = ''.join(list(i.values()))
@@ -273,10 +274,13 @@ class RasaNLP(object):
                 self.unparsed_messages.append(msg)
                 return random.choice(self.COULD_NOT_PARSE_MSGS)
 
-            if table == 'course' and 'lic' in [k.lowwer() for k in keyword]:
+            if table == 'course' and 'lic' in [a.lower() for a in att]:
                 self.staff = []
                 for i in info_list:
-                    self.staff += [i['lic']]
+                    name = i['lic']
+                    for s in self.STAFF_TITLE:
+                        name = name.lstrip(s)
+                    self.staff += [name]
 
             if not any(info_list):
                 # no record in DB
@@ -320,7 +324,7 @@ class RasaNLP(object):
 
                     if True in info:
                         # meet the requirement
-                        answer += ': you are eligible to declare this stream, congratulations!\n'
+                        answer += ': \n\tYou are eligible to declare this stream, congratulations!\n'
                         continue
                     else:
                         answer += ':\n\tPlease choose'
