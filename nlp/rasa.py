@@ -65,16 +65,25 @@ class RasaNLP(object):
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
 
-    # combined querys, two tables to search
-    COMBINED_INTENT = 'combined'
-    # table to search first
-    ENTITY_KEY1 = 'key1'
-    # second table to search
-    ENTITY_KEY2 = 'key2'
+    # special entities that might require searching db multiply time
+    # 2: lic, 3: courses
+    ENTITY_ATT2 = 'att2'
+    ENTITY_ATT3 = 'att3'
+
+    # lecturer title
+    STAFF_TITLE = ['Dr ', 'Apro ', 'Prof ',]
+
+##    # combined querys, two tables to search
+##    COMBINED_INTENT = 'combined'
+##    # table to search first
+##    ENTITY_KEY1 = 'key1'
+##    # second table to search
+##    ENTITY_KEY2 = 'key2'
 
     def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff', 'stream']):
-        # record the current subject for follow questions
+        # record the current subject and staff for follow questions
         self.subject = None
+        self.staff = None
 
         self.INTENTS = INTENTS
         
@@ -136,37 +145,19 @@ class RasaNLP(object):
             return random.choice(self.CHALLENGE_MSG)
 
 
-        if res['intent']['name'] in self.COMBINED_INTENT:
-            deterministic = False
-            # to locate entry
-            key1 = []
-            key2 = []
-            # to retrieve info
-            att = []
 
-            for e in res['entities']:
-                if e['entity'] == self.ENTITY_DET:
-                    deterministic = True
-                elif e['entity'] == self.ENTITY_ATT:
-                    att += [e['value']]
-                elif e['entity'] == self.ENTITY_KEY1:
-                    key1 += [e['value']]
-                elif e['entity'] == self.ENTITY_KEY2:
-                    key2 += [e['value']]
-
-            return deterministic, 'staff', get_info('course', key1, key2), att
-
-
-
-        # same approach for all questions
+        # search db
         if res['intent']['name'] in self.INTENTS and len(res['entities']) > 0:
-
+            table = res['intent']['name']
 
             deterministic = False
             # to locate entry
             key = []
             # to retrieve info
             att = []
+            # complex query
+            att2 = []
+            att3 = []
 
             
             for e in res['entities']:
@@ -176,12 +167,56 @@ class RasaNLP(object):
                     att += [e['value']]
                 elif e['entity'] == self.ENTITY_KEY:
                     key += [e['value']]
+                elif e['entity'] == self.ENTITY_ATT2:
+                    att2 += [e['value']]
+                elif e['entity'] == self.ENTITY_ATT3:
+                    att3 += [e['value']]
 
-            if len(key):
-                self.subject = key
+            # record question
+            if table == 'staff':
+                if len(key):
+                    self.staff = key
+                else:
+                    key = self.staff
+            elif table == 'course':
+                if len(key):
+                    self.subject = key
+                else:
+                    key = self.subject
 
-            # need_reply,[]
-            return deterministic, res['intent']['name'], self.subject, att
+            # handle complex questions
+            if att2:
+                if not att:
+                    att = att2
+                else:
+                    try:
+                        res = get_info(table, key, att2)
+                    except:
+                        return random.choice(self.NO_RECORD)
+
+                    table = 'staff'
+                    new_key = []
+                    for i in res:
+                        name = ''.join(list(i.values()))
+                        for s in self.STAFF_TITLE:
+                            name = name.lstrip(s)
+                        new_key += [name]
+                    key = new_key
+
+            if att3:
+                if not att:
+                    att = att3
+                else:
+                    try:
+                        res = get_info('staff', key, att3)
+                    except:
+                        return random.choice(self.NO_RECORD)
+
+                    new_key = []
+                    
+            
+            
+            return deterministic, table, key, att
 
 
 
@@ -239,6 +274,14 @@ class RasaNLP(object):
                 self.unparsed_messages.append(msg)
                 return random.choice(self.COULD_NOT_PARSE_MSGS)
 
+            if table == 'course' and 'lic' in [a.lower() for a in att]:
+                self.staff = []
+                for i in info_list:
+                    name = i['lic']
+                    for s in self.STAFF_TITLE:
+                        name = name.lstrip(s)
+                    self.staff += [name]
+
             if not any(info_list):
                 # no record in DB
                 self.unparsed_messages.append(msg)
@@ -266,7 +309,7 @@ class RasaNLP(object):
                             answer += '\t' + i + ': ' + str(info[i]) + '\n'
 
                     else:
-                        answer += key
+                        answer += key.upper()
                         for i in info:
                             if info[i]:
                                 answer += ' is ' + i + ','
@@ -281,7 +324,7 @@ class RasaNLP(object):
 
                     if True in info:
                         # meet the requirement
-                        answer += ': you are eligible to declare this stream, congratulations!\n'
+                        answer += ': \n\tYou are eligible to declare this stream, congratulations!\n'
                         continue
                     else:
                         answer += ':\n\tPlease choose'
@@ -295,7 +338,7 @@ class RasaNLP(object):
                     answer += '\n'
 
                 elif table == 'staff':
-                    answer += key + ':\n'
+                    answer += ' '.join([s.capitalize() for s in key.split()]) + ':\n'
                     for i in info:
                         if info[i] == 'N/A':
                             answer += '\t' + i + ': No record' + '\n'
