@@ -349,7 +349,7 @@
             "start": 5,
             "end": 12,
             "value": "courses",
-            "entity": "att"
+            "entity": "att3"
           }
         ]
       },
@@ -379,7 +379,7 @@
             "start": 5,
             "end": 12,
             "value": "courses",
-            "entity": "att"
+            "entity": "att3"
           }
         ]
       },
@@ -409,7 +409,7 @@
             "start": 5,
             "end": 12,
             "value": "courses",
-            "entity": "att"
+            "entity": "att3"
           }
         ]
       },
@@ -436,7 +436,7 @@
             "start": 11,
             "end": 14,
             "value": "LiC",
-            "entity": "att"
+            "entity": "att2"
           }
         ]
       },
@@ -460,7 +460,7 @@
             "start": 7,
             "end": 10,
             "value": "LiC",
-            "entity": "att"
+            "entity": "att2"
           }
         ]
       },
@@ -1053,13 +1053,13 @@
             "start": 7,
             "end": 14,
             "value": "contact",
-            "entity": "att2"
+            "entity": "att"
           },
           {
             "start": 19,
             "end": 22,
             "value": "lic",
-            "entity": "att"
+            "entity": "att2"
           },
           {
             "start": 26,
@@ -1083,13 +1083,13 @@
             "start": 7,
             "end": 14,
             "value": "contact",
-            "entity": "att2"
+            "entity": "att"
           },
           {
             "start": 19,
             "end": 22,
             "value": "lic",
-            "entity": "att"
+            "entity": "att2"
           },
           {
             "start": 26,
@@ -1113,13 +1113,13 @@
             "start": 7,
             "end": 14,
             "value": "contact",
-            "entity": "att2"
+            "entity": "att"
           },
           {
             "start": 15,
             "end": 18,
             "value": "lic",
-            "entity": "att"
+            "entity": "att2"
           },
           {
             "start": 22,
@@ -1143,13 +1143,13 @@
             "start": 7,
             "end": 14,
             "value": "contact",
-            "entity": "att2"
+            "entity": "att"
           },
           {
             "start": 19,
             "end": 22,
             "value": "lic",
-            "entity": "att"
+            "entity": "att2"
           },
           {
             "start": 26,
@@ -1185,19 +1185,19 @@
             "start": 35,
             "end": 38,
             "value": "lic",
-            "entity": "key1"
+            "entity": "att2"
           },
           {
             "start": 42,
             "end": 50,
             "value": "COMP3456",
-            "entity": "key2"
+            "entity": "key"
           },
           {
             "start": 55,
             "end": 63,
             "value": "COMP4125",
-            "entity": "key2"
+            "entity": "key"
           }
         ]
       },
@@ -1221,19 +1221,19 @@
             "start": 31,
             "end": 34,
             "value": "lic",
-            "entity": "key1"
+            "entity": "att2"
           },
           {
             "start": 38,
             "end": 46,
             "value": "COMP3456",
-            "entity": "key2"
+            "entity": "key"
           },
           {
             "start": 51,
             "end": 59,
             "value": "COMP4125",
-            "entity": "key2"
+            "entity": "key"
           }
         ]
       }
@@ -1257,7 +1257,8 @@
       },
       {
         "value": "pre_requisite",
-        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol", "prerequisite"]
+        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol", "prerequisite",
+                    "prerequisites","pre_requisites", "requirement", "enrolment requirement"]
       },
       {
         "value": "courses",
@@ -1269,7 +1270,11 @@
       },
       {
         "value": "courses",
-        "synonyms": ["course"]
+        "synonyms": ["course", "subject", "subjects"]
+      },
+      {
+        "value": "phone",
+        "synonyms": ["contact number", "phone number", "mobile", "mobile number"]
       }
     ]
   }

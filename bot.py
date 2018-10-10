@@ -14,6 +14,10 @@ q = "how to contact the lic of comp9417?"
 qq = "show me the name of comp4121"
 
 
+qq0 = 'is it adk'
+qq1 = 'what is the name of it'
+
+
 import warnings
 warnings.filterwarnings('ignore')
 
