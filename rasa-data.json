@@ -1801,7 +1801,7 @@
       },
       {
         "value": "timetable",
-        "synonyms": ["time table"]
+        "synonyms": ["time table", "time"]
       }
     ]
   }
