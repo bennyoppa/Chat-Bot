@@ -65,18 +65,227 @@
       },
 
 
+
       {
-        "text": "What is your name???",
-        "intent": "unrelated",
+        "text": "Tell me something about COMP9527",
+        "intent": "course",
         "entities": [
           {
-            "start": 8,
-            "end": 17,
-            "value": "your name",
-            "entity": "self"
+            "start": 24,
+            "end": 32,
+            "value": "COMP9527",
+            "entity": "key"
           }
         ]
       },
+      {
+        "text": "Tell me something about COMP2357",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "COMP2357",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "What do you know about COMP3457",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP3457",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I want to know about COMP2345",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "COMP2345",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I'd like to know about COMP6745",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP6745",
+            "entity": "key"
+          }
+        ]
+      },
+
+
+
+
+
+
+      {
+        "text": "Do you know Eric Martin?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 23,
+            "value": "Eric Martin",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Tell me what you know about Lily Wang?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "Lily Wang",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I need info about Jack Simon.",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "Jack Simon",
+            "entity": "key"
+          }
+        ]
+      },
+
+
+
+
+      {
+        "text": "I need info about stream COMPAS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Tell me something about stream COMPAS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Tell me something about stream COMPGS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "COMPGS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "What do you know about stream COMPDS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "I need to know about stream COMPSS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "COMPSS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Give me info stream COMPIS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPIS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Give me info stream COMPGS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPGS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Give me info stream COMPDS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Give me info stream COMPAS.",
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ]
+      },
+
+
+
+
+
+
       {
         "text": "What is your name?",
         "intent": "unrelated",
@@ -84,18 +293,6 @@
           {
             "start": 8,
             "end": 17,
-            "value": "your name",
-            "entity": "self"
-          }
-        ]
-      },
-      {
-        "text": "What's your name?",
-        "intent": "unrelated",
-        "entities": [
-          {
-            "start": 7,
-            "end": 16,
             "value": "your name",
             "entity": "self"
           }
@@ -164,30 +361,9 @@
           }
         ]
       },
-      {
-        "text": "Tell me something about yourself",
-        "intent": "unrelated",
-        "entities": [
-          {
-            "start": 24,
-            "end": 32,
-            "value": "yourself",
-            "entity": "self"
-          }
-        ]
-      },
-      {
-        "text": "Tell me something about you",
-        "intent": "unrelated",
-        "entities": [
-          {
-            "start": 24,
-            "end": 27,
-            "value": "you",
-            "entity": "self"
-          }
-        ]
-      },
+
+
+
 
 
       {
@@ -1589,7 +1765,11 @@
       },
       {
         "name": "stream code",
-        "pattern": "[a-zA-Z]{6}"
+        "pattern": "[Cc][Oo][Mm][Pp][AaBbCcDdEeGgIiSs][Ss]"
+      },
+      {
+        "name": "staff name",
+        "pattern": "[A-Z][a-z]* [A-Z][a-z]+"
       }
     ],
 
