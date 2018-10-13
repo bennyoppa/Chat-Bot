@@ -114,6 +114,8 @@ q02 = 'What is the pre_requisite and name of COMP9517?'
 ##????????
 ##q11 = 'Is COMP9417 an adk course?'
 
+q="show me the lic of comp9021"
+qq="how to contact lic of xomp9444"
 
 q11 = 'Is COMP9418 an adk course?'
 q12 = 'What is the prerequisite of it?'
@@ -146,6 +148,11 @@ botsr = BotSR()
 
 ##print(   reply(nlp.reply(q41))    )
 ##print(   reply(nlp.reply(q42))    )
+
+print(nlp._reply(q))
+print(nlp._reply(qq))
+
+
 
 def test():
     while 1:

@@ -67,14 +67,14 @@ video {
  </script>
 </head>
 
-<body>
+<body id="mybody">
     {% load static %}
 
 
     <div id="mydiv">
     <strong>
                             <p id="myp1">
-                             Hi there! I am Uri,a chatbot! you can ask me for information about cse/Unsw! Such as:
+                             Hi there! I am Uri,a chatbot! you can ask me for information about  postgrads/CSE/UNSW!<br> Such as:
                              <br><a onclick=onmyclick("https://www.engineering.unsw.edu.au/study-with-us/current-students/academic-information/electives/pg-electives")>Information about courses.</a>
                                  <br><span id="a1">(name,adk,description,pre_requisite,Lic)</span>
                                 <br><a onclick=onmyclick("https://student.unsw.edu.au/staff")>Information about staffs.</a>
@@ -88,29 +88,27 @@ video {
         <div id="mydiv2">
             <strong>
             <p id="myp2">
-                here are some questions you can ask!<br/><br/>
+                    <br/>
+                'WHAT is the <span id="myspan">pre_requisite</span> and name of COMP9517?'<br/><br/>
 
-                 'What is the pre_requisite of COMP9417?'<br/>
-                 'What is the pre_requisite and name of COMP9517?'<br/><br/>
+                'Is COMP9418 an <span id="myspan">adk course</span>?'<br/>
+                'WHAT is the prerequisite of <span id="myspan">it</span>?'<br/><br/>
 
-                'Is COMP9418 an adk course?'<br/>
-                'What is the prerequisite of it?'<br/><br/>
-
-                'Are COMP9417 and comp9801 adk courses?'<br/>
-                "What is the prerequisite of coMp9024 and comp9444?"<br/>
-                "What are the prerequisite and name of coMp9024 and comp9021?"<br/><br/>
+                'ARE COMP9417 and COMP9801 <span id="myspan">adk courses?</span>'<br/>
+                "WHAT is the prerequisite of COMP9024 and COMP9444?"<br/>
+                "WHAT are the <span id="myspan">prerequisite and name</span> of COMP9024 and COMP9021?"<br/><br/>
 
 
-                'I've done comp9021 and comp9024, am i eligible for COMPas stream?'<br/>
-                "What subjects do I have to complete to declare COMPAS stream?"<br/>
-                "What subjects do I have to complete to declare COMPAS and COMPDS stream?"<br/><br/>
+                'I've done COMP9021 and COMP9024, am i eligible for <span id="myspan">COMPAS stream</span>?'<br/>
+                "WHAT subjects do I have to complete to <span id="myspan">declare COMPAS stream</span>?"<br/>
+                "WHAT <span id="myspan">subjects</span> do I have to complete to declare COMPAS and COMPDS stream?"<br/><br/>
 
-                 "what is the phone of eric martin?"<br/>
-                "what is the email of eric martin?"<br/><br/>
+                "WHAT is the <span id="myspan">phone </span>of Eric Martin?"<br/>
+                "WHAT is the <span id="myspan">email</span> of Eric Martin?"<br/><br/>
 
-                "who is the lic of comp9021?"<br/>
-                "where is the office of eric martin?"<br/>
-                "what courses does eric martin teach?"<br/><br/>
+                "WHO is the <span id="myspan">lic</span> of COMP9021?"<br/>
+                "WHERE is the <span id="myspan">office</span> of Eric Martin?"<br/>
+                "WHAT <span id="myspan">courses</span> does Eric Martin <span id="myspan">teach</span>?"<br/><br/>
             </p>
 
             </strong>
@@ -118,13 +116,16 @@ video {
 
 
     </div>
-    <video class="abc"  preload muted autoplay loop id="video">
+    <video class="abc"  preload muted autoplay id="video">
         <source src="{% static "UNSW.mp4" %}" type="video/webm">
         <source src="{% static "UNSW.mp4" %}">
     </video>
 
     <div id="ask_me" onclick="askme()"  style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 999; position: absolute;margin-right: 150px;top:350px; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 150px; height: 150px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
 <style>
+    #myspan{
+        color: #ff1a1a;
+    }
    a{color: #030000;
     font-size: 1.2em;
     line-height: 1.2em;
@@ -159,7 +160,7 @@ video {
         position: absolute;
         margin-top: 0px;
         margin-left: 50px;
-        opacity:0.8;
+        opacity:0.9;
        filter:alpha(opacity=90);
         z-index: 1000;
     }
@@ -171,7 +172,7 @@ video {
         position: absolute;
         margin-top: 0px;
         margin-right: 50px;
-        opacity:0.8;
+        opacity:0.9;
        filter:alpha(opacity=90);
         z-index: 1000;
     }
@@ -180,7 +181,7 @@ video {
         color: black;
         font-family: Garamond;
         width: 375px;
-        height:228px;
+        height:234px;
         margin-top: 37px;
         margin-left: 45px;
         background-color: rgba(222, 222, 222, 0.9);
@@ -206,7 +207,7 @@ video {
         height:0px;
         margin-top: 37px;
         margin-left: 45px;
-        background-color: rgba(222, 222, 222, 0.4);
+        background-color: rgba(222, 222, 222, 0.1);
         z-index: -1000;
     }
 </style>
