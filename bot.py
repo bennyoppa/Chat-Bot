@@ -147,6 +147,10 @@ q61 = "who is the lic of comp9021?"
 q62 = "where is the office of eric martin?"
 q63 = "what courses does eric martin teach?"
 
+q71="tell/show/give/me/ what's the contact number of eric martin "
+q72="do you know lic of comp9021?"
+q73="do you know where is the office of eric martin"
+
 #  train the nlp model
 nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
 nlp.train()
