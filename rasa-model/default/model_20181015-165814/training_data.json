@@ -2,105 +2,96 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey.",
         "intent": "greet1",
-        "entities": []
+        "entities": [],
+        "text": "hey."
       },
       {
-        "text": "howdy.",
         "intent": "greet1",
-        "entities": []
+        "entities": [],
+        "text": "howdy."
       },
       {
-        "text": "hey you.",
         "intent": "greet1",
-        "entities": []
+        "entities": [],
+        "text": "hey you."
       },
       {
-        "text": "Hi.",
         "intent": "greet1",
-        "entities": []
+        "entities": [],
+        "text": "Hi."
       },
-
-
       {
-        "text": "how are you.",
         "intent": "greet2",
-        "entities": []
+        "entities": [],
+        "text": "how are you."
       },
       {
-        "text": "how r u.",
         "intent": "greet2",
-        "entities": []
+        "entities": [],
+        "text": "how r u."
       },
       {
-        "text": "how's going.",
         "intent": "greet2",
-        "entities": []
+        "entities": [],
+        "text": "how's going."
       },
       {
-        "text": "how do you do.",
         "intent": "greet2",
-        "entities": []
+        "entities": [],
+        "text": "how do you do."
       },
       {
-        "text": "how you feeling??",
         "intent": "greet2",
-        "entities": []
+        "entities": [],
+        "text": "how you feeling??"
       },
       {
-        "text": "how r you feeling",
         "intent": "greet2",
-        "entities": []
+        "entities": [],
+        "text": "how r you feeling"
       },
       {
-        "text": "Thank you.",
         "intent": "greet3",
-        "entities": []
+        "entities": [],
+        "text": "Thank you."
       },
       {
-        "text": "Thanks.",
         "intent": "greet3",
-        "entities": []
+        "entities": [],
+        "text": "Thanks."
       },
       {
-        "text": "Thank you very much.",
         "intent": "greet3",
-        "entities": []
+        "entities": [],
+        "text": "Thank you very much."
       },
       {
-        "text": "Thank you thank you.",
         "intent": "greet3",
-        "entities": []
+        "entities": [],
+        "text": "Thank you thank you."
       },
-
-
-
       {
-        "text": "Bye.",
         "intent": "bye",
-        "entities": []
+        "entities": [],
+        "text": "Bye."
       },
       {
-        "text": "See you.",
         "intent": "bye",
-        "entities": []
+        "entities": [],
+        "text": "See you."
       },
       {
-        "text": "Later.",
         "intent": "bye",
-        "entities": []
+        "entities": [],
+        "text": "Later."
       },
       {
-        "text": "Good Bye.",
         "intent": "bye",
-        "entities": []
+        "entities": [],
+        "text": "Good Bye."
       },
-
-
-
       {
-        "text": "Tell me something about COMP9527",
         "intent": "course",
         "entities": [
           {
@@ -109,10 +100,10 @@
             "value": "COMP9527",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Tell me something about COMP9527"
       },
       {
-        "text": "Tell me something about COMP2357",
         "intent": "course",
         "entities": [
           {
@@ -121,10 +112,10 @@
             "value": "COMP2357",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Tell me something about COMP2357"
       },
       {
-        "text": "What do you know about COMP3457",
         "intent": "course",
         "entities": [
           {
@@ -133,10 +124,10 @@
             "value": "COMP3457",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What do you know about COMP3457"
       },
       {
-        "text": "I want to know about COMP2345",
         "intent": "course",
         "entities": [
           {
@@ -145,10 +136,10 @@
             "value": "COMP2345",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I want to know about COMP2345"
       },
       {
-        "text": "I'd like to know about COMP6745",
         "intent": "course",
         "entities": [
           {
@@ -157,16 +148,10 @@
             "value": "COMP6745",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I'd like to know about COMP6745"
       },
-
-
-
-
-
-
       {
-        "text": "Do you know Eric Martin?",
         "intent": "staff",
         "entities": [
           {
@@ -175,10 +160,10 @@
             "value": "Eric Martin",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Do you know Eric Martin?"
       },
       {
-        "text": "Tell me what you know about Lily Wang?",
         "intent": "staff",
         "entities": [
           {
@@ -187,10 +172,10 @@
             "value": "Lily Wang",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Tell me what you know about Lily Wang?"
       },
       {
-        "text": "Tell me what you know about Tatjana Zrimec?",
         "intent": "staff",
         "entities": [
           {
@@ -199,10 +184,10 @@
             "value": "Tatjana Zrimec",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Tell me what you know about Tatjana Zrimec?"
       },
       {
-        "text": "Do you know Hangbin Zhang?",
         "intent": "staff",
         "entities": [
           {
@@ -211,10 +196,10 @@
             "value": "Hangbin Zhang",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Do you know Hangbin Zhang?"
       },
       {
-        "text": "Do you know Seung Ryu?",
         "intent": "staff",
         "entities": [
           {
@@ -223,10 +208,10 @@
             "value": "Seung Ryu",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Do you know Seung Ryu?"
       },
       {
-        "text": "Do you know Jin Qu?",
         "intent": "staff",
         "entities": [
           {
@@ -235,10 +220,10 @@
             "value": "Jin Qu",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Do you know Jin Qu?"
       },
       {
-        "text": "I need info about Jack Simon.",
         "intent": "staff",
         "entities": [
           {
@@ -247,14 +232,10 @@
             "value": "Jack Simon",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I need info about Jack Simon."
       },
-
-
-
-
       {
-        "text": "I need info about stream COMPAS.",
         "intent": "stream",
         "entities": [
           {
@@ -263,10 +244,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I need info about stream COMPAS."
       },
       {
-        "text": "Tell me something about stream COMPAS.",
         "intent": "stream",
         "entities": [
           {
@@ -275,10 +256,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Tell me something about stream COMPAS."
       },
       {
-        "text": "Tell me something about stream COMPGS.",
         "intent": "stream",
         "entities": [
           {
@@ -287,10 +268,10 @@
             "value": "COMPGS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Tell me something about stream COMPGS."
       },
       {
-        "text": "What do you know about stream COMPDS.",
         "intent": "stream",
         "entities": [
           {
@@ -299,10 +280,10 @@
             "value": "COMPDS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What do you know about stream COMPDS."
       },
       {
-        "text": "I need to know about stream COMPSS.",
         "intent": "stream",
         "entities": [
           {
@@ -311,10 +292,10 @@
             "value": "COMPSS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I need to know about stream COMPSS."
       },
       {
-        "text": "Give me info stream COMPIS.",
         "intent": "stream",
         "entities": [
           {
@@ -323,10 +304,10 @@
             "value": "COMPIS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Give me info stream COMPIS."
       },
       {
-        "text": "Give me info stream COMPGS.",
         "intent": "stream",
         "entities": [
           {
@@ -335,10 +316,10 @@
             "value": "COMPGS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Give me info stream COMPGS."
       },
       {
-        "text": "Give me info stream COMPDS.",
         "intent": "stream",
         "entities": [
           {
@@ -347,10 +328,10 @@
             "value": "COMPDS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Give me info stream COMPDS."
       },
       {
-        "text": "Give me info stream COMPAS.",
         "intent": "stream",
         "entities": [
           {
@@ -359,16 +340,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Give me info stream COMPAS."
       },
-
-
-
-
-
-
       {
-        "text": "What is your name?",
         "intent": "unrelated",
         "entities": [
           {
@@ -377,10 +352,10 @@
             "value": "your name",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "What is your name?"
       },
       {
-        "text": "Whats your name?",
         "intent": "unrelated",
         "entities": [
           {
@@ -389,10 +364,10 @@
             "value": "your name",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "Whats your name?"
       },
       {
-        "text": "Who are you?",
         "intent": "unrelated",
         "entities": [
           {
@@ -401,10 +376,10 @@
             "value": "Who are you",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "Who are you?"
       },
       {
-        "text": "tell me your name?",
         "intent": "unrelated",
         "entities": [
           {
@@ -413,25 +388,25 @@
             "value": "your name",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "tell me your name?"
       },
       {
-        "text": "How is the weather???",
         "intent": "unrelated",
-        "entities": []
+        "entities": [],
+        "text": "How is the weather???"
       },
       {
-        "text": "Whats the time now?",
         "intent": "unrelated",
-        "entities": []
+        "entities": [],
+        "text": "Whats the time now?"
       },
       {
-        "text": "Did you see the movie last night?",
         "intent": "unrelated",
-        "entities": []
+        "entities": [],
+        "text": "Did you see the movie last night?"
       },
       {
-        "text": "What can you do",
         "intent": "unrelated",
         "entities": [
           {
@@ -440,10 +415,10 @@
             "value": "can you do",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "What can you do"
       },
       {
-        "text": "What could you do",
         "intent": "unrelated",
         "entities": [
           {
@@ -452,10 +427,10 @@
             "value": "could you do",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "What could you do"
       },
       {
-        "text": "What are you able to do",
         "intent": "unrelated",
         "entities": [
           {
@@ -464,54 +439,45 @@
             "value": "are you able to do",
             "entity": "self"
           }
-        ]
+        ],
+        "text": "What are you able to do"
       },
-
-
-
-
-
       {
-        "text": "How smart are you???",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "How smart are you???"
       },
       {
-        "text": "How smart are you?",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "How smart are you?"
       },
       {
-        "text": "How smart are you",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "How smart are you"
       },
       {
-        "text": "U dont seem so smart.",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "U dont seem so smart."
       },
       {
-        "text": "You are stupid.",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "You are stupid."
       },
       {
-        "text": "You seem dumb.",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "You seem dumb."
       },
       {
-        "text": "Why are you so dumb.",
         "intent": "challenge",
-        "entities": []
+        "entities": [],
+        "text": "Why are you so dumb."
       },
-
-      
-
-
       {
-        "text": "what's John Martin's email?",
         "intent": "staff",
         "entities": [
           {
@@ -532,10 +498,10 @@
             "value": "email",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what's John Martin's email?"
       },
       {
-        "text": "what's Vladimir Tosic's contact number?",
         "intent": "staff",
         "entities": [
           {
@@ -556,10 +522,10 @@
             "value": "phone",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what's Vladimir Tosic's contact number?"
       },
       {
-        "text": "what's his phone number?",
         "intent": "staff",
         "entities": [
           {
@@ -574,10 +540,10 @@
             "value": "phone",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what's his phone number?"
       },
       {
-        "text": "where's his office?",
         "intent": "staff",
         "entities": [
           {
@@ -592,10 +558,10 @@
             "value": "office",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "where's his office?"
       },
       {
-        "text": "where's Ashesh Mahidadia's office?",
         "intent": "staff",
         "entities": [
           {
@@ -616,10 +582,10 @@
             "value": "office",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "where's Ashesh Mahidadia's office?"
       },
       {
-        "text": "where's Nadeem Ahmed's office?",
         "intent": "staff",
         "entities": [
           {
@@ -640,10 +606,10 @@
             "value": "office",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "where's Nadeem Ahmed's office?"
       },
       {
-        "text": "what subjects does he teach?",
         "intent": "staff",
         "entities": [
           {
@@ -658,10 +624,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects does he teach?"
       },
       {
-        "text": "what subjects do he teach?",
         "intent": "staff",
         "entities": [
           {
@@ -676,10 +642,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects do he teach?"
       },
       {
-        "text": "what courses do he teach?",
         "intent": "staff",
         "entities": [
           {
@@ -694,10 +660,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what courses do he teach?"
       },
       {
-        "text": "what courses does she teach?",
         "intent": "staff",
         "entities": [
           {
@@ -712,10 +678,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what courses does she teach?"
       },
       {
-        "text": "what courses do she teach?",
         "intent": "staff",
         "entities": [
           {
@@ -730,10 +696,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what courses do she teach?"
       },
       {
-        "text": "what subjects does Salil Kanhere teach?",
         "intent": "staff",
         "entities": [
           {
@@ -754,10 +720,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects does Salil Kanhere teach?"
       },
       {
-        "text": "what subjects do Salil Kanhere teach?",
         "intent": "staff",
         "entities": [
           {
@@ -778,10 +744,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects do Salil Kanhere teach?"
       },
       {
-        "text": "what subjects does Jashank Jeremy teach?",
         "intent": "staff",
         "entities": [
           {
@@ -802,10 +768,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects does Jashank Jeremy teach?"
       },
       {
-        "text": "what subjects do Jashank Jeremy teach?",
         "intent": "staff",
         "entities": [
           {
@@ -826,10 +792,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects do Jashank Jeremy teach?"
       },
       {
-        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?",
         "intent": "staff",
         "entities": [
           {
@@ -850,10 +816,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?"
       },
       {
-        "text": "what subjects do Mohammadali Yaghoubzadehfard teach?",
         "intent": "staff",
         "entities": [
           {
@@ -874,10 +840,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects do Mohammadali Yaghoubzadehfard teach?"
       },
       {
-        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?",
         "intent": "staff",
         "entities": [
           {
@@ -898,10 +864,10 @@
             "value": "courses",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?"
       },
       {
-        "text": "whats his email?",
         "intent": "staff",
         "entities": [
           {
@@ -916,10 +882,10 @@
             "value": "email",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "whats his email?"
       },
       {
-        "text": "how to contact him?",
         "intent": "staff",
         "entities": [
           {
@@ -934,10 +900,10 @@
             "value": "contact",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "how to contact him?"
       },
       {
-        "text": "how to contact her?",
         "intent": "staff",
         "entities": [
           {
@@ -952,10 +918,10 @@
             "value": "contact",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "how to contact her?"
       },
       {
-        "text": "wheres her office?",
         "intent": "staff",
         "entities": [
           {
@@ -970,10 +936,10 @@
             "value": "office",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "wheres her office?"
       },
       {
-        "text": "where is his office?",
         "intent": "staff",
         "entities": [
           {
@@ -988,10 +954,10 @@
             "value": "office",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "where is his office?"
       },
       {
-        "text": "What is the mobile number of Rachid Hamadi?",
         "intent": "staff",
         "entities": [
           {
@@ -1012,10 +978,10 @@
             "value": "phone",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the mobile number of Rachid Hamadi?"
       },
       {
-        "text": "What is the contact number of Eric Martin?",
         "intent": "staff",
         "entities": [
           {
@@ -1036,10 +1002,10 @@
             "value": "phone",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the contact number of Eric Martin?"
       },
       {
-        "text": "How to contact Lina Yao?",
         "intent": "staff",
         "entities": [
           {
@@ -1060,10 +1026,10 @@
             "value": "contact",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "How to contact Lina Yao?"
       },
       {
-        "text": "How to contact John Shepherd or Alex Linker?",
         "intent": "staff",
         "entities": [
           {
@@ -1090,10 +1056,10 @@
             "value": "contact",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "How to contact John Shepherd or Alex Linker?"
       },
       {
-        "text": "What courses does John Shepherd teach?",
         "intent": "staff",
         "entities": [
           {
@@ -1114,10 +1080,10 @@
             "value": "courses",
             "entity": "att3"
           }
-        ]
+        ],
+        "text": "What courses does John Shepherd teach?"
       },
       {
-        "text": "What courses do Lily Yao and Eric Martin teach?",
         "intent": "staff",
         "entities": [
           {
@@ -1144,10 +1110,10 @@
             "value": "courses",
             "entity": "att3"
           }
-        ]
+        ],
+        "text": "What courses do Lily Yao and Eric Martin teach?"
       },
       {
-        "text": "What courses do Luke John and Jin Qu teach?",
         "intent": "staff",
         "entities": [
           {
@@ -1174,12 +1140,10 @@
             "value": "courses",
             "entity": "att3"
           }
-        ]
+        ],
+        "text": "What courses do Luke John and Jin Qu teach?"
       },
-
-
       {
-        "text": "is it adk?",
         "intent": "course",
         "entities": [
           {
@@ -1194,10 +1158,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "is it adk?"
       },
       {
-        "text": "whats its name?",
         "intent": "course",
         "entities": [
           {
@@ -1212,10 +1176,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "whats its name?"
       },
       {
-        "text": "whats comp9418's prerequisites?",
         "intent": "course",
         "entities": [
           {
@@ -1236,10 +1200,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "whats comp9418's prerequisites?"
       },
       {
-        "text": "Who is the LiC of COMP9900?",
         "intent": "course",
         "entities": [
           {
@@ -1260,10 +1224,10 @@
             "value": "LiC",
             "entity": "att2"
           }
-        ]
+        ],
+        "text": "Who is the LiC of COMP9900?"
       },
       {
-        "text": "Who is LiC of COMP4055?",
         "intent": "course",
         "entities": [
           {
@@ -1284,10 +1248,10 @@
             "value": "LiC",
             "entity": "att2"
           }
-        ]
+        ],
+        "text": "Who is LiC of COMP4055?"
       },
       {
-        "text": "how to enrol in COMP9417?",
         "intent": "course",
         "entities": [
           {
@@ -1308,10 +1272,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "how to enrol in COMP9417?"
       },
       {
-        "text": "How can I enrol in COMP9417?",
         "intent": "course",
         "entities": [
           {
@@ -1332,10 +1296,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "How can I enrol in COMP9417?"
       },
       {
-        "text": "How can I enrol COMP9417?",
         "intent": "course",
         "entities": [
           {
@@ -1356,10 +1320,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "How can I enrol COMP9417?"
       },
       {
-        "text": "How can I enrol in COMP9417?",
         "intent": "course",
         "entities": [
           {
@@ -1380,10 +1344,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "How can I enrol in COMP9417?"
       },
       {
-        "text": "What is the prerequisite of COMP9999?",
         "intent": "course",
         "entities": [
           {
@@ -1404,10 +1368,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9999?"
       },
       {
-        "text": "What are the enrolment requirements of COMP9922?",
         "intent": "course",
         "entities": [
           {
@@ -1428,10 +1392,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the enrolment requirements of COMP9922?"
       },
       {
-        "text": "What are the enrolment requirements of it?",
         "intent": "course",
         "entities": [
           {
@@ -1446,10 +1410,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the enrolment requirements of it?"
       },
       {
-        "text": "What are name of it?",
         "intent": "course",
         "entities": [
           {
@@ -1464,10 +1428,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are name of it?"
       },
       {
-        "text": "What is the prerequisite of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
           {
@@ -1494,10 +1458,10 @@
             "value": "pre_requisite",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite of COMP9999 and comp9022?"
       },
       {
-        "text": "What is the name of COMP9021 and comp9444?",
         "intent": "course",
         "entities": [
           {
@@ -1524,10 +1488,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the name of COMP9021 and comp9444?"
       },
       {
-        "text": "What are the prerequisite and name of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
           {
@@ -1560,10 +1524,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the prerequisite and name of COMP9999 and comp9022?"
       },
       {
-        "text": "What is the prerequisite and name of COMP9562 and COMP4258?",
         "intent": "course",
         "entities": [
           {
@@ -1596,10 +1560,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the prerequisite and name of COMP9562 and COMP4258?"
       },
       {
-        "text": "What is the timetable and name of COMP9562 and COMP4258?",
         "intent": "course",
         "entities": [
           {
@@ -1632,10 +1596,10 @@
             "value": "name",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What is the timetable and name of COMP9562 and COMP4258?"
       },
       {
-        "text": "What are the prerequisite and lic of COMP3121 and comp4122?",
         "intent": "course",
         "entities": [
           {
@@ -1668,14 +1632,10 @@
             "value": "lic",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "What are the prerequisite and lic of COMP3121 and comp4122?"
       },
-      
-
-
-
       {
-        "text": "Is COMP9417 an adk course?",
         "intent": "course",
         "entities": [
           {
@@ -1696,10 +1656,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Is COMP9417 an adk course?"
       },
       {
-        "text": "Is COMP9876 an adk course?",
         "intent": "course",
         "entities": [
           {
@@ -1720,10 +1680,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Is COMP9876 an adk course?"
       },
       {
-        "text": "Are COMP9020 and comp9034 adk courses?",
         "intent": "course",
         "entities": [
           {
@@ -1750,10 +1710,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Are COMP9020 and comp9034 adk courses?"
       },
       {
-        "text": "Are COMP9321 and comp9517 adk courses?",
         "intent": "course",
         "entities": [
           {
@@ -1780,12 +1740,10 @@
             "value": "adk",
             "entity": "att"
           }
-        ]
+        ],
+        "text": "Are COMP9321 and comp9517 adk courses?"
       },
-
-
       {
-        "text": "What courses do I need to finish to declare COMPAS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -1800,10 +1758,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What courses do I need to finish to declare COMPAS stream?"
       },
       {
-        "text": "What subjects do I have to complete to declare COMPDS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -1818,10 +1776,10 @@
             "value": "COMPDS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What subjects do I have to complete to declare COMPDS stream?"
       },
       {
-        "text": "I've completed COMP9414 and COMP9999, what other subjects do I have to study to declare COMPDS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -1848,10 +1806,10 @@
             "value": "COMPDS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've completed COMP9414 and COMP9999, what other subjects do I have to study to declare COMPDS stream?"
       },
       {
-        "text": "I've done COMP4121 and COMP9417, am I eligible to declare COMPAS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -1878,10 +1836,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've done COMP4121 and COMP9417, am I eligible to declare COMPAS stream?"
       },
       {
-        "text": "I've done COMP6587 and COMP3485, am I eligible to declare COMPAS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -1908,10 +1866,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've done COMP6587 and COMP3485, am I eligible to declare COMPAS stream?"
       },
       {
-        "text": "I've completed COMP3121 and COMP3111, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
         "intent": "stream",
         "entities": [
           {
@@ -1944,10 +1902,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've completed COMP3121 and COMP3111, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
       },
       {
-        "text": "I've completed COMP3121, COMP3111 and comp1247, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
         "intent": "stream",
         "entities": [
           {
@@ -1986,10 +1944,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've completed COMP3121, COMP3111 and comp1247, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
       },
       {
-        "text": "I've completed COMP3121 and COMP3111 and comp9024 and comp9418, what other subjects do I have to study to declare COMPDS stream and COMPAS?",
         "intent": "stream",
         "entities": [
           {
@@ -2034,10 +1992,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "I've completed COMP3121 and COMP3111 and comp9024 and comp9418, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
       },
       {
-        "text": "What subjects do I have to complete to declare COMPAS and COMPDS stream?",
         "intent": "stream",
         "entities": [
           {
@@ -2058,15 +2016,10 @@
             "value": "COMPAS",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
       },
-
-
-
-
-      
       {
-        "text": "How to contact the lic of COMP9101?",
         "intent": "course",
         "entities": [
           {
@@ -2093,10 +2046,10 @@
             "value": "COMP9101",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "How to contact the lic of COMP9101?"
       },
       {
-        "text": "How to contact the lic of COMP3412?",
         "intent": "course",
         "entities": [
           {
@@ -2123,10 +2076,10 @@
             "value": "COMP3412",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "How to contact the lic of COMP3412?"
       },
       {
-        "text": "How to contact lic of COMP3687?",
         "intent": "course",
         "entities": [
           {
@@ -2153,10 +2106,10 @@
             "value": "COMP3687",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "How to contact lic of COMP3687?"
       },
       {
-        "text": "How to contact the lic of COMP3456 and COMP4125?",
         "intent": "course",
         "entities": [
           {
@@ -2189,10 +2142,10 @@
             "value": "COMP4125",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "How to contact the lic of COMP3456 and COMP4125?"
       },
       {
-        "text": "Show me the contact details of the lic of COMP3456 and COMP4125?",
         "intent": "course",
         "entities": [
           {
@@ -2225,10 +2178,10 @@
             "value": "COMP4125",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Show me the contact details of the lic of COMP3456 and COMP4125?"
       },
       {
-        "text": "Show me the contact details of lic of COMP3456 and COMP4125?",
         "intent": "course",
         "entities": [
           {
@@ -2261,10 +2214,10 @@
             "value": "COMP4125",
             "entity": "key"
           }
-        ]
+        ],
+        "text": "Show me the contact details of lic of COMP3456 and COMP4125?"
       }
     ],
-
     "regex_features": [
       {
         "name": "course code",
@@ -2279,36 +2232,64 @@
         "pattern": "[A-Z][a-z]* [A-Z][a-z]+"
       }
     ],
-
     "entity_synonyms": [
       {
         "value": "lic",
-        "synonyms": ["Lecturer in charge", "Lecturer"]
+        "synonyms": [
+          "Lecturer in charge",
+          "Lecturer"
+        ]
       },
       {
         "value": "pre_requisite",
-        "synonyms": ["enrolment requirements", "requirements", "pre_requisite", "enrol", "prerequisite",
-                    "prerequisites","pre_requisites", "requirement", "enrolment requirement"]
+        "synonyms": [
+          "enrolment requirements",
+          "requirements",
+          "enrol",
+          "prerequisite",
+          "prerequisites",
+          "pre_requisites",
+          "requirement",
+          "enrolment requirement"
+        ]
       },
       {
         "value": "courses",
-        "synonyms": ["course", "subjects", "subject", "classes", "class"]
+        "synonyms": [
+          "course",
+          "subjects",
+          "subject",
+          "classes",
+          "class"
+        ]
       },
       {
         "value": "What",
-        "synonyms": ["Show me", "Give me", "Tell me", "Gimme", "Whats", "What's", "where"]
-      },
-      {
-        "value": "courses",
-        "synonyms": ["course", "subject", "subjects"]
+        "synonyms": [
+          "Show me",
+          "Give me",
+          "Tell me",
+          "Gimme",
+          "Whats",
+          "What's",
+          "where"
+        ]
       },
       {
         "value": "phone",
-        "synonyms": ["contact number", "phone number", "mobile", "mobile number"]
+        "synonyms": [
+          "contact number",
+          "phone number",
+          "mobile",
+          "mobile number"
+        ]
       },
       {
         "value": "timetable",
-        "synonyms": ["time table", "time"]
+        "synonyms": [
+          "time table",
+          "time"
+        ]
       }
     ]
   }
