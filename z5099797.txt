@@ -19,3 +19,19 @@ about course, and two more information table to go which are lecture and tream, 
 week 7
 I have make some progress on UI design, it now can prompt a new window from current page by click a button or a image.
 and for the backgroud I decide to keep playing a video which is related to our project. there are still some bugs need to be fixd. 
+
+week 8
+this week, I've working on improving presenting type, I commited lots of midifications on css style which makes UI more colorful;together with my teamates, we disscused about which version is the best.
+
+
+week 9
+our project is now performing as expected, our job now is foucus on bugs fix, we've try to add lots of cases to test whether our chatbot can handle those cases. ideed our chatbot cannot satisfied every case, so we work together to fix these bugs.
+as me, I add two frame to the homepage, which is guideline of how to use our chatbot and some types of question that user can ask, this would help user to easily use chatbot. 
+
+week 10
+this week, I've been working on to fix the bug of presenting format, the bug will automaticly delete <br> which are embedded in response
+from server, this would result in a poor resenting of our response data. In first place, I thought there was some problems of  the js API that I referred, I did enormous search on js, read throught all the api code, and finally found that problem is not the js but the css style, all I have to do is add a tag on css code, this fixed all the problems.
+
+
+week 11
+this week ,our group has a meeting on give a final test of our project, we discussed how to give a good demo and working on powerpoint individualy and integrate all parts in the end. We also has start our report writting seperately as each member of the group has specific works. 
