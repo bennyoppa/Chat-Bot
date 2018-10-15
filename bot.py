@@ -127,6 +127,8 @@ q04 = 'do you know Tatjana Zrimec'
 
 q05 = "what subjects do he teach"
 
+q09 = "how to contact Liam O'Connor-Davis and John David?"
+
 ##????????
 ##q11 = 'Is COMP9417 an adk course?'
 

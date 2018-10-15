@@ -1,5 +1,6 @@
 import random
 import logging
+import re
 from db.retrieve_info import get_info
 
 ##pip install rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy
@@ -180,6 +181,7 @@ class RasaNLP(object):
 
             # record question
             if table == 'staff':
+                key = [''.join(n) for n in re.findall("([A-Z][A-Za-z\-']*)( [A-Z][A-Za-z\-']*)+", msg)]
                 if len(key):
                     self.staff = key
                 else:
@@ -266,6 +268,8 @@ class RasaNLP(object):
         if type(parsed_query) is tuple:
             # need_reply,[]
             deter, table, keyword, att = parsed_query
+##            if table == "staff":
+##                keyword = [''.join(n) for n in re.findall("([A-Z][A-Za-z\-']*)( [A-Z][A-Za-z\-']*)+", msg)]
 
 
             # replace 'contact' in att for staff table
