@@ -119,7 +119,11 @@ warnings.filterwarnings('ignore')
 ##        return answer
 
 q01 = 'What is the pre_requisite of COMP9417?'
-q02 = 'What is the pre_requisite and name of COMP9517?'
+
+
+q02 = 'What is the pre_requisite and name of COMP9517 and comp9418?'
+q03 = "What are the prerequisite and lic of COMP3121 and comp4121?"
+q04 = 'do you know Tatjana Zrimec'
 
 ##????????
 ##q11 = 'Is COMP9417 an adk course?'

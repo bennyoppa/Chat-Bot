@@ -23,7 +23,13 @@ week 8
 Added more training data to handle more questions including both general and specific ones. Bit internal structure modifications for future development convenience.
 
 week 9
+Searching for speech recognization resources, started the SR implementation for our Chat bot. Added more training data for more types of questions.
 
+week 10
+Decided not to use SR in our Chat Bot because most of the keywords in the query are not English words(like course code, COMP1234, and lecturer's name, etc.), thus, hard to be recognised correctly sometimes, which causes instability, also, our accent makes testing a bit difficult. This week mainly focused on testing our Chat Bot with more types of potential questions, and debugging accordingly.
+
+week 11
+Added more training data as a follow up from debugging last week. Prepare for the demo and final report.
 
 
 
