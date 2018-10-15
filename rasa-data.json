@@ -661,7 +661,43 @@
         ]
       },
       {
+        "text": "what subjects do he teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "what courses does she teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what courses do she teach?",
         "intent": "staff",
         "entities": [
           {
@@ -703,6 +739,30 @@
         ]
       },
       {
+        "text": "what subjects do Salil Kanhere teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 17,
+            "end": 30,
+            "value": "Salil Kanhere",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "what subjects does Jashank Jeremy teach?",
         "intent": "staff",
         "entities": [
@@ -727,6 +787,30 @@
         ]
       },
       {
+        "text": "what subjects do Jashank Jeremy teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 17,
+            "end": 31,
+            "value": "Jashank Jeremy",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "what subjects does Mohammadali Yaghoubzadehfard teach?",
         "intent": "staff",
         "entities": [
@@ -739,6 +823,30 @@
           {
             "start": 19,
             "end": 47,
+            "value": "Mohammadali Yaghoubzadehfard",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what subjects do Mohammadali Yaghoubzadehfard teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 17,
+            "end": 45,
             "value": "Mohammadali Yaghoubzadehfard",
             "entity": "key"
           },
