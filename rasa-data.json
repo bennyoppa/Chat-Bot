@@ -1104,6 +1104,24 @@
         ]
       },
       {
+        "text": "What are name of it?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "value": "name",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "What is the prerequisite of COMP9999 and comp9022?",
         "intent": "course",
         "entities": [
