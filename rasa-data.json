@@ -238,6 +238,30 @@
         ]
       },
       {
+        "text": "Do you know Liam O'Connor-Davis?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 31,
+            "value": "Liam O'Connor-Davis",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Do you know Jason Connor-Davis?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "Jason Connor-Davis",
+            "entity": "key"
+          }
+        ]
+      },
+      {
         "text": "I need info about Jack Simon.",
         "intent": "staff",
         "entities": [
