@@ -157,6 +157,54 @@
         ]
       },
       {
+        "text": "Tell me what you know about Tatjana Zrimec?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 28,
+            "end": 42,
+            "value": "Tatjana Zrimec",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Do you know Hangbin Zhang?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 25,
+            "value": "Hangbin Zhang",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Do you know Seung Ryu?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "Seung Ryu",
+            "entity": "key"
+          }
+        ]
+      },
+      {
+        "text": "Do you know Jin Qu?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "Jin Qu",
+            "entity": "key"
+          }
+        ]
+      },
+      {
         "text": "I need info about Jack Simon.",
         "intent": "staff",
         "entities": [
@@ -425,6 +473,30 @@
             "start": 21,
             "end": 26,
             "value": "email",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what's Vladimir Tosic's contact number?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 7,
+            "end": 21,
+            "value": "Vladimir Tosic",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 24,
+            "end": 38,
+            "value": "phone",
             "entity": "att"
           }
         ]
@@ -1122,6 +1194,78 @@
           {
             "start": 30,
             "end": 34,
+            "value": "name",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What is the prerequisite and name of COMP9562 and COMP4258?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 37,
+            "end": 45,
+            "value": "COMP9562",
+            "entity": "key"
+          },
+          {
+            "start": 50,
+            "end": 58,
+            "value": "COMP4258",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "value": "pre_requisite",
+            "entity": "att"
+          },
+          {
+            "start": 29,
+            "end": 33,
+            "value": "name",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What is the timetable and name of COMP9562 and COMP4258?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 34,
+            "end": 42,
+            "value": "COMP9562",
+            "entity": "key"
+          },
+          {
+            "start": 47,
+            "end": 55,
+            "value": "COMP4258",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 21,
+            "value": "timetable",
+            "entity": "att"
+          },
+          {
+            "start": 26,
+            "end": 30,
             "value": "name",
             "entity": "att"
           }

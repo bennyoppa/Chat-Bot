@@ -186,8 +186,12 @@ class RasaNLP(object):
 
             # handle complex questions
             if att2:
-                if not att:
-                    att = att2
+                if not att \
+                   or not 'contact' in att\
+                   and not 'email' in att\
+                   and not 'phone' in att\
+                   and not 'office' in att:
+                    att += att2
                 else:
                     try:
                         res = get_info(table, key, att2)
@@ -277,6 +281,8 @@ class RasaNLP(object):
             if table == 'course' and 'lic' in [a.lower() for a in att]:
                 self.staff = []
                 for i in info_list:
+                    if not any(i):
+                        break
                     name = i['lic']
                     for s in self.STAFF_TITLE:
                         name = name.lstrip(s)
