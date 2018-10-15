@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79a9d524-36a1-4f11-94d8-25c472787def" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainpage.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,19 +46,19 @@
         <counts>
           <entry key="Django Console" value="32" />
           <entry key="css" value="204" />
-          <entry key="html" value="7290" />
+          <entry key="html" value="7323" />
           <entry key="js" value="105" />
-          <entry key="py" value="1952" />
+          <entry key="py" value="2035" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="204" />
-          <entry key="HTML" value="7291" />
+          <entry key="HTML" value="7324" />
           <entry key="JavaScript" value="104" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1984" />
+          <entry key="Python" value="2067" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -101,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UI/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2208">
-              <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <state relative-caret-position="300">
+              <caret line="104" column="48" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -113,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="147" column="65" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="65" />
+            <state relative-caret-position="828">
+              <caret line="153" column="65" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="65" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -122,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="84" column="95" selection-start-line="84" selection-start-column="95" selection-end-line="84" selection-end-column="95" />
+            <state relative-caret-position="-253">
+              <caret line="94" column="219" selection-start-line="94" selection-start-column="219" selection-end-line="94" selection-end-column="219" />
             </state>
           </provider>
         </entry>
@@ -207,12 +207,12 @@
         <option value="$PROJECT_DIR$/UI/index.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/UI/static/botui.min.js" />
-        <option value="$PROJECT_DIR$/UI/views.py" />
         <option value="$PROJECT_DIR$/UI/static/botui-theme-default.css" />
         <option value="$PROJECT_DIR$/nlp/rasa.py" />
         <option value="$PROJECT_DIR$/templates/ChatUI.html" />
         <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/templates/mainpage.html" />
+        <option value="$PROJECT_DIR$/UI/views.py" />
       </list>
     </option>
   </component>
@@ -419,7 +419,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.061755147" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.37053087" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -632,27 +632,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+        <state relative-caret-position="-253">
+          <caret line="94" column="219" selection-start-line="94" selection-start-column="219" selection-end-line="94" selection-end-column="219" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="147" column="65" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="65" />
+        <state relative-caret-position="828">
+          <caret line="153" column="65" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="65" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mainpage.html">
+    <entry file="file://$PROJECT_DIR$/UI/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="84" column="95" selection-start-line="84" selection-start-column="95" selection-end-line="84" selection-end-column="95" />
+        <state relative-caret-position="300">
+          <caret line="104" column="48" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
         </state>
       </provider>
     </entry>
