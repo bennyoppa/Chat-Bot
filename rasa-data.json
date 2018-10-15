@@ -679,6 +679,24 @@
         ]
       },
       {
+        "text": "what courses do he teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "what courses does she teach?",
         "intent": "staff",
         "entities": [
