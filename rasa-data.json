@@ -16,6 +16,11 @@
         "intent": "greet1",
         "entities": []
       },
+      {
+        "text": "Hi.",
+        "intent": "greet1",
+        "entities": []
+      },
 
 
       {
@@ -30,6 +35,11 @@
       },
       {
         "text": "how's going.",
+        "intent": "greet2",
+        "entities": []
+      },
+      {
+        "text": "how do you do.",
         "intent": "greet2",
         "entities": []
       },
@@ -61,6 +71,29 @@
       {
         "text": "Thank you thank you.",
         "intent": "greet3",
+        "entities": []
+      },
+
+
+
+      {
+        "text": "Bye.",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "See you.",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "Later.",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "Good Bye.",
+        "intent": "bye",
         "entities": []
       },
 
@@ -347,6 +380,30 @@
         ]
       },
       {
+        "text": "Whats your name?",
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "your name",
+            "entity": "self"
+          }
+        ]
+      },
+      {
+        "text": "Who are you?",
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Who are you",
+            "entity": "self"
+          }
+        ]
+      },
+      {
         "text": "tell me your name?",
         "intent": "unrelated",
         "entities": [
@@ -538,6 +595,54 @@
         ]
       },
       {
+        "text": "where's Ashesh Mahidadia's office?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 8,
+            "end": 24,
+            "value": "Ashesh Mahidadia",
+            "entity": "key"
+          },
+          {
+            "start": 27,
+            "end": 33,
+            "value": "office",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "where's Nadeem Ahmed's office?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 8,
+            "end": 20,
+            "value": "Nadeem Ahmed",
+            "entity": "key"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "value": "office",
+            "entity": "att"
+          }
+        ]
+      },
+      {
         "text": "what subjects does he teach?",
         "intent": "staff",
         "entities": [
@@ -546,6 +651,120 @@
             "end": 4,
             "value": "what",
             "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what courses does she teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what subjects does Salil Kanhere teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 32,
+            "value": "Salil Kanhere",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what subjects does Jashank Jeremy teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 33,
+            "value": "Jashank Jeremy",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 47,
+            "value": "Mohammadali Yaghoubzadehfard",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?",
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 47,
+            "value": "Mohammadali Yaghoubzadehfard",
+            "entity": "key"
           },
           {
             "start": 5,
@@ -1099,6 +1318,24 @@
             "start": 13,
             "end": 35,
             "value": "pre_requisite",
+            "entity": "att"
+          }
+        ]
+      },
+      {
+        "text": "What are name of it?",
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "value": "name",
             "entity": "att"
           }
         ]
