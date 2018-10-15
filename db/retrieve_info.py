@@ -47,6 +47,7 @@ def get_course_info(keywords, query):
                     info = json.loads(doc.to_json())
                     for key in query:
                         result[key] = info[key]
+        del result['_id']
         final_result.append(result)
     return final_result
 
@@ -107,5 +108,6 @@ def get_staff_info(keywords, query):
                     info = json.loads(doc.to_json())
                     for key in query:
                         result[key] = info[key]
+        del result['_id']
         final_result.append(result)
     return final_result
