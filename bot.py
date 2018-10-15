@@ -9,15 +9,14 @@ from db.retrieve_info import get_info
 qs = "I've completed COMP6714 and comp9313 and COMP9321, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
 
 
-q = "how to contact the lic of comp9020?"
+
 qq = "show me the name of comp4121"
 
 
 qq0 = 'is it adk'
 qq1 = 'what is the name of it'
 
-qq11 = 'whos lic comp9020'
-qq12 = 'how to contact him'
+
 
 
 import warnings
@@ -126,7 +125,7 @@ q02 = 'What is the pre_requisite and name of COMP9517?'
 ##q11 = 'Is COMP9417 an adk course?'
 
 q="show me the lic of comp9021"
-qq="how to contact lic of xomp9444"
+qq="how to contact lic of comp9020"
 
 q11 = 'Is COMP9418 an adk course?'
 q12 = 'What is the prerequisite of it?'
@@ -140,16 +139,21 @@ q3 = 'I\'ve done comp9021 and comp9024, am i eligible for COMPas stream?'
 q41 = "What subjects do I have to complete to declare COMPAS stream?"
 q42 = "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
 
-q51 = "what is the phone of eric martin?"
-q52 = "what is the email of eric martin?"
+q51 = "what is the phone/email of eric martin?"
 
 q61 = "who is the lic of comp9021?"
 q62 = "where is the office of eric martin?"
 q63 = "what courses does eric martin teach?"
 
-q71="tell/show/give/me/ what's the contact number of eric martin "
+q71="tell/show/give/me/ what's/the contact number of eric martin "
 q72="do you know lic of comp9021?"
 q73="do you know where is the office of eric martin"
+q74="do you know Eric Martin/name of comp9444/comp9900"
+q75="tell me something about comp9323/Alan Blair"
+q76= "how to contact the lic of comp9020?"
+
+q77 = 'whos lic comp9020'
+q78 = 'how to contact him'
 
 #  train the nlp model
 nlp = RasaNLP('./rasa-config.json', './rasa-data.json', './rasa-model')
