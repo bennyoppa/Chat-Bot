@@ -291,7 +291,8 @@ class RasaNLP(object):
                         break
                     name = i['lic']
                     for s in self.STAFF_TITLE:
-                        name = name.lstrip(s)
+                        if name.startswith(s):
+                            name = name.lstrip(s)
                     self.staff += [name]
 
             if not any(info_list):
