@@ -42,8 +42,11 @@ class RasaNLP(object):
         'No worries at all',
         ]
 
+    INTENT_BYE = 'bye'
+    BYE_MSG = ['Later', 'Bye', 'See you', 'Have a nice day', 'Have a good day']
+
 ##    INTENT_SELF = 'self'
-    SELF_MSG = ['My name is Uri. I am an intelligent chatting robot and can answer CSE enrolment related questions.']
+    SELF_MSG = ['I am an intelligent chatting robot and can answer CSE enrolment related questions.']
 
     INTENT_UNRELATED = 'unrelated'
     UNRELATED_MSG = ['Sorry, I can only answer questions related to CSE courses, streams and staff.']
@@ -143,6 +146,9 @@ class RasaNLP(object):
         
         if res['intent']['name'] == self.INTENT_CHALLENGE:
             return random.choice(self.CHALLENGE_MSG)
+
+        if res['intent']['name'] == self.INTENT_BYE:
+            return random.choice(self.BYE_MSG)
 
 
 
