@@ -6,6 +6,14 @@ from db.retrieve_info import get_info
 # stream, no record and eligible are the same.
 #                       return True
 
+
+q3 = 'I\'ve done comp9414 and comp4418, am i eligible for COMPas stream? '
+q31="I\'ve done comp9021 and comp9024, am i eligible for COMPas stream? "
+
+
+
+
+
 qs = "I've completed COMP6714 and comp9313 and COMP9321, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
 
 
@@ -142,8 +150,6 @@ q21 = 'Are COMP9417 and comp9801 adk courses?'
 q22 = "What is the prerequisite of coMp9024 and comp9444?"
 q23 = "What are the prerequisite and name of coMp9024 and comp9021?"
 
-
-q3 = 'I\'ve done comp9021 and comp9024, am i eligible for COMPas stream?'
 q41 = "What subjects do I have to complete to declare COMPAS stream?"
 q42 = "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
 
