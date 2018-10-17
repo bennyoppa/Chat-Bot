@@ -1,0 +1,75 @@
+Work Diary
+Course : COMP9900
+Name: Arvind Bahl
+zid: 5129975
+
+Week 1
+
+Attended the lecture and went through course outline, course requirements and all the material on the course website.
+
+Week 2
+
+Formed the group. Explored all the project topics available for implementation. Discussed with the 
+teammates and finalised Chatbot as the topic. Did research on the Chatbot and helped the teammates in
+deciding epics and project proposal. Setup the Github for the project on the local machine.
+
+Week 3
+
+Took up the task of creating add-in for the browser. Started studying Django tutorials, manuals and other resources. 
+Implemented basic web server using the Django and using basic browser an add-in to interact with it. Dropped the planned of
+implementing it further as team-mates wanted my help in data collections.
+
+Week 4
+
+Took up the data collection of collecting the data from multiple web pages with hierarchy starting from one webpage
+as a root and going to the bottom of the tree, crawling all the links in the website and sub-websites. Studied Beautifulsoup library
+and setup the environment for coding, implemented data collection for staff course relation and staff type relation.
+
+Week 5
+
+Completed staff course relation and staff type relation, thus developing python code, to save the crawling and scraping data
+in CSV file. Started working on course staff relation. Facing issues with the find functions in Beautifulsoup library,
+therefore, developed customised logic and python code for WebCMS site.
+
+Week 6
+
+Completed course staff relation, developed code and pushed the code and the CSV file to GitHub. Started working on 
+staff contact details code, developing code to gather data from different types of websites. Also developing and debugging
+issues arising in extracting information from the website pop up.
+
+Week 7
+
+Working on fixing bugs in the code related to website pop up information gathering, added code for string manipulation
+in case of long single string separating the contact details in different strings, cases and also keeping names same. Now information gathered by the code
+is a name, email id, phone number and contact details. pushed the code and CSV files to Github.
+
+Week 8
+
+Started creating code for course gathering course related information. Successfully build code to gather all the information
+on the course handbook. Challenging part is finding the details as all the elements are tagged as data. Developed logic to
+search the list manipulated the strings and save it in the dictionary with the key as the course and value as the lecture time.
+Completed and pushed the code and CSV to Github.
+
+Week 9
+
+Started working on a project report, completed the format and table of contents. Passed it to scrum master for Tutors review.
+Working on data updating code. implementing two different systems for code update the first is complete update second one
+is only html diff update. Decided to implement complete update and second one requires a lot of space.
+
+Week 10
+
+Implemented data update code. Tested the update part by checking the CSV file results manually. Started working on the packaging of
+the code to single exe file. Developed the build and compile the code to form exe. Verified the data is getting updated
+and parameter passing for current date year is working fine.
+
+Week 11
+
+Working on creating the service for automatic update of the data. Created the service and tested the data is getting updated correctly.
+Worked on writing introduction and objectives for the report. Modified the report content as per tutors' suggestions.
+Preparing the presentation for the final demo.
+
+Week 12 
+
+Practiced presentation with the team and completed the presentation. Gave the final demo and presentation. working on 
+completing my part in the report and preparing user manuals.
+
