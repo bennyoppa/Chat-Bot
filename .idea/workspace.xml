@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79a9d524-36a1-4f11-94d8-25c472787def" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/rasa.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/rasa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z5099797.txt" beforeDir="false" afterPath="$PROJECT_DIR$/z5099797.txt" afterDir="false" />
-    </list>
+    <list default="true" id="79a9d524-36a1-4f11-94d8-25c472787def" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +20,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="53" />
-          <entry key="project.open.time.0" value="10" />
+          <entry key="project.open.time.0" value="11" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -39,7 +35,7 @@
           <entry key="project.open.time.7" value="8" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="54" />
+          <entry key="project.opened" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -49,7 +45,7 @@
           <entry key="html" value="7344" />
           <entry key="js" value="105" />
           <entry key="py" value="2052" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -57,20 +53,22 @@
           <entry key="CSS" value="204" />
           <entry key="HTML" value="7345" />
           <entry key="JavaScript" value="104" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="26" />
           <entry key="Python" value="2084" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="27" />
+          <entry key="csv" value="1" />
           <entry key="gif" value="1" />
           <entry key="html" value="31" />
           <entry key="jpg" value="22" />
           <entry key="js" value="21" />
           <entry key="json" value="4" />
           <entry key="png" value="20" />
-          <entry key="py" value="47" />
+          <entry key="py" value="54" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -80,7 +78,8 @@
           <entry key="Image" value="43" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="21" />
-          <entry key="Python" value="47" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -95,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/ChatUI.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1472">
+            <state relative-caret-position="826">
               <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
             </state>
           </provider>
@@ -104,8 +103,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1817">
-              <caret line="84" selection-start-line="84" selection-end-line="85" selection-end-column="35" />
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/retrieve_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nlp/rasa.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/stream_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/staff_details.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/staff_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +172,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="322">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -127,15 +186,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
               <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nlp/rasa.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="109" selection-start-line="109" selection-end-line="109" />
             </state>
           </provider>
         </entry>
@@ -222,6 +272,7 @@
         <option value="$PROJECT_DIR$/templates/mainpage.html" />
         <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/nlp/rasa.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -243,13 +294,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="mychatbot" type="b2602c69:ProjectViewProjectNode" />
               <item name="mychatbot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mychatbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mychatbot" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mychatbot" type="b2602c69:ProjectViewProjectNode" />
@@ -276,6 +331,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,7 +489,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29850745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30170575" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -477,45 +533,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="n" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UI/static/layer/mobile/need/layer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1738" selection-start-column="1735" selection-end-column="1738" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/static/layer/mobile/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="32" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/static/layer/theme/default/layer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6518" selection-start-column="6515" selection-end-column="6518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/course_db.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/retrieve_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rasa-data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-753">
-          <caret line="368" column="45" selection-start-line="368" selection-start-column="40" selection-end-line="368" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/static/human.png" />
     <entry file="file://$PROJECT_DIR$/UI/static/robot.png" />
     <entry file="file://$PROJECT_DIR$/UI/static/enter-animate.gif">
       <provider selected="true" editor-type-id="images" />
@@ -603,26 +620,26 @@
     <entry file="file://$PROJECT_DIR$/UI/static/13.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/course_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ChatUI.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1472">
+        <state relative-caret-position="826">
           <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UI/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1817">
-          <caret line="84" selection-start-line="84" selection-end-line="85" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -634,10 +651,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/retrieve_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/info_lists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlp/rasa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="46">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/stream_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/staff_details.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/staff_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
