@@ -45,3 +45,11 @@ Week 9
 
 Created another table for staff details. Waited for team member to collect more teaching details. Also,
 wrote search functions for 'Staff' table.
+
+Week 10
+
+Add more info about staff for the 'Staff table'. Also add timetable for courses.
+
+Week 11
+
+Minor bug fix and prepared for the final demo next week.
