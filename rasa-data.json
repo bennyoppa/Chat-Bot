@@ -2332,7 +2332,7 @@
       },
       {
         "value": "timetable",
-        "synonyms": ["time table", "time"]
+        "synonyms": ["time table", "time", "lecture time"]
       }
     ]
   }
