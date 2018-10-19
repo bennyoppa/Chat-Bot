@@ -33,10 +33,11 @@ as me, I add two frame to the homepage, which is guideline of how to use our cha
 this would help user to easily use chatbot. 
 
 week 10
-this week, I've been working on to fix the bug of presenting format, the bug will automaticly delete <br> which are embedded in response
-from server, this would result in a poor resenting of our response data. In first place, I thought there was some problems of  the js API that I referred, 
-I did enormous search on js, read throught all the api code, and finally found that problem is not the js but the css style, 
-all I have to do is add a tag on css code, this fixed all the problems.
+this week, I've been working on to fix the bug of presenting format, the bug will automatically delete <br> which are embedded in the response
+from the server, this would result in a poor resenting of our response data. In the first place, I thought there were some problems with the js API that I referred, 
+I did an enormous search on js, read through all the API code, and finally found that the problem is not the js but the CSS style, 
+all I have to do is add a tag on CSS code, this fixed all the problems.
+
 
 
 week 11

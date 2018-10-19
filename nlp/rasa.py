@@ -105,13 +105,8 @@ class RasaNLP(object):
         logging.info('rasa parse res: {}'.format(res))
 
         if not 'intent' in res or res['intent'] is None:
-<<<<<<< HEAD
-            # later we can do something with unparsed messages, probably train bot
-            self.uned_messages.append(msg)
-=======
             # later we can do something with unparsed messages, train bot
             self.unparsed_messages.append(msg)
->>>>>>> jin
             return random.choice(self.COULD_NOT_PARSE_MSGS)
 
         if res['intent']['name'] == self.INTENT_GREET1:
