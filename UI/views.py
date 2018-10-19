@@ -99,8 +99,11 @@ def Chatbot_sub(req):
           #reply = ''
           #for q in answer:
           #     reply += answer[q] + '\n'
-          answer = reply(nlp.reply(data['content']))
-          print('view: ', nlp.subject)
+          try:
+            answer = reply(nlp.reply(data['content']))
+          except:
+              answer="sorry, I don't understand"
+          nlp.snapshot_unparsed_messages("unparsed.txt")
 
           return HttpResponse(json.dumps(answer), content_type='application/json')
      return render(req, 'error.html')

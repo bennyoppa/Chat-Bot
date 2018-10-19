@@ -1,0 +1,2320 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet1",
+        "entities": [],
+        "text": "hey."
+      },
+      {
+        "intent": "greet1",
+        "entities": [],
+        "text": "howdy."
+      },
+      {
+        "intent": "greet1",
+        "entities": [],
+        "text": "hey you."
+      },
+      {
+        "intent": "greet1",
+        "entities": [],
+        "text": "Hi."
+      },
+      {
+        "intent": "greet2",
+        "entities": [],
+        "text": "how are you."
+      },
+      {
+        "intent": "greet2",
+        "entities": [],
+        "text": "how r u."
+      },
+      {
+        "intent": "greet2",
+        "entities": [],
+        "text": "how's going."
+      },
+      {
+        "intent": "greet2",
+        "entities": [],
+        "text": "how do you do."
+      },
+      {
+        "intent": "greet2",
+        "entities": [],
+        "text": "how you feeling??"
+      },
+      {
+        "intent": "greet2",
+        "entities": [],
+        "text": "how r you feeling"
+      },
+      {
+        "intent": "greet3",
+        "entities": [],
+        "text": "Thank you."
+      },
+      {
+        "intent": "greet3",
+        "entities": [],
+        "text": "Thanks."
+      },
+      {
+        "intent": "greet3",
+        "entities": [],
+        "text": "Thank you very much."
+      },
+      {
+        "intent": "greet3",
+        "entities": [],
+        "text": "Thank you thank you."
+      },
+      {
+        "intent": "bye",
+        "entities": [],
+        "text": "Bye."
+      },
+      {
+        "intent": "bye",
+        "entities": [],
+        "text": "See you."
+      },
+      {
+        "intent": "bye",
+        "entities": [],
+        "text": "Later."
+      },
+      {
+        "intent": "bye",
+        "entities": [],
+        "text": "Good Bye."
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "COMP9527",
+            "entity": "key"
+          }
+        ],
+        "text": "Tell me something about COMP9527"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "COMP2357",
+            "entity": "key"
+          }
+        ],
+        "text": "Tell me something about COMP2357"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP3457",
+            "entity": "key"
+          }
+        ],
+        "text": "What do you know about COMP3457"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "COMP2345",
+            "entity": "key"
+          }
+        ],
+        "text": "I want to know about COMP2345"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP6745",
+            "entity": "key"
+          }
+        ],
+        "text": "I'd like to know about COMP6745"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 23,
+            "value": "Eric Martin",
+            "entity": "key"
+          }
+        ],
+        "text": "Do you know Eric Martin?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "Lily Wang",
+            "entity": "key"
+          }
+        ],
+        "text": "Tell me what you know about Lily Wang?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 28,
+            "end": 42,
+            "value": "Tatjana Zrimec",
+            "entity": "key"
+          }
+        ],
+        "text": "Tell me what you know about Tatjana Zrimec?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 25,
+            "value": "Hangbin Zhang",
+            "entity": "key"
+          }
+        ],
+        "text": "Do you know Hangbin Zhang?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "Seung Ryu",
+            "entity": "key"
+          }
+        ],
+        "text": "Do you know Seung Ryu?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "Jin Qu",
+            "entity": "key"
+          }
+        ],
+        "text": "Do you know Jin Qu?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 31,
+            "value": "Liam O'Connor-Davis",
+            "entity": "key"
+          }
+        ],
+        "text": "Do you know Liam O'Connor-Davis?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "Jason Connor-Davis",
+            "entity": "key"
+          }
+        ],
+        "text": "Do you know Jason Connor-Davis?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "Jack Simon",
+            "entity": "key"
+          }
+        ],
+        "text": "I need info about Jack Simon."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "I need info about stream COMPAS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "Tell me something about stream COMPAS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "COMPGS",
+            "entity": "key"
+          }
+        ],
+        "text": "Tell me something about stream COMPGS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ],
+        "text": "What do you know about stream COMPDS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "COMPSS",
+            "entity": "key"
+          }
+        ],
+        "text": "I need to know about stream COMPSS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPIS",
+            "entity": "key"
+          }
+        ],
+        "text": "Give me info stream COMPIS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPGS",
+            "entity": "key"
+          }
+        ],
+        "text": "Give me info stream COMPGS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ],
+        "text": "Give me info stream COMPDS."
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "Give me info stream COMPAS."
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "your name",
+            "entity": "self"
+          }
+        ],
+        "text": "What is your name?"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "your name",
+            "entity": "self"
+          }
+        ],
+        "text": "Whats your name?"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Who are you",
+            "entity": "self"
+          }
+        ],
+        "text": "Who are you?"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "your name",
+            "entity": "self"
+          }
+        ],
+        "text": "tell me your name?"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [],
+        "text": "How is the weather???"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [],
+        "text": "Whats the time now?"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [],
+        "text": "Did you see the movie last night?"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 5,
+            "end": 15,
+            "value": "can you do",
+            "entity": "self"
+          }
+        ],
+        "text": "What can you do"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 5,
+            "end": 17,
+            "value": "could you do",
+            "entity": "self"
+          }
+        ],
+        "text": "What could you do"
+      },
+      {
+        "intent": "unrelated",
+        "entities": [
+          {
+            "start": 5,
+            "end": 23,
+            "value": "are you able to do",
+            "entity": "self"
+          }
+        ],
+        "text": "What are you able to do"
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "How smart are you???"
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "How smart are you?"
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "How smart are you"
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "U dont seem so smart."
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "You are stupid."
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "You seem dumb."
+      },
+      {
+        "intent": "challenge",
+        "entities": [],
+        "text": "Why are you so dumb."
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 7,
+            "end": 18,
+            "value": "John Martin",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 21,
+            "end": 26,
+            "value": "email",
+            "entity": "att"
+          }
+        ],
+        "text": "what's John Martin's email?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 7,
+            "end": 21,
+            "value": "Vladimir Tosic",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 24,
+            "end": 38,
+            "value": "phone",
+            "entity": "att"
+          }
+        ],
+        "text": "what's Vladimir Tosic's contact number?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 11,
+            "end": 16,
+            "value": "phone",
+            "entity": "att"
+          }
+        ],
+        "text": "what's his phone number?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 18,
+            "value": "office",
+            "entity": "att"
+          }
+        ],
+        "text": "where's his office?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 8,
+            "end": 24,
+            "value": "Ashesh Mahidadia",
+            "entity": "key"
+          },
+          {
+            "start": 27,
+            "end": 33,
+            "value": "office",
+            "entity": "att"
+          }
+        ],
+        "text": "where's Ashesh Mahidadia's office?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 8,
+            "end": 20,
+            "value": "Nadeem Ahmed",
+            "entity": "key"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "value": "office",
+            "entity": "att"
+          }
+        ],
+        "text": "where's Nadeem Ahmed's office?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects does he teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects do he teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what courses do he teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what courses does she teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what courses do she teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 32,
+            "value": "Salil Kanhere",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects does Salil Kanhere teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 17,
+            "end": 30,
+            "value": "Salil Kanhere",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects do Salil Kanhere teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 33,
+            "value": "Jashank Jeremy",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects does Jashank Jeremy teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 17,
+            "end": 31,
+            "value": "Jashank Jeremy",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects do Jashank Jeremy teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 47,
+            "value": "Mohammadali Yaghoubzadehfard",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 17,
+            "end": 45,
+            "value": "Mohammadali Yaghoubzadehfard",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects do Mohammadali Yaghoubzadehfard teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 19,
+            "end": 47,
+            "value": "Mohammadali Yaghoubzadehfard",
+            "entity": "key"
+          },
+          {
+            "start": 5,
+            "end": 13,
+            "value": "courses",
+            "entity": "att"
+          }
+        ],
+        "text": "what subjects does Mohammadali Yaghoubzadehfard teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "email",
+            "entity": "att"
+          }
+        ],
+        "text": "whats his email?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ],
+        "text": "how to contact him?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ],
+        "text": "how to contact her?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "where",
+            "entity": "nd"
+          },
+          {
+            "start": 11,
+            "end": 17,
+            "value": "office",
+            "entity": "att"
+          }
+        ],
+        "text": "wheres her office?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "where",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "office",
+            "entity": "att"
+          }
+        ],
+        "text": "where is his office?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 29,
+            "end": 42,
+            "value": "Rachid Hamadi",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 25,
+            "value": "phone",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the mobile number of Rachid Hamadi?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 30,
+            "end": 41,
+            "value": "Eric Martin",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 26,
+            "value": "phone",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the contact number of Eric Martin?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "Lina Yao",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ],
+        "text": "How to contact Lina Yao?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 15,
+            "end": 28,
+            "value": "John Shepherd",
+            "entity": "key"
+          },
+          {
+            "start": 32,
+            "end": 43,
+            "value": "Alex Linker",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          }
+        ],
+        "text": "How to contact John Shepherd or Alex Linker?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 18,
+            "end": 31,
+            "value": "John Shepherd",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att3"
+          }
+        ],
+        "text": "What courses does John Shepherd teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "Lily Yao",
+            "entity": "key"
+          },
+          {
+            "start": 29,
+            "end": 40,
+            "value": "Eric Martin",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att3"
+          }
+        ],
+        "text": "What courses do Lily Yao and Eric Martin teach?"
+      },
+      {
+        "intent": "staff",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "Luke John",
+            "entity": "key"
+          },
+          {
+            "start": 30,
+            "end": 36,
+            "value": "Jin Qu",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "courses",
+            "entity": "att3"
+          }
+        ],
+        "text": "What courses do Luke John and Jin Qu teach?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "is",
+            "entity": "d"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "value": "adk",
+            "entity": "att"
+          }
+        ],
+        "text": "is it adk?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 14,
+            "value": "name",
+            "entity": "att"
+          }
+        ],
+        "text": "whats its name?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 6,
+            "end": 14,
+            "value": "comp9418",
+            "entity": "key"
+          },
+          {
+            "start": 17,
+            "end": 30,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "whats comp9418's prerequisites?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "COMP9900",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Who is",
+            "entity": "nd"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "value": "LiC",
+            "entity": "att2"
+          }
+        ],
+        "text": "Who is the LiC of COMP9900?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "COMP4055",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Who is",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "value": "LiC",
+            "entity": "att2"
+          }
+        ],
+        "text": "Who is LiC of COMP4055?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "how to enrol in COMP9417?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "How can I enrol in COMP9417?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "How can I enrol COMP9417?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 3,
+            "value": "how",
+            "entity": "nd"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "How can I enrol in COMP9417?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP9999",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the prerequisite of COMP9999?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 39,
+            "end": 47,
+            "value": "COMP9922",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 35,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "What are the enrolment requirements of COMP9922?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 35,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "What are the enrolment requirements of it?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "value": "name",
+            "entity": "att"
+          }
+        ],
+        "text": "What are name of it?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP9999",
+            "entity": "key"
+          },
+          {
+            "start": 41,
+            "end": 49,
+            "value": "comp9022",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "value": "pre_requisite",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the prerequisite of COMP9999 and comp9022?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "COMP9021",
+            "entity": "key"
+          },
+          {
+            "start": 33,
+            "end": 41,
+            "value": "comp9444",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "name",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the name of COMP9021 and comp9444?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "COMP9999",
+            "entity": "key"
+          },
+          {
+            "start": 51,
+            "end": 59,
+            "value": "comp9022",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 25,
+            "value": "pre_requisite",
+            "entity": "att"
+          },
+          {
+            "start": 30,
+            "end": 34,
+            "value": "name",
+            "entity": "att"
+          }
+        ],
+        "text": "What are the prerequisite and name of COMP9999 and comp9022?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 37,
+            "end": 45,
+            "value": "COMP9562",
+            "entity": "key"
+          },
+          {
+            "start": 50,
+            "end": 58,
+            "value": "COMP4258",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "value": "pre_requisite",
+            "entity": "att"
+          },
+          {
+            "start": 29,
+            "end": 33,
+            "value": "name",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the prerequisite and name of COMP9562 and COMP4258?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 34,
+            "end": 42,
+            "value": "COMP9562",
+            "entity": "key"
+          },
+          {
+            "start": 47,
+            "end": 55,
+            "value": "COMP4258",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What is",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 21,
+            "value": "timetable",
+            "entity": "att"
+          },
+          {
+            "start": 26,
+            "end": 30,
+            "value": "name",
+            "entity": "att"
+          }
+        ],
+        "text": "What is the timetable and name of COMP9562 and COMP4258?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 37,
+            "end": 45,
+            "value": "COMP3121",
+            "entity": "key"
+          },
+          {
+            "start": 50,
+            "end": 58,
+            "value": "comp4122",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 8,
+            "value": "What are",
+            "entity": "nd"
+          },
+          {
+            "start": 13,
+            "end": 25,
+            "value": "pre_requisite",
+            "entity": "att"
+          },
+          {
+            "start": 30,
+            "end": 33,
+            "value": "lic",
+            "entity": "att"
+          }
+        ],
+        "text": "What are the prerequisite and lic of COMP3121 and comp4122?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 3,
+            "end": 11,
+            "value": "COMP9417",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 2,
+            "value": "Is",
+            "entity": "d"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "value": "adk",
+            "entity": "att"
+          }
+        ],
+        "text": "Is COMP9417 an adk course?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 3,
+            "end": 11,
+            "value": "COMP9876",
+            "entity": "key"
+          },
+          {
+            "start": 0,
+            "end": 2,
+            "value": "Is",
+            "entity": "d"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "value": "adk",
+            "entity": "att"
+          }
+        ],
+        "text": "Is COMP9876 an adk course?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Are",
+            "entity": "d"
+          },
+          {
+            "start": 4,
+            "end": 12,
+            "value": "COMP9020",
+            "entity": "key"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "comp9034",
+            "entity": "key"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "value": "adk",
+            "entity": "att"
+          }
+        ],
+        "text": "Are COMP9020 and comp9034 adk courses?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Are",
+            "entity": "d"
+          },
+          {
+            "start": 4,
+            "end": 12,
+            "value": "COMP9321",
+            "entity": "key"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "comp9517",
+            "entity": "key"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "value": "adk",
+            "entity": "att"
+          }
+        ],
+        "text": "Are COMP9321 and comp9517 adk courses?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 44,
+            "end": 50,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "What courses do I need to finish to declare COMPAS stream?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 47,
+            "end": 53,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ],
+        "text": "What subjects do I have to complete to declare COMPDS stream?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP9414",
+            "entity": "att"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP9999",
+            "entity": "att"
+          },
+          {
+            "start": 38,
+            "end": 42,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 88,
+            "end": 94,
+            "value": "COMPDS",
+            "entity": "key"
+          }
+        ],
+        "text": "I've completed COMP9414 and COMP9999, what other subjects do I have to study to declare COMPDS stream?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "COMP4121",
+            "entity": "att"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP9417",
+            "entity": "att"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "am",
+            "entity": "nd"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "I've done COMP4121 and COMP9417, am I eligible to declare COMPAS stream?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "COMP6587",
+            "entity": "att"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "COMP3485",
+            "entity": "att"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "value": "am",
+            "entity": "nd"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "I've done COMP6587 and COMP3485, am I eligible to declare COMPAS stream?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP3121",
+            "entity": "att"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP3111",
+            "entity": "att"
+          },
+          {
+            "start": 38,
+            "end": 42,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 88,
+            "end": 94,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 106,
+            "end": 112,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "I've completed COMP3121 and COMP3111, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP3121",
+            "entity": "att"
+          },
+          {
+            "start": 25,
+            "end": 33,
+            "value": "COMP3111",
+            "entity": "att"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "comp1247",
+            "entity": "att"
+          },
+          {
+            "start": 48,
+            "end": 52,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 98,
+            "end": 104,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 116,
+            "end": 122,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "I've completed COMP3121, COMP3111 and comp1247, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "COMP3121",
+            "entity": "att"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "COMP3111",
+            "entity": "att"
+          },
+          {
+            "start": 41,
+            "end": 49,
+            "value": "comp9024",
+            "entity": "att"
+          },
+          {
+            "start": 54,
+            "end": 62,
+            "value": "comp9418",
+            "entity": "att"
+          },
+          {
+            "start": 64,
+            "end": 68,
+            "value": "what",
+            "entity": "nd"
+          },
+          {
+            "start": 114,
+            "end": 120,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 132,
+            "end": 138,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "I've completed COMP3121 and COMP3111 and comp9024 and comp9418, what other subjects do I have to study to declare COMPDS stream and COMPAS?"
+      },
+      {
+        "intent": "stream",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "COMPDS",
+            "entity": "key"
+          },
+          {
+            "start": 47,
+            "end": 53,
+            "value": "COMPAS",
+            "entity": "key"
+          }
+        ],
+        "text": "What subjects do I have to complete to declare COMPAS and COMPDS stream?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "lic",
+            "entity": "att2"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "COMP9101",
+            "entity": "key"
+          }
+        ],
+        "text": "How to contact the lic of COMP9101?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "lic",
+            "entity": "att2"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "COMP3412",
+            "entity": "key"
+          }
+        ],
+        "text": "How to contact the lic of COMP3412?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "value": "lic",
+            "entity": "att2"
+          },
+          {
+            "start": 22,
+            "end": 30,
+            "value": "COMP3687",
+            "entity": "key"
+          }
+        ],
+        "text": "How to contact lic of COMP3687?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "How to",
+            "entity": "nd"
+          },
+          {
+            "start": 7,
+            "end": 14,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "lic",
+            "entity": "att2"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "COMP3456",
+            "entity": "key"
+          },
+          {
+            "start": 39,
+            "end": 47,
+            "value": "COMP4125",
+            "entity": "key"
+          }
+        ],
+        "text": "How to contact the lic of COMP3456 and COMP4125?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 35,
+            "end": 38,
+            "value": "lic",
+            "entity": "att2"
+          },
+          {
+            "start": 42,
+            "end": 50,
+            "value": "COMP3456",
+            "entity": "key"
+          },
+          {
+            "start": 55,
+            "end": 63,
+            "value": "COMP4125",
+            "entity": "key"
+          }
+        ],
+        "text": "Show me the contact details of the lic of COMP3456 and COMP4125?"
+      },
+      {
+        "intent": "course",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "What",
+            "entity": "nd"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "value": "contact",
+            "entity": "att"
+          },
+          {
+            "start": 31,
+            "end": 34,
+            "value": "lic",
+            "entity": "att2"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "COMP3456",
+            "entity": "key"
+          },
+          {
+            "start": 51,
+            "end": 59,
+            "value": "COMP4125",
+            "entity": "key"
+          }
+        ],
+        "text": "Show me the contact details of lic of COMP3456 and COMP4125?"
+      }
+    ],
+    "regex_features": [
+      {
+        "name": "course code",
+        "pattern": "[a-zA-Z]{4}[0-9]{4}"
+      },
+      {
+        "name": "stream code",
+        "pattern": "[Cc][Oo][Mm][Pp][AaBbCcDdEeGgIiSs][Ss]"
+      },
+      {
+        "name": "staff name",
+        "pattern": "[A-Z][a-z]* [A-Z][a-z]+"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "lic",
+        "synonyms": [
+          "Lecturer in charge",
+          "Lecturer"
+        ]
+      },
+      {
+        "value": "pre_requisite",
+        "synonyms": [
+          "enrolment requirements",
+          "requirements",
+          "enrol",
+          "prerequisite",
+          "prerequisites",
+          "pre_requisites",
+          "requirement",
+          "enrolment requirement"
+        ]
+      },
+      {
+        "value": "courses",
+        "synonyms": [
+          "course",
+          "subjects",
+          "subject",
+          "classes",
+          "class"
+        ]
+      },
+      {
+        "value": "What",
+        "synonyms": [
+          "Show me",
+          "Give me",
+          "Tell me",
+          "Gimme",
+          "Whats",
+          "What's",
+          "where"
+        ]
+      },
+      {
+        "value": "phone",
+        "synonyms": [
+          "contact number",
+          "phone number",
+          "mobile",
+          "mobile number"
+        ]
+      },
+      {
+        "value": "timetable",
+        "synonyms": [
+          "time table",
+          "time"
+        ]
+      }
+    ]
+  }
+}

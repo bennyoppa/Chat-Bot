@@ -1,0 +1,14 @@
+[
+    {
+        "name": "course code",
+        "pattern": "[a-zA-Z]{4}[0-9]{4}"
+    },
+    {
+        "name": "stream code",
+        "pattern": "[Cc][Oo][Mm][Pp][AaBbCcDdEeGgIiSs][Ss]"
+    },
+    {
+        "name": "staff name",
+        "pattern": "[A-Z][a-z]* [A-Z][a-z]+"
+    }
+]

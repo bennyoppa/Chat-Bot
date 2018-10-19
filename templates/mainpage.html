@@ -67,36 +67,74 @@ video {
  </script>
 </head>
 
-<body>
+<body id="mybody">
     {% load static %}
 
 
     <div id="mydiv">
     <strong>
-                            <p>
-                             Hi there! I am a chatbot! you can ask me for information about cse/Unsw! Such as:
-                                <br/>
+                            <p id="myp1">
+                             Hi there! I am Uri,a chatbot! you can ask me for information about  postgrads/CSE/UNSW!<br> Such as:
                              <br><a onclick=onmyclick("https://www.engineering.unsw.edu.au/study-with-us/current-students/academic-information/electives/pg-electives")>Information about courses.</a>
+                                 <br><span id="a1">(name,adk,description,pre_requisite,Lic)</span>
                                 <br><a onclick=onmyclick("https://student.unsw.edu.au/staff")>Information about staffs.</a>
+                                <br><span id="a1">(email,phone,office,staff_type,courses)</span>
                                 <br><a onclick=onmyclick("http://legacy.handbook.unsw.edu.au/postgraduate/specialisations/2018/ComputerScienceEngineering.html")>Information about streams.</a>
-                             <br/>
-                                <br>For example: ask me "What is the prerequisite of coMp9024?"
-                             <br>Now,click me and try it!!
+                                <br><span id="a1">(What subjects do I have to complete </span>
+                                <br><span id="a1">to declare a stream?)</span>
+                                <br><span id="a2">below are some question type that you can ask!</span>
                             </p>
 </strong>
+        <div id="mydiv2">
+            <strong>
+            <p id="myp2">
+                    <br/>
+                'Show me the lic of comp9021'<br>
+                'How to <span id="myspan">contact</span> lic of comp9020'<br><br>
+
+                'tell/show/give/me/ what's/the contact number of <span id="myspan">E</span>ric <span id="myspan">M</span>artin '<span id="myspan">(note:The first letter of a person's name needs to be capitalized)</span><br><br>
+
+                'Is COMP9418 an <span id="myspan">adk</span> course?'<br>
+                'What is the prerequisite of <span id="myspan">it</span>?'<br><br>
+
+                'What are the prerequisite and name of coMp9024 and comp9021?'<br><br>
+
+                '<span id="myspan">do you know</span> lic of comp9021/Eric Martin/office of Alan Blair/comp9318?<br><br>
+
+                'Where is the office of Eric Martin'<br>
+                'What courses does Eric Martin <span id="myspan">teach</span>?'<br><br>
+
+                'tell me <span id="myspan">something about</span> Tatjana Zrimec/comp9900'<br><br>
+
+                'What subjects do I have to complete to <span id="myspan">declare</span> COMPAS and COMPDS <span id="myspan">stream</span>?'<br><br>
+
+                'Who is the lic/lecturer of comp9020'<br>
+                'How to contact <span id="myspan">him</span>'<br><br>
+
+
+
+            </p>
+
+            </strong>
+        </div>
+
+
     </div>
-    <video class="abc"  preload muted autoplay loop id="video">
+    <video class="abc"  preload muted autoplay id="video">
         <source src="{% static "UNSW.mp4" %}" type="video/webm">
         <source src="{% static "UNSW.mp4" %}">
     </video>
 
-    <div id="ask_me" onclick="askme()"  style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 999; position: absolute;left: 250px;top:350px; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
+    <div id="ask_me" onclick="askme()"  style="cursor: pointer; background: url('{% static "enter-animate.gif" %}') 0% 0% / contain white; z-index: 999; position: absolute;margin-right: 150px;top:350px; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 150px; height: 150px; border-radius: 50%; right: 40px; bottom: 20px; overflow: visible;"></div>
 <style>
+    #myspan{
+        color: #ff1a1a;
+    }
    a{color: #030000;
     font-size: 1.2em;
     line-height: 1.2em;
     text-decoration: none;
-        margin-left: 45px;
+        margin-left: 30px;
    }
     div {
     display: block;
@@ -126,25 +164,56 @@ video {
         position: absolute;
         margin-top: 0px;
         margin-left: 50px;
-        opacity:0.8;
+        opacity:0.9;
        filter:alpha(opacity=90);
         z-index: 1000;
     }
-    p{
+    #mydiv2{
+        background-image: url("{% static "paper.png" %}");
+        width: 444px;
+        height: 599px;
+        background-size: cover;
+        position: absolute;
+        margin-top: 0px;
+        margin-right: 50px;
+        opacity:0.9;
+       filter:alpha(opacity=90);
+        z-index: 1000;
+    }
+    #myp1{
         font-size: 1.1em;
         color: black;
         font-family: Garamond;
         width: 375px;
-        height:228px;
+        height:234px;
         margin-top: 37px;
         margin-left: 45px;
-        background-color: rgba(222, 222, 222, 0.4);
+        background-color: rgba(222, 222, 222, 0.9);
         z-index: -1000;
     }
     a:hover{
     color: #ff0c3d;
     }
+#a1{
+    font-size: 1em;
+    margin-left: 45px;
+    color: #030000;
+}
+    #a2{
+        color: #1025ff;
+    }
 
+    #myp2{
+        font-size: 1.1em;
+        color: black;
+        font-family: Garamond;
+        width: 375px;
+        height:0px;
+        margin-top: 37px;
+        margin-left: 45px;
+        background-color: rgba(222, 222, 222, 0.1);
+        z-index: -1000;
+    }
 </style>
 </body>
 </html>
