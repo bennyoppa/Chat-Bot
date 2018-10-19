@@ -181,7 +181,14 @@ class RasaNLP(object):
 
             # record question
             if table == 'staff':
-                key = [''.join(n) for n in re.findall("([A-Z][A-Za-z\-']*)( [A-Z][A-Za-z\-']*)+", msg)]
+                key = []
+##                key = [''.join(n) for n in re.findall("([A-Z][A-Za-z\-']*)( [A-Z][A-Za-z\-']*)+", msg)]
+                names = re.findall(r'\b[A-Z][a-z\-\']*\b(?:(?:\s+[A-Z][a-z\-\']*\b)+|$)', msg)
+                for name in names:
+                        for s in self.STAFF_TITLE:
+                            name = name.lstrip(s)
+                        key += [name]
+                        
                 if len(key):
                     self.staff = key
                 else:
