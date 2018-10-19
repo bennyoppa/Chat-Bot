@@ -21,13 +21,14 @@ from rasa_nlu.components import ComponentBuilder
 class RasaNLP(object):
     COULD_NOT_PARSE_MSGS = ['Sorry, I don\'t understand your question, can you please ask in another way?',
                             'Sorry, I don\'t understand your query, can you please try it in a different way?',
-                            
                             ]
 
     NO_RECORD = ['Sorry, I could not find what you are looking for',
                  'Sorry, there is no record found in my database for your question',
                  ]
+
     
+    # intent: table names, table to search     
     INTENT_GREET1 = 'greet1'
     GREET_MSGS1 = ['Hello.', 'Hi.', 'Hey.', 'Hihi.']
 
@@ -46,28 +47,22 @@ class RasaNLP(object):
     INTENT_BYE = 'bye'
     BYE_MSG = ['Later', 'Bye', 'See you', 'Have a nice day', 'Have a good day']
 
-##    INTENT_SELF = 'self'
-    SELF_MSG = ['I am an intelligent chatting robot and can answer CSE enrolment related questions.']
-
     INTENT_UNRELATED = 'unrelated'
     UNRELATED_MSG = ['Sorry, I can only answer questions related to CSE courses, streams and staff.']
-
-##    INTENT_FUNC = 'function'
-##    FUNC_MSG = ['I can provide course recommendation and information retrieval of CSE courses, streams and staff.']
 
     INTENT_CHALLENGE = 'challenge'
     CHALLENGE_MSG = ['I\'m able to assist you with CSE-related questions.']
 
-
-    ENTITY_SELF = 'self'
-
-    # intent: table names, table to search 
 
     # entity: keywords
     ENTITY_DET = 'd'
     ENTITY_NDET = 'nd'
     ENTITY_KEY = 'key'
     ENTITY_ATT = 'att'
+
+    ENTITY_SELF = 'self'
+    SELF_MSG = ['I am an intelligent chatting robot and can answer CSE enrolment related questions.']
+
 
     # special entities that might require searching db multiply time
     # 2: lic, 3: courses
@@ -76,13 +71,6 @@ class RasaNLP(object):
 
     # lecturer title
     STAFF_TITLE = ['Dr ', 'Apro ', 'Prof ',]
-
-##    # combined querys, two tables to search
-##    COMBINED_INTENT = 'combined'
-##    # table to search first
-##    ENTITY_KEY1 = 'key1'
-##    # second table to search
-##    ENTITY_KEY2 = 'key2'
 
     def __init__(self, config_file, data_file, model_dir, INTENTS = ['course', 'staff', 'stream']):
         # record the current subject and staff for follow questions
@@ -117,7 +105,7 @@ class RasaNLP(object):
         logging.info('rasa parse res: {}'.format(res))
 
         if not 'intent' in res or res['intent'] is None:
-            # later we can do something with unparsed messages, probably train bot
+            # later we can do something with unparsed messages, train bot
             self.unparsed_messages.append(msg)
             return random.choice(self.COULD_NOT_PARSE_MSGS)
 
@@ -130,20 +118,13 @@ class RasaNLP(object):
         if res['intent']['name'] == self.INTENT_GREET3:
             return random.choice(self.GREET_MSGS3)
         
-##        if res['intent']['name'] == self.INTENT_SELF:
-##            return random.choice(self.SELF_MSG)
-        
         if res['intent']['name'] == self.INTENT_UNRELATED:
-##            if not any(res['entities']):
-##                return random.choice(self.UNRELATED_MSG)
 
             if self.ENTITY_SELF in [e['entity'] for e in res['entities']]:
                 return random.choice(self.SELF_MSG)
             
             return random.choice(self.UNRELATED_MSG)
         
-##        if res['intent']['name'] == self.INTENT_FUNC:
-##            return random.choice(self.FUNC_MSG)
         
         if res['intent']['name'] == self.INTENT_CHALLENGE:
             return random.choice(self.CHALLENGE_MSG)
@@ -153,7 +134,7 @@ class RasaNLP(object):
 
 
 
-        # search db
+        # construct data for db search, and answer construction
         if res['intent']['name'] in self.INTENTS and len(res['entities']) > 0:
             table = res['intent']['name']
 
@@ -182,18 +163,19 @@ class RasaNLP(object):
             # record question
             if table == 'staff':
                 key = []
-##                key = [''.join(n) for n in re.findall("([A-Z][A-Za-z\-']*)( [A-Z][A-Za-z\-']*)+", msg)]
                 names = re.findall(r'\b[A-Z][a-z\-\']*\b(?:(?:\s+[A-Z][a-z\-\']*\b)+|$)', msg)
                 for name in names:
                         for s in self.STAFF_TITLE:
                             name = name.lstrip(s)
                         key += [name]
-                        
+
+                # record previous staff
                 if len(key):
                     self.staff = key
                 else:
                     key = self.staff
             elif table == 'course':
+                # record previous course
                 if len(key):
                     self.subject = key
                 else:
@@ -237,15 +219,6 @@ class RasaNLP(object):
             
             return deterministic, table, key, att
 
-
-
-
-
-
-
-
-
-
         self.unparsed_messages.append(msg)
         return random.choice(self.COULD_NOT_PARSE_MSGS)
 
@@ -256,27 +229,12 @@ class RasaNLP(object):
         takes RasaNLP parsed query as input
         outputs the answer string for user
         '''
-        _answers = ['Sure, this is what I found:\n',
-                    'OK, I found this:\n',
-                    'Not a problem.\n',
-                    'No problem at all.\n',
-                    'Sure, I can do this.\n',
-                    '',
-                    '',
-                    '',
-                    ]
-
-
-
         parsed_query = self._reply(msg)
         # used to construct answers to queries related to stream questions
         stream = ['number', 'electives']
 
         if type(parsed_query) is tuple:
-            # need_reply,[]
             deter, table, keyword, att = parsed_query
-##            if table == "staff":
-##                keyword = [''.join(n) for n in re.findall("([A-Z][A-Za-z\-']*)( [A-Z][A-Za-z\-']*)+", msg)]
 
 
             # replace 'contact' in att for staff table
@@ -289,6 +247,7 @@ class RasaNLP(object):
 
 
             try:
+                # search db
                 info_list = get_info(table, keyword, att)
             except:
                 # parsed into undesired format
@@ -296,6 +255,7 @@ class RasaNLP(object):
                 return random.choice(self.COULD_NOT_PARSE_MSGS)
 
             if table == 'course' and 'lic' in [a.lower() for a in att]:
+                # record staff returned from db
                 self.staff = []
                 for i in info_list:
                     if not any(i):
@@ -311,9 +271,9 @@ class RasaNLP(object):
                 self.unparsed_messages.append(msg)
                 return random.choice(self.NO_RECORD)
             
-##            answer = random.choice(_answers)
             answer = '\n'
 
+            # construct answer according to the table searched
             for index in range(len(keyword)):
                 key = keyword[index]
                 info = info_list[index]
